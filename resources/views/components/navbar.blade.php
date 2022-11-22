@@ -20,8 +20,9 @@
                     Benvenuto nome
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{route('logout')}}">Logout</a></li>
-                        <li><a class="dropdown-item" href="{{route('')}}">Inserisci annuncio</a></li>
+                        <li><a class="dropdown-item" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
+                        <form class="d-none" method="POST" action="{{route('logout')}}" id="form-logout">@csrf</form>
+                        <li><a class="dropdown-item" href="">Inserisci annuncio</a></li>
                     </ul>
                 </div>
             {{-- end dropdown registrato --}}

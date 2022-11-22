@@ -5,18 +5,27 @@
             <div class="col-12 col-md-8">
                 {{-- form register --}}
                     <form action="{{route('register')}}" method="POST">
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                            @endif
                         @csrf
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" nome="email" class="form-control" id="email">
+                            <input type="email" name="email" class="form-control" id="email">
                         </div>
                         <div class="mb-3">
                             <label for="name" class="form-label">Username</label>
-                            <input type="text" nome="name" class="form-control" id="name">
+                            <input type="text" name="name" class="form-control" id="name">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password">
+                            <input type="password" name="password" class="form-control" id="password">
                         </div>
                         <div class="mb-3">
                             <label for="password_confirmation" class="form-label">Conferma Password</label>
