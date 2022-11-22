@@ -1,5 +1,9 @@
 <x-layout>
 
-    <h1>CIAO Michael</h1>
+    @livewire('articles-create-form')
+
+    
+
+
 
 </x-layout>
