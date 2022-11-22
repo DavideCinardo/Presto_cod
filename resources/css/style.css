@@ -2,7 +2,7 @@
     --primario: #FBF0DA;
     --secondario: #F1AB86;
     --terzo: #C57B57;
-    --quarto:#1E2D2F;
+    --quarto: #1E2D2F;
     --quinto: #073635;
 }
 
@@ -10,6 +10,6 @@
 font-family: 'Numans', sans-serif;
 font-family: 'Taviraj', serif; */
 
-.titoli{
+.titoli {
     font-family: 'Taviraj', serif;
 }

@@ -14,8 +14,8 @@
           </li>
         </ul>
         @auth
-            {{-- dropdown utente registrato --}}
-                <div class="nav-item dropdown">
+        {{-- dropdown utente registrato --}}
+        <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Benvenuto nome
                     </a>
