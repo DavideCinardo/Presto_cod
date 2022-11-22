@@ -5,3 +5,11 @@
     --quarto:#1E2D2F;
     --quinto: #073635;
 }
+
+/* font-family: 'Mukta', sans-serif;
+font-family: 'Numans', sans-serif;
+font-family: 'Taviraj', serif; */
+
+.titoli{
+    font-family: 'Taviraj', serif;
+}
