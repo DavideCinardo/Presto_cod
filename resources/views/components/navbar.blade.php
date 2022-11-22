@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{route('homepage')}}">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+        @auth
+            {{-- dropdown utente registrato --}}
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Benvenuto nome
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('logout')}}">Logout</a></li>
+                        <li><a class="dropdown-item" href="{{route('')}}">Inserisci annuncio</a></li>
+                    </ul>
+                </div>
+            {{-- end dropdown registrato --}}
+        @else
+            {{-- dropdown utente --}}
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Benvenuto ospite
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+                        <li><a class="dropdown-item" href="{{route('register')}}">Register</a></li>
+                    </ul>
+                </div>
+            {{-- end drop down utente --}}
+        @endauth
+      </div>
+    </div>
+  </nav>
