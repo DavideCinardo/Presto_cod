@@ -1,8 +1,14 @@
 <div class="container-fluid">
 
    <div class="row justify-content-center">
+    @if (session('articleCreated'))
+    
+    <div class="alert alert-danger">
+      {{session('articleCreated')}}
+    </div>
+            @endif
         <div class="col-12 col-md-8">
-            <form>
+            <form wire:submit.prevent="create">
                 @csrf
                 <div class="mb-3">
                   <label for="title" class="form-label">Titolo</label>
