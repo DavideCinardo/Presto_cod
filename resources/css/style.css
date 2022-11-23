@@ -11,7 +11,8 @@ font-family: 'Numans', sans-serif;
 font-family: 'Taviraj', serif; */
 
 body {
-    background-color: var(--primario);
+    background: rgb(251, 240, 218);
+    background: linear-gradient(130deg, rgba(251, 240, 218, 1) 0%, rgba(241, 171, 134, 0.65) 100%);
 }
 
 nav {
@@ -26,7 +27,8 @@ nav {
     color: var(--terzo) !important;
 }
 
-a, .colorTextDD {
+a,
+.colorTextDD {
     color: var(--quinto);
     text-decoration: none;
 }
@@ -36,12 +38,19 @@ a, .colorTextDD {
 }
 
 .SectionFoot1 {
+    border-radius: 75px 70px 0px 0px;
     background-color: var(--quinto);
 }
 
 .SectionFoot2 {
     background-color: var(--quarto);
     color: var(--primario) !important
+}
+
+footer {
+    border-top: solid 4px var(--terzo);
+    border-radius: 75px 70px 0px 0px;
+
 }
 
 .titoli {
@@ -59,4 +68,8 @@ a, .colorTextDD {
     transition: 0.5s ease-in;
     height: 480px;
     width: 370px;
+}
+
+.HoverFooter:hover {
+    color: var(--terzo);
 }

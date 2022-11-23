@@ -52,16 +52,16 @@
             <h6 class="text-uppercase fw-bold mb-4">
               Prodotti popolari
             </h6>
-            <p>
+            <p class="HoverFooter">
               <a href="#!" class="text-reset">Motori</a>
             </p>
-            <p>
+            <p class="HoverFooter">
               <a href="#!" class="text-reset">Libri</a>
             </p>
-            <p>
+            <p class="HoverFooter">
               <a href="#!" class="text-reset">Informatica</a>
             </p>
-            <p>
+            <p class="HoverFooter">
               <a href="#!" class="text-reset">Smartphone</a>
             </p>
           </div>
@@ -73,16 +73,16 @@
             <h6 class="text-uppercase fw-bold mb-4">
               Link utili
             </h6>
-            <p>
+            <p class="HoverFooter">
               <a href="#!" class="text-reset">Prezzi</a>
             </p>
-            <p>
+            <p class="HoverFooter">
               <a href="#!" class="text-reset">Impostazioni</a>
             </p>
-            <p>
+            <p class="HoverFooter">
               <a href="#!" class="text-reset">Ordini</a>
             </p>
-            <p>
+            <p class="HoverFooter">
               <a href="#!" class="text-reset">Aiuto</a>
             </p>
           </div>
@@ -98,8 +98,8 @@
               <i class="fas fa-envelope"></i>
               info@example.com
             </p>
-            <p><i class="fas fa-phone"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print"></i> + 01 234 567 89</p>
+            <p><i class="fas fa-phone"></i>+ 01 234 567 88</p>
+            <p><i class="fas fa-print"></i>+ 01 234 567 89</p>
           </div>
           <!-- Grid column -->
         </div>
@@ -109,9 +109,11 @@
   
   
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2021 Copyright:
-      <a class="text-reset fw-bold" href="https://aulab.it/">Code of duty TEAM</a>
+    <div class="text-center p-2">
+      © 2022 Copyright:
+      <p class="HoverFooter">
+        <a class="text-reset fw-bold" href="https://aulab.it/">Code of duty TEAM</a>
+      </p>
     </div>
     <!-- Copyright -->
   </footer>
