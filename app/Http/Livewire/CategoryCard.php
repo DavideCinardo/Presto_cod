@@ -10,10 +10,12 @@ use Illuminate\Support\Facades\DB;
 class CategoryCard extends Component
 {
     public $categoryId;
+    public $category;
 
-    public function render()
-    {   
+    public function render(){
+        
+        $category = $this->category;
         $articles = Article::where('category_id', $this->categoryId)->get();
-        return view('livewire.category-card', compact('articles'));
+        return view('livewire.category-card', compact('articles', 'category'));
     }
 }
