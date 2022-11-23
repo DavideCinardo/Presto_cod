@@ -34,7 +34,6 @@ class ArticlesCreateForm extends Component
                 'location' => $this -> location,
                 //collegare l'articolo all'user loggato che inserisce 'annuncio
                 'user_id' =>Auth::user()->id,
-   
             ]);
             
 
