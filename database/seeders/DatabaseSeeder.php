@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,11 +16,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        //Categorie inserite lato server
+        $categories = ['Motori', 'Informatica', 'Casa', 'Giochi', 'Lavoro', 'Abbigliamento', 'Elettrodomestici', 'Libri', 'Smartphone', 'Immobili'];
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        //per ogni categoria crea un record dando al name->category un valore dell'array
+        foreach ($categories as $category){
+            DB::table('categories')->insert([
+                'name' => $category
+            ]);
+        };
     }
 }

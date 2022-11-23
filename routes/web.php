@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//rotte public
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
-Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
+
+//rotte articles
+Route::get('/articles/create', [ArticleController::class, 'create'])->middleware('auth')->name('articles.create');

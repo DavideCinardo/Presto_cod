@@ -3,16 +3,18 @@
 namespace App\Http\Livewire;
 
 use App\Models\Article;
+use App\Models\Category;
 use Livewire\Component;
 
 class ArticlesCreateForm extends Component
 {
-    public $title, $price, $description, $location;
+    public $title, $price, $description, $location, $category;
         protected $rules = [
             'title' => 'required',
             'price' => 'required',
             'description' => 'required|min:10',
             'location' => 'required',
+            'category' => 'required',
         ];
         protected $message = [
             '*.required' => 'Il campo è obbligatorio',
@@ -21,7 +23,10 @@ class ArticlesCreateForm extends Component
          
         public function create(){
             $this -> validate();
-            Article::create([
+
+            //recuper il record della categoria
+            $category = Category::find($this->category);
+            $category->articles()->create([
                 'title' => $this -> title,
                 'price' => $this -> price,
                 'description' => $this -> description,
@@ -30,12 +35,18 @@ class ArticlesCreateForm extends Component
                 
                 session()->flash('articleCreated', 'Complimenti, hai creato la tua inserzione.')
 
-            ]); 
+            ]);
+
+            //creazione tabella article
+            // Article::create([
+
+            // ]); 
 
         }
 
     public function render()
     {
-        return view('livewire.articles-create-form');
+        $categories = Category::all();
+        return view('livewire.articles-create-form', compact('categories'));
     }
 }

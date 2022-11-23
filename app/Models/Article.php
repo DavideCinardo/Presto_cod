@@ -15,4 +15,9 @@ class Article extends Model
         'description',
         'location',
     ];
+
+    //relazione con category
+    public function Category(){
+        return $this->belongsTo(Category::class);
+    }
 }
