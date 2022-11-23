@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class ArticlesCreateForm extends Component
@@ -25,23 +26,24 @@ class ArticlesCreateForm extends Component
             $this -> validate();
 
             //recuper il record della categoria
-            $category = Category::find($this->category);
+            $article = $category = Category::find($this->category);
             $category->articles()->create([
                 'title' => $this -> title,
                 'price' => $this -> price,
                 'description' => $this -> description,
                 'location' => $this -> location,
-                $this -> reset(),
+
                 
-                session()->flash('articleCreated', 'Complimenti, hai creato la tua inserzione.')
-
             ]);
+            
+            //collegare l'articolo all'user loggato che inserisce 'annuncio
+            Auth::user()->articles()->save($article);
 
-            //creazione tabella article
-            // Article::create([
-
-            // ]); 
-
+            //resettare i campi dopo l'inserimento
+            $this -> reset();
+            
+            //messaggio di avvenuto inserimento
+            session()->flash('articleCreated', 'Complimenti, hai creato la tua inserzione.');
         }
 
     public function render()
