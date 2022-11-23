@@ -9,7 +9,8 @@ class ArticlesCard extends Component
 {
     public function render()
     {
-        $articles = Article::all();
+        $articles = Article::orderBy('created_at', 'DESC')->get();
+
         return view('livewire.articles-card', compact('articles'));
     }
 }
