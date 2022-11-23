@@ -2,7 +2,6 @@
     <div class="container">
         <div class="row justify-content-center">
             @foreach($articles as $article)
-            @dd($article)
             <div class="col-12 col-md-4">
                 {{-- Card --}}
                 <div class="card">
