@@ -9,10 +9,21 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('articles.index')}}">Tutti gli articoli</a>
-          </li>
+    
+          <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Annunci
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="{{route('articles.index')}}">Tutti Gli Annunci</a></li>
+            <hr>
+            @foreach($categories as $category)
+            <li class="dropdown-item">{{$category->name}}</li>
+            @endforeach
+          </ul>
+          </div>
         </ul>
+        
         @auth
         {{-- dropdown utente registrato --}}
         <div class="nav-item dropdown">
@@ -25,9 +36,11 @@
                         <li><a class="dropdown-item" href="{{route('articles.create')}}">Inserisci annuncio</a></li>
                     </ul>
                 </div>
+    
             {{-- end dropdown registrato --}}
         @else
             {{-- dropdown utente --}}
+      
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Benvenuto ospite

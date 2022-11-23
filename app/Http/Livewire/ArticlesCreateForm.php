@@ -49,7 +49,7 @@ class ArticlesCreateForm extends Component
             ]);
             
             //collegare l'articolo all'user loggato che inserisce 'annuncio
-            Auth::user()->articles()->save($article);
+           
 
             //resettare i campi dopo l'inserimento
             $this -> reset();
