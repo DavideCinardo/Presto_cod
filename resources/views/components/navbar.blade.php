@@ -18,7 +18,7 @@
             <a href="{{route('articles.index')}}"><li class="dropdown-item colorText">Tutti Gli Annunci</li></a>
             <hr>
             @foreach($categories as $category)
-            <a href="{{route('category', compact('category'))}}"><li class="dropdown-item colorText">{{$category->name}}</li></a>
+            <a href="{{route('category', compact('category'))}}"><li class="dropdown-item colorTextDD">{{$category->name}}</li></a>
             @endforeach
           </ul>
           </div>
@@ -31,9 +31,9 @@
                     Benvenuto, {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
+                        <li><a class="dropdown-item colorTextDD" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                         <form class="d-none" method="POST" action="{{route('logout')}}" id="form-logout">@csrf</form>
-                        <li><a class="dropdown-item" href="{{route('articles.create')}}">Inserisci annuncio</a></li>
+                        <li><a class="dropdown-item colorTextDD" href="{{route('articles.create')}}">Inserisci annuncio</a></li>
                     </ul>
                 </div>
     

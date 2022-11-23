@@ -15,23 +15,33 @@ body {
 }
 
 nav {
-    margin-top:35px;
-    border-top: solid 4px var(--quinto);
+    margin-top: 35px;
+    border-top: solid 4px var(--terzo);
     border-radius: 50px 0 20px 10px;
-    background-color: var(--quarto);
+    background: rgb(30, 45, 47);
+    background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);
 }
 
-.colorText{
-    color:var(--secondario) !important;
+.colorText {
+    color: var(--terzo) !important;
 }
 
-.SectionFoot1{
+a, .colorTextDD {
+    color: var(--quinto);
+    text-decoration: none;
+}
+
+.colorTextDD:hover {
+    color: var(--terzo);
+}
+
+.SectionFoot1 {
     background-color: var(--quinto);
 }
 
-.SectionFoot2{
+.SectionFoot2 {
     background-color: var(--quarto);
-    color: var(--secondario) !important
+    color: var(--primario) !important
 }
 
 .titoli {
@@ -39,7 +49,14 @@ nav {
 }
 
 .OurCards {
+    width: 350px;
+    height: 450px;
     margin: 15px;
     border-top: 10px solid var(--quarto);
 }
 
+.OurCards:hover {
+    transition: 0.5s ease-in;
+    height: 480px;
+    width: 370px;
+}
