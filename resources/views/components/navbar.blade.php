@@ -18,7 +18,7 @@
             <li class="dropdown-item"><a href="{{route('articles.index')}}">Tutti Gli Annunci</a></li>
             <hr>
             @foreach($categories as $category)
-            <li class="dropdown-item">{{$category->name}}</li>
+            <li class="dropdown-item"><a href="{{route('category', compact('category'))}}">{{$category->name}}</a></li>
             @endforeach
           </ul>
           </div>
