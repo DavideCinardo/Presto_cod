@@ -32,12 +32,11 @@ class ArticlesCreateForm extends Component
                 'price' => $this -> price,
                 'description' => $this -> description,
                 'location' => $this -> location,
-
-                
+                //collegare l'articolo all'user loggato che inserisce 'annuncio
+                'user_id' =>Auth::user()->id,
+   
             ]);
             
-            //collegare l'articolo all'user loggato che inserisce 'annuncio
-            Auth::user()->articles()->save($article);
 
             //resettare i campi dopo l'inserimento
             $this -> reset();

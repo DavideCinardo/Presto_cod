@@ -14,6 +14,7 @@ class Article extends Model
         'price',
         'description',
         'location',
+        'user_id',
     ];
 
     //relazione con category
