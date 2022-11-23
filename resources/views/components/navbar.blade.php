@@ -10,11 +10,7 @@
             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-<<<<<<< HEAD
             <a class="nav-link active" aria-current="page" href="{{route('articles.index')}}">Tutti gli articoli</a>
-=======
-            <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
->>>>>>> 62ef6ceaa56611722080ac421ff9a9e4d7e13061
           </li>
         </ul>
         @auth
@@ -26,11 +22,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                         <form class="d-none" method="POST" action="{{route('logout')}}" id="form-logout">@csrf</form>
-<<<<<<< HEAD
                         <li><a class="dropdown-item" href="{{route('articles.create')}}">Inserisci annuncio</a></li>
-=======
-                        <li><a class="dropdown-item" href="{{route('article.create')}}">Inserisci annuncio</a></li>
->>>>>>> 62ef6ceaa56611722080ac421ff9a9e4d7e13061
                     </ul>
                 </div>
             {{-- end dropdown registrato --}}
