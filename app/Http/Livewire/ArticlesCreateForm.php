@@ -6,20 +6,26 @@ use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use Livewire\WithFileUploads;
+
 
 class ArticlesCreateForm extends Component
 {
-    public $title, $price, $description, $location, $category;
+    use WithFileUploads;
+
+    public $title, $price, $description, $location, $category, $cover;
         protected $rules = [
             'title' => 'required',
             'price' => 'required',
             'description' => 'required|min:10',
             'location' => 'required',
             'category' => 'required',
+            'cover' => 'required|image',
         ];
         protected $message = [
             '*.required' => 'Il campo è obbligatorio',
             'description.min' => 'Il minimo è di 10 caratteri',
+            'cover.image' => 'Il file deve essere un\'immagine',
         ];
          
         public function create(){
@@ -32,12 +38,13 @@ class ArticlesCreateForm extends Component
                 'price' => $this -> price,
                 'description' => $this -> description,
                 'location' => $this -> location,
-
+                'cover' => $this -> cover -> store('public/cover'),
+                'user_id' => Auth::user()->id,
                 
             ]);
             
             //collegare l'articolo all'user loggato che inserisce 'annuncio
-            Auth::user()->articles()->save($article);
+            
 
             //resettare i campi dopo l'inserimento
             $this -> reset();
