@@ -19,3 +19,4 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 //rotte articles
 Route::get('/articles/create', [ArticleController::class, 'create'])->middleware('auth')->name('articles.create');
+Route::get('/articles/index', [ArticleController::class, 'index'])->name('articles.index');

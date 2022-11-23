@@ -10,7 +10,7 @@
             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
         </ul>
         @auth
@@ -22,7 +22,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                         <form class="d-none" method="POST" action="{{route('logout')}}" id="form-logout">@csrf</form>
-                        <li><a class="dropdown-item" href="">Inserisci annuncio</a></li>
+                        <li><a class="dropdown-item" href="{{route('article.create')}}">Inserisci annuncio</a></li>
                     </ul>
                 </div>
             {{-- end dropdown registrato --}}
