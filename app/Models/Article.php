@@ -14,10 +14,6 @@ class Article extends Model
         'price',
         'description',
         'location',
-<<<<<<< HEAD
-        'cover',
-=======
->>>>>>> c27dc5fc471dd6ddcefe5e9e3be62fd3ba01b06e
         'user_id',
     ];
 
