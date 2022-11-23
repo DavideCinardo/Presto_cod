@@ -28,9 +28,15 @@ class ArticlesCreateForm extends Component
             'cover.image' => 'Il file deve essere un\'immagine',
         ];
          
-        public function create(){
+        public function updateImage(){
+        $this -> validate([
+            'cover' => 'image']); 
+        }
+
+    public function create(){
             $this -> validate();
 
+            
             //recuper il record della categoria
             $article = $category = Category::find($this->category);
             $category->articles()->create([
@@ -38,9 +44,8 @@ class ArticlesCreateForm extends Component
                 'price' => $this -> price,
                 'description' => $this -> description,
                 'location' => $this -> location,
-                'cover' => $this -> cover -> store('public/cover'),
+                'cover' => $this->cover->store('public/cover'),
                 'user_id' => Auth::user()->id,
-                
             ]);
             
             //collegare l'articolo all'user loggato che inserisce 'annuncio

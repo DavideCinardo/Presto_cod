@@ -14,7 +14,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        return view('articles.index');
     }
 
     /**
@@ -22,20 +22,9 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create()     
+    {       
         return view ('articles.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
