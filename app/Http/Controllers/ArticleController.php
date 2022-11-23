@@ -14,7 +14,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        return view('ariticles.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {       
         return view ('articles.create');
     }
 

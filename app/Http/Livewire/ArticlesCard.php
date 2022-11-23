@@ -28,7 +28,7 @@ class ArticlesCreateForm extends Component
             'cover.image' => 'Il file deve essere un\'immagine',
         ];
          
-        public function create(){
+    public function create(){
             $this -> validate();
 
             //recuper il record della categoria
