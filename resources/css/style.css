@@ -10,6 +10,35 @@
 font-family: 'Numans', sans-serif;
 font-family: 'Taviraj', serif; */
 
+body {
+    background-color: var(--primario);
+}
+
+nav {
+    margin-top: 20px;
+    border-top: solid 4px #073635;
+    border-radius: 50px 0 20px 10px;
+    background-color: #1E2D2F;
+}
+
+.colorText{
+    color:#C57B57 !important;
+}
+
+.SectionFoot1{
+    background-color: var(--quinto);
+}
+
+.SectionFoot2{
+    background-color: var(--quarto);
+}
+
 .titoli {
     font-family: 'Taviraj', serif;
 }
+
+.OurCards {
+    margin: 15px;
+    border-top: 10px solid var(--quarto);
+}
+

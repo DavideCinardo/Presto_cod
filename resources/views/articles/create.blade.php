@@ -5,5 +5,5 @@
     
 
 
-
+    <x-footer />
 </x-layout>

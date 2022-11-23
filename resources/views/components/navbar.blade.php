@@ -1,24 +1,24 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{route('homepage')}}">Navbar</a>
+      <a class="navbar-brand colorText" href="{{route('homepage')}}">Presto.it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
+            <a class="nav-link active colorText" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
     
           <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle colorText" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Annunci
           </a>
           <ul class="dropdown-menu">
-            <a href="{{route('articles.index')}}"><li class="dropdown-item">Tutti Gli Annunci</li></a>
+            <a href="{{route('articles.index')}}"><li class="dropdown-item colorText">Tutti Gli Annunci</li></a>
             <hr>
             @foreach($categories as $category)
-            <a href="{{route('category', compact('category'))}}"><li class="dropdown-item">{{$category->name}}</li></a>
+            <a href="{{route('category', compact('category'))}}"><li class="dropdown-item colorText">{{$category->name}}</li></a>
             @endforeach
           </ul>
           </div>
@@ -26,7 +26,7 @@
         
         @auth
         {{-- dropdown utente registrato --}}
-        <div class="nav-item dropdown">
+        <div class="nav-item dropdown colorText">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Benvenuto, {{Auth::user()->name}}
                     </a>
@@ -41,7 +41,7 @@
         @else
             {{-- dropdown utente --}}
       
-                <div class="nav-item dropdown">
+                <div class="nav-item dropdown colorText">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Benvenuto ospite
                     </a>

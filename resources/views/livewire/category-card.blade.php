@@ -1,10 +1,10 @@
-<div>
-    <div class="container">
+
+    <div class="container my-5">
         <div class="row justify-content-center">
             @forelse($articles as $article)
             <div class="col-12 col-md-4">
                 {{-- Card --}}
-                <div class="card">
+                <div class="card my-5 OurCards">
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{Storage::url($article->cover)}}" class="img-fluid" />
                         <a href="#!">
@@ -13,8 +13,7 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">{{$article->title}}</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <p class="card-text">Descrizione card creata . . . .</p>
                         <a href="{{route('articles.show', compact('article'))}}" class="btn btn-primary">Leggi di più</a>
                     </div>
                 </div>
@@ -27,4 +26,4 @@
             @endforelse
         </div>
     </div>
-</div>
+
