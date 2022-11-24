@@ -37,3 +37,6 @@ Route::get('become/revaisor', [RevaisorController::class, 'becomeRevaisor'])->mi
 //rotta rendi utente revisore
 Route::get('give/revaisor/{user}', [RevaisorController::class, 'makeRevaisor'])->name('make.revaisor');
 
+//rotta per ricercare gli annunci con laravel scout
+Route::get('/search/article', [PublicController::class, 'seachArticles'])->name('articles.search');
+

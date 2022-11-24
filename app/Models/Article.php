@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Article extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
 
     protected $fillable = [
         'title',
@@ -18,6 +19,19 @@ class Article extends Model
         'user_id',
         'revisioned_from',
     ];
+
+    //funzione per utilizzare laravel scout
+    public function toSearchableArray(){
+        
+        $category = $this->category;
+        $array = [
+            'id'=> $this->id,
+            'title'=> $this->title,
+            'description'=> $this->description,
+            'category' => $category,
+        ];
+        return $array;
+    }
 
     //relazione con category
     public function Category(){

@@ -76,6 +76,13 @@
                 </div>
             {{-- end drop down utente --}}
         @endauth
+        <div>
+          <form action="{{route('articles.search')}}" method="GET">
+            <input name="searched" class="form-control" type="search" placeholder="Cosa vuoi cercare?">
+            <button class="btn btn-outline-success" type="submit">Cerca</button>
+
+          </form>
+        </div>
       </div>
     </div>
   </nav>
