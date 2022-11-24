@@ -19,7 +19,7 @@
            Annunci
           </a>
           <ul class="dropdown-menu bg-menu my-2">
-            <a href="{{route('articles.index')}}"><li class="dropdown-item colorText">Tutti Gli Annunci</li></a>
+            <a href="{{route('articles.index')}}"><li class="dropdown-item colorText bg-menu">Tutti Gli Annunci</li></a>
             <hr>
             @foreach($categories as $category)
             <a href="{{route('category', compact('category'))}}"><li class="dropdown-item colorTextDD">{{$category->name}}</li></a>
