@@ -1,21 +1,21 @@
-<nav class="navbar navbar-expand-lg sticky-top my-0">
+<nav class="navbar navbar-expand-lg sticky-top mt-2 p-2">
     <div class="container-fluid">
-      <div id="toggle" class="container">
-        <a class="navbar-brand colorText p-0 m-0 w-25 logo-home " href="{{route('homepage')}}"><img src="/media/Presto.it-PhotoRoom.png" alt="" class="logo"></a>
+      <div id="toggle" class="container-fluid">
+        <a class="navbar-brand colorText p-0 ms-2 w-25 logo-home " href="{{route('homepage')}}"><img src="/media/Presto.it-PhotoRoom.png" alt="" class="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""><i class="fa-solid fa-bars toggle-color"></i></span>
         </button>
     </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse justify-content-between d-flex" id="navbarSupportedContent">
         <div class="d-flex justify-content-center">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"
             <li class="nav-item">
-              <a class="nav-link active colorText" aria-current="page" href="{{route('homepage')}}">Home</a>
+              <a class="nav-link active colorText size" aria-current="page" href="{{route('homepage')}}">Home</a>
             </li>
         </div>
     
           <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle colorText" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle colorText size" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Annunci
           </a>
           <ul class="dropdown-menu bg-menu my-2">
@@ -30,14 +30,16 @@
         
         @auth
         {{-- dropdown utente registrato --}}
-        <div class="nav-item dropdown colorText">
+        <div>
+          <a class="dropdown-item colorTextDD" href="{{route('articles.create')}}">Inserisci annuncio</a>
+        </div>
+        <div class="nav-item dropdown colorText size">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Benvenuto, {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu bg-menu">
                         <li><a class="dropdown-item colorTextDD" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                         <form class="d-none" method="POST" action="{{route('logout')}}" id="form-logout">@csrf</form>
-                        <li><a class="dropdown-item colorTextDD" href="{{route('articles.create')}}">Inserisci annuncio</a></li>
                     </ul>
         </div>
     
@@ -45,7 +47,7 @@
         @else
             {{-- dropdown utente --}}
       
-                <div class="nav-item dropdown colorText">
+                <div class="nav-item dropdown colorText size">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Benvenuto ospite
                     </a>
