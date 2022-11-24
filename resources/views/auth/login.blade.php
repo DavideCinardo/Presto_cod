@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container">
+    <div class="container mt-5 min-vh-100">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
                 {{-- form register --}}
@@ -29,4 +29,5 @@
         </div>
     </div>
 
+    <x-footer />
 </x-layout>
