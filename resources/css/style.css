@@ -12,14 +12,17 @@ font-family: 'Numans', sans-serif;
 font-family: 'Taviraj', serif; */
 
 body {
-    background: rgb(251, 240, 218);
-    background: linear-gradient(130deg, rgba(251, 240, 218, 1) 0%, rgba(241, 171, 134, 0.65) 100%);
+    background-image: url(/public/media/BGvintage.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background: rgb(251, 240, 218); */
+    /* background: linear-gradient(130deg, rgba(251, 240, 218, 1) 0%, rgba(241, 171, 134, 0.65) 100%); */
 }
 
 nav {
-    margin-top: 35px;
-    border-top: solid 4px var(--terzo);
-    border-radius: 20px 20px 50px 50px;
+    border-bottom: solid 4px var(--terzo);
+    border-radius: 0px 0px 50px 50px;
     background: rgb(30, 45, 47);
     background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);
 }

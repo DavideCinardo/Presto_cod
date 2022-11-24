@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg sticky-top mt-2 p-2">
+<nav class="navbar fixed-top navbar-expand-lg p-2">
     <div class="container-fluid">
       <div id="toggle" class="container-fluid">
         <a class="navbar-brand colorText p-0 ms-2 w-25 logo-home " href="{{route('homepage')}}"><img src="/media/Presto.it-PhotoRoom.png" alt="" class="logo"></a>
@@ -31,7 +31,7 @@
         @auth
         {{-- dropdown utente registrato --}}
         <div>
-          <a class="dropdown-item colorTextDD" href="{{route('articles.create')}}">Inserisci annuncio</a>
+          <a class="dropdown-item colorText size" href="{{route('articles.create')}}">Inserisci annuncio</a>
         </div>
         <div class="nav-item dropdown colorText size">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
