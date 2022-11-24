@@ -16,6 +16,7 @@ class Article extends Model
         'location',
         'cover',
         'user_id',
+        'revisioned_from',
     ];
 
     //relazione con category
@@ -30,7 +31,7 @@ class Article extends Model
 
     //salvataggio cambio parametro accettazione
     public function setAccepted($value){
-        $this->is_accepted= $value;
+        $this->is_accepted = $value;
         $this->save();
         return true;
     }

@@ -30,7 +30,8 @@ Route::get('revaisor/article/show/{article_unchecked}', [RevaisorController::cla
 Route::patch('accetta/article/{article}', [RevaisorController::class, 'acceptArticle'])->middleware('isRevaisor')->name('revaisor.accept_article');
 //rotta rifiuta articolo
 Route::patch('rifiuta/article/{article}', [RevaisorController::class, 'rejectArticle'])->middleware('isRevaisor')->name('revaisor.reject_article');
-
+//rotta annulla ultima revisione
+Route::patch('null/revision/{article_checked}', [RevaisorController::class, 'nullRevision'])->middleware('isRevaisor')->name('revaisor.null_revision');
 //rotta diventa revisore
 Route::get('become/revaisor', [RevaisorController::class, 'becomeRevaisor'])->middleware('auth')->name('become.revaisor');
 //rotta rendi utente revisore

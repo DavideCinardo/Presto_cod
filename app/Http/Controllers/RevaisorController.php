@@ -16,8 +16,10 @@ class RevaisorController extends Controller
 
         //prendere gli articoli da revisionare
         $articles_unchecked = Article::where('is_accepted', null)->first();
+        //prendere gli articoli revisionati dal revisore loggato
+        $articles_checked = Article::where('revisioned_from', Auth::user()->id)->first();
         //torna alla vista con questa variabile
-        return view('revaisor.index', compact('articles_unchecked'));
+        return view('revaisor.index', compact('articles_unchecked', 'articles_checked'));
     }
 
     public function show($article_unchecked){
@@ -28,6 +30,7 @@ class RevaisorController extends Controller
 
     //funzione per accettare l'rticolo
     public function acceptArticle(Article $article){
+        $article->revisioned_from = Auth::user()->id;
         $article->setAccepted(true);
         return redirect(route('revaisor.index'))->with('message', 'Complimenti hai accettato l\'articolo');
     }
@@ -36,6 +39,14 @@ class RevaisorController extends Controller
     public function rejectArticle(Article $article){
         $article->setAccepted(false);
         return redirect(route('revaisor.index'))->with('message', 'Complimenti hai rifiutato l\'articolo');
+    }
+
+    //funzione per annullare ultima revisione
+    public function nullRevision(Article $article_checked){
+        $article_checked->setAccepted(null);
+        $article_checked->revisioned_from = 1;
+        $article_checked->save();
+        return redirect(route('revaisor.index'))->with('message', 'Hai annullato la tua ultima modifica con successo');
     }
 
     //invio mail richiesta per diventare revisore
