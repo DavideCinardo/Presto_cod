@@ -148,3 +148,14 @@ footer {
 .HoverFooter:hover {
     color: var(--terzo);
 }
+
+
+.formCreate{
+    margin-top: 200px;
+}
+
+.SearchBar {
+    background-color: #FBF0DA;
+    border: solid 1px var(--primario);
+    margin-top: 350px;
+}

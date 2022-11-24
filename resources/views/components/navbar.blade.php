@@ -8,7 +8,7 @@
     </div>
       <div class="collapse navbar-collapse justify-content-between d-flex" id="navbarSupportedContent">
         <div class="d-flex justify-content-center">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0"
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active colorText size" aria-current="page" href="">Contattaci</a>
             </li>
@@ -18,8 +18,8 @@
           <a class="nav-link dropdown-toggle colorText size" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Annunci
           </a>
-          <ul class="dropdown-menu bg-menu my-2">
-            <a href="{{route('articles.index')}}"><li class="dropdown-item colorText">Tutti Gli Annunci</li></a>
+          <ul class="dropdown-menu bg-menu my-3">
+            <a href="{{route('articles.index')}}"><li class="dropdown-item colorText colorTextDD">Tutti Gli Annunci</li></a>
             <hr>
             @foreach($categories as $category)
             <a href="{{route('category', compact('category'))}}"><li class="dropdown-item colorTextDD">{{$category->name}}</li></a>
@@ -55,9 +55,9 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Benvenuto ospite
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
-                        <li><a class="dropdown-item" href="{{route('register')}}">Register</a></li>
+                    <ul class="dropdown-menu bg-menu">
+                        <li><a class="dropdown-item toggle-color colorTextDD" href="{{route('login')}}">Login</a></li>
+                        <li><a class="dropdown-item toggle-color colorTextDD" href="{{route('register')}}">Register</a></li>
                     </ul>
                 </div>
             {{-- end drop down utente --}}
