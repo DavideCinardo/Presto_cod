@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevaisorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,4 +23,16 @@ Route::get('/articles/create', [ArticleController::class, 'create'])->middleware
 Route::get('/articles/index', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articles/show/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
+//rotte del revisore
+Route::get('/revaisor/index', [RevaisorController::class, 'index'])->middleware('isRevaisor')->name('revaisor.index');
+Route::get('revaisor/article/show/{article_unchecked}', [RevaisorController::class, 'show'])->name('article.unchecked');
+//rotta accetta articolo
+Route::patch('accetta/article/{article}', [RevaisorController::class, 'acceptArticle'])->middleware('isRevaisor')->name('revaisor.accept_article');
+//rotta rifiuta articolo
+Route::patch('rifiuta/article/{article}', [RevaisorController::class, 'rejectArticle'])->middleware('isRevaisor')->name('revaisor.reject_article');
+
+//rotta diventa revisore
+Route::get('become/revaisor', [RevaisorController::class, 'becomeRevaisor'])->middleware('auth')->name('become.revaisor');
+//rotta rendi utente revisore
+Route::get('give/revaisor/{user}', [RevaisorController::class, 'makeRevaisor'])->name('make.revaisor');
 

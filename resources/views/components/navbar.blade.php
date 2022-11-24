@@ -27,17 +27,37 @@
           </ul>
           </div>
         </ul>
+
         
         @auth
         {{-- dropdown utente registrato --}}
+        {{-- tasto per i revisori --}}
+          @if (Auth::user()->is_revaisor)
+              <div class="nav-item">
+                <a href="{{route('revaisor.index')}}" class="position-relative">
+                  Articdiv da revisionare
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pillbg-danger">
+                    {{App\Models\Article::toBeRevaisonedCount()}}
+                  </span>
+                </a>
+              </div>
+          @endif
+        {{-- end tasto dei revisori --}}
         <div class="nav-item dropdown colorText">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Benvenuto, {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu bg-menu">
-                        <li><a class="dropdown-item colorTextDD" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
+                        <li>
+                          <a class="dropdown-item colorTextDD" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+                        </li>
                         <form class="d-none" method="POST" action="{{route('logout')}}" id="form-logout">@csrf</form>
-                        <li><a class="dropdown-item colorTextDD" href="{{route('articles.create')}}">Inserisci annuncio</a></li>
+                        <li>
+                          <a class="dropdown-item colorTextDD" href="{{route('articles.create')}}">Inserisci annuncio</a>
+                        </li>
+                        <div class="dropdown-item colorTextDD">
+                          <a class="nav-link" href="{{route('become.revaisor')}}">Lavora con noi</a>
+                        </div>
                     </ul>
         </div>
     

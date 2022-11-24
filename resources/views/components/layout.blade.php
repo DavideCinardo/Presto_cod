@@ -15,6 +15,14 @@
 <body>
     {{-- navbar --}}
     <x-navbar />
+
+    {{-- messaggio di errore accesso ad area non consentita --}}
+    @if(session('message'))
+        <div class="alert alert-success">
+            {{session('message')}}
+        </div>
+    @endif
+    {{-- end messaggio di errore accesso ad area non consentita --}}
     
     <div class="min-vh-100">
         {{$slot}}
