@@ -10,7 +10,7 @@
         <div class="d-flex justify-content-center">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"
             <li class="nav-item">
-              <a class="nav-link active colorText size" aria-current="page" href="{{route('homepage')}}">Home</a>
+              <a class="nav-link active colorText size" aria-current="page" href="">Contattaci</a>
             </li>
         </div>
     
@@ -38,6 +38,10 @@
                     Benvenuto, {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu bg-menu">
+                      <li><a class="dropdown-item colorTextDD" href="">I tuoi ordini</a></li>
+                        <li><a class="dropdown-item colorTextDD" href="">I tuoi annunci</a></li>
+                        <li><a class="dropdown-item colorTextDD" href="">Preferiti</a></li>
+                        <li><a class="dropdown-item colorTextDD" href="">Messaggi</a></li>
                         <li><a class="dropdown-item colorTextDD" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                         <form class="d-none" method="POST" action="{{route('logout')}}" id="form-logout">@csrf</form>
                     </ul>
