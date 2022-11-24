@@ -9,6 +9,13 @@
     @endif
     <div class="col-12 col-md-8">
       <form wire:submit.prevent="create" enctype="multipart/form-data">
+        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                                @endif
         @csrf
           <div class="mb-3">
               <label for="title" class="form-label">Titolo</label>
