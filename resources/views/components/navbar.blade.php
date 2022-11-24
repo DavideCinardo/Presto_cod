@@ -1,20 +1,24 @@
-<nav class="navbar navbar-expand-lg sticky-top">
+<nav class="navbar navbar-expand-lg sticky-top my-0">
     <div class="container-fluid">
-      <a class="navbar-brand colorText" href="{{route('homepage')}}">Presto.it</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="d-flex justify-content-between container">
+        <a class="navbar-brand colorText p-0 m-0 w-25" href="{{route('homepage')}}"><img src="/media/Presto.it-PhotoRoom.png" alt="" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""><i class="fa-solid fa-bars toggle-color"></i></span>
+        </button>
+    </div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active colorText" aria-current="page" href="{{route('homepage')}}">Home</a>
-          </li>
+        <div class="d-flex justify-content-center">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"
+            <li class="nav-item">
+              <a class="nav-link active colorText" aria-current="page" href="{{route('homepage')}}">Home</a>
+            </li>
+        </div>
     
           <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle colorText" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Annunci
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu bg-menu my-2">
             <a href="{{route('articles.index')}}"><li class="dropdown-item colorText">Tutti Gli Annunci</li></a>
             <hr>
             @foreach($categories as $category)
@@ -30,12 +34,12 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Benvenuto, {{Auth::user()->name}}
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu bg-menu">
                         <li><a class="dropdown-item colorTextDD" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                         <form class="d-none" method="POST" action="{{route('logout')}}" id="form-logout">@csrf</form>
                         <li><a class="dropdown-item colorTextDD" href="{{route('articles.create')}}">Inserisci annuncio</a></li>
                     </ul>
-                </div>
+        </div>
     
             {{-- end dropdown registrato --}}
         @else

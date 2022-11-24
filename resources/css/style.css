@@ -4,6 +4,7 @@
     --terzo: #C57B57;
     --quarto: #1E2D2F;
     --quinto: #073635;
+    --sesto: #ffbd59;
 }
 
 /* font-family: 'Mukta', sans-serif;
@@ -24,17 +25,41 @@ nav {
 }
 
 .colorText {
-    color: var(--terzo) !important;
+    color: var(--sesto) !important;
+}
+
+.logo{
+    width: 30%;
+}
+
+@media only screen and (max-width: 425px){
+    .logo {
+        width: 100%;
+    }
+}
+
+.toggle-color {
+    color: var(--sesto);
+}
+
+.bg-menu {
+    background: rgb(30, 45, 47); 
+    background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%); 
+}
+
+.navbar-toggler {
+    color: var(--sesto) ;
 }
 
 a,
 .colorTextDD {
-    color: var(--quinto);
+    color: var(--sesto);
     text-decoration: none;
 }
 
 .colorTextDD:hover {
-    color: var(--terzo);
+    color: var(--sesto);
+    background-color: var(--quarto);
 }
 
 .SectionFoot1 {
