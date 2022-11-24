@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg sticky-top my-0">
     <div class="container-fluid">
-      <div class="d-flex justify-content-between container">
-        <a class="navbar-brand colorText p-0 m-0 w-25" href="{{route('homepage')}}"><img src="/media/Presto.it-PhotoRoom.png" alt="" class="logo"></a>
+      <div id="toggle" class="container">
+        <a class="navbar-brand colorText p-0 m-0 w-25 logo-home " href="{{route('homepage')}}"><img src="/media/Presto.it-PhotoRoom.png" alt="" class="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""><i class="fa-solid fa-bars toggle-color"></i></span>
         </button>
@@ -19,7 +19,7 @@
            Annunci
           </a>
           <ul class="dropdown-menu bg-menu my-2">
-            <a href="{{route('articles.index')}}"><li class="dropdown-item colorText bg-menu">Tutti Gli Annunci</li></a>
+            <a href="{{route('articles.index')}}"><li class="dropdown-item colorText">Tutti Gli Annunci</li></a>
             <hr>
             @foreach($categories as $category)
             <a href="{{route('category', compact('category'))}}"><li class="dropdown-item colorTextDD">{{$category->name}}</li></a>

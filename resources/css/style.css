@@ -29,15 +29,39 @@ nav {
 }
 
 .logo{
+    width: 100%;
+}
+
+.logo-home{
+    display: block;  
+}
+
+#toggle {
     width: 30%;
 }
+
 
 @media only screen and (max-width: 425px){
     .logo {
         width: 100%;
     }
+    #toggle {
+        display: flex;
+        justify-content: space-between;
+
+    }
 }
 
+@media only screen and (max-width: 768px){
+    .logo {
+        width: 100%;
+    }
+    #toggle {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+}
 .toggle-color {
     color: var(--sesto);
 }
