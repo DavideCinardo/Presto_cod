@@ -21,7 +21,7 @@
                 @empty
                     <div class="col-12">
                         <div class="alert alert-danger">
-                            <p>Non ci sono annunci relativi alla tua ricerca</p>
+                            <p>Non ci sono annunci relativi alla tua ricerca : " {{$search}} "</p>
                         </div>
                     </div>
                 @endforelse

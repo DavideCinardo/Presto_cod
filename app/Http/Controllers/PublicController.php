@@ -21,7 +21,8 @@ class PublicController extends Controller
 
     //funzione che ci permette di ricercare con laravel scout
     public function seachArticles(Request $request){
+        $search = $request->searched;
         $articles_searched = Article::search($request->searched)->where('is_accepted', true)->get();
-        return view('articles.searched', compact('articles_searched'));
+        return view('articles.searched', compact('articles_searched', 'search'));
     }
 }
