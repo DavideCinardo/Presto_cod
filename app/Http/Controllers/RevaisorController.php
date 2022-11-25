@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Artisan;
 
 class RevaisorController extends Controller
 {
+    public $whyWork;
+
     public function index(){
 
         //prendere gli articoli da revisionare
@@ -50,8 +52,9 @@ class RevaisorController extends Controller
     }
 
     //invio mail richiesta per diventare revisore
-    public function becomeRevaisor(){
-        Mail::to('admin@presto.it')->send(new BecomeRevaisor(Auth::user()));
+    public function becomeRevaisor(Request $request){
+        
+        Mail::to('admin@presto.it')->send(new BecomeRevaisor(Auth::user(), $request->whyWork));
         return redirect()->back()->with('message', 'La tua richiesta è stata inoltrata all\'admin, ti risponderemo entro 24h');
     }
 

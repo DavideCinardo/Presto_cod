@@ -35,8 +35,8 @@
           @if (Auth::user()->is_revaisor)
               <div class="nav-item">
                 <a href="{{route('revaisor.index')}}" class="position-relative">
-                  Articdiv da revisionare
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pillbg-danger">
+                  Articoli da revisionare
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                     {{App\Models\Article::toBeRevaisonedCount()}}
                   </span>
                 </a>
@@ -57,11 +57,14 @@
                         <li>
                           <a class="dropdown-item colorTextDD" href="{{route('articles.create')}}">Inserisci annuncio</a>
                         </li>
-                        <div class="dropdown-item colorTextDD">
-                          <a class="nav-link" href="{{route('become.revaisor')}}">Lavora con noi</a>
-                        </div>
+                          <button type="button" class="dropdown-item colorTextDD" data-bs-toggle="modal" data-bs-target="#workModal">
+                            Lavora con noi
+                          </button>  
+                        
                     </ul>
+                    
         </div>
+        
     
             {{-- end dropdown registrato --}}
         @else
@@ -87,4 +90,27 @@
         </div>
       </div>
     </div>
+    
   </nav>
+
+  <div class="modal fade" id="workModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Vuoi diventare un revisore?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="{{route('become.revaisor')}}" method="POST">
+            @csrf
+            <label for="whyWork">Dicci perchè : </label>
+            <textarea class="form-control" name="whyWork" id="whyWork" cols="30" rows="7"></textarea>
+            <div class="mt-2">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Invia candidatura</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

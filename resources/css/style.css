@@ -128,7 +128,6 @@ a,
 footer {
     border-top: solid 4px var(--terzo);
     border-radius: 75px 70px 0px 0px;
-
 }
 
 .titoli {
@@ -136,10 +135,17 @@ footer {
 }
 
 .OurCards {
+    color: var(--sesto);
     width: 350px;
     min-height: 450px;
     margin: 15px;
-    border-top: 10px solid var(--quarto);
+    border-radius: 15px;
+    border: 1px solid var(--quarto);
+    border-bottom: 4px solid var(--terzo);
+}
+
+.CardImg {
+    border-radius: 20px;
 }
 
 .OurCards:hover {
@@ -154,8 +160,7 @@ footer {
 
 
 .formCreate {
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 150px;
 }
 
 .SearchBar {

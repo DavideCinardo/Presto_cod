@@ -20,9 +20,12 @@ class BecomeRevaisor extends Mailable
      * @return void
      */
     public $user;
-    public function __construct(User $user)
+    public $whyWork;
+
+    public function __construct(User $user, $whyWork)
     {
         $this->user =$user;
+        $this->whyWork = $whyWork;
     }
 
     public function build(){

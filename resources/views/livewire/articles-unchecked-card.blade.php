@@ -11,8 +11,10 @@
                             </a>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">{{$article_unchecked->title}}</h5>
-                            <p class="card-text">Descrizione card creata . . . . .</p>
+                            <h5 class="card-title">{{ $article_unchecked->title }}</h5>
+                            <p class="card-text">{{ $article_unchecked->description }}</p>
+                            <p class="card-text">{{ $article_unchecked->created_at }}</p>
+                            <p class="card-text">Prezzo: {{ $article_unchecked->price }}</p>
                             <a href="{{route('article.unchecked', compact('article_unchecked'))}}" class="btn btn-primary">Revisiona articolo</a>
                         </div>
                     </div>

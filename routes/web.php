@@ -33,7 +33,7 @@ Route::patch('rifiuta/article/{article}', [RevaisorController::class, 'rejectArt
 //rotta annulla ultima revisione
 Route::patch('null/revision/{article_checked}', [RevaisorController::class, 'nullRevision'])->middleware('isRevaisor')->name('revaisor.null_revision');
 //rotta diventa revisore
-Route::get('become/revaisor', [RevaisorController::class, 'becomeRevaisor'])->middleware('auth')->name('become.revaisor');
+Route::post('become/revaisor', [RevaisorController::class, 'becomeRevaisor'])->middleware('auth')->name('become.revaisor');
 //rotta rendi utente revisore
 Route::get('give/revaisor/{user}', [RevaisorController::class, 'makeRevaisor'])->name('make.revaisor');
 
