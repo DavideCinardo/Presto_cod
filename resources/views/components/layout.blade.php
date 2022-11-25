@@ -15,8 +15,28 @@
 <body>
     {{-- navbar --}}
     <x-navbar />
+
+    {{-- messaggi di successo/errore --}}
+        {{-- allert di successo --}}
+            @if(session('message'))
+                <div class="alert alert-success">
+                    {{session('message')}}
+                </div>
+            @endif
+        {{-- end allert di successo --}}
+
+        {{-- allert di errore --}}
+            @if(session('error'))
+                <div class="alert alert-danger">
+                    {{session('erroe')}}
+                </div>
+            @endif
+        {{-- end allert di errore --}}
+    {{-- end messaggi di successo/errore --}}
+        
+    {{-- end messaggio di errore accesso ad area non consentita --}}
     
-    <div class="min-vh-100">
+    <div class="min-vh-100 formCreate">
         {{$slot}}
     </div>
 
