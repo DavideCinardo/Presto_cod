@@ -179,10 +179,14 @@ footer {
 }
 
 .BoxWelcomeCards {
-    margin-top: 200px;
+    margin-top: 130px;
+    margin-bottom: 50px;
 }
 
 .RowRevaisor {
     background: rgb(30, 45, 47);
     background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);
+    color: var(--sesto);
+    padding: 70px;
+    font-size: 3.5em;
 }
