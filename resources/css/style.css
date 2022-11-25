@@ -34,7 +34,7 @@ nav {
 }
 
 .logo {
-    width: 120%;
+    width: 100%;
 }
 
 .logo-home {
@@ -42,7 +42,7 @@ nav {
 }
 
 #toggle {
-    width: 30%;
+    width:10%;
 }
 
 
@@ -207,6 +207,14 @@ footer {
     margin-top: 350px;
 }
 
+.dropdown-menu {
+    border-top: solid 4px var(--terzo);
+}
+
+.line-separator {
+    color: var(--terzo);
+    
+}
 
 
 /* carousel css */
