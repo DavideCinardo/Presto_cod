@@ -17,5 +17,9 @@ yarn-error.log
 /.idea
 /.vscode
 /storage/articles.index-shm
+<<<<<<< HEAD
+/storage/articles.index-wal
+=======
 /storage/articles.index-wal
 
+>>>>>>> 49d8fee6639b2020c328e95fbac17035ce91f69b

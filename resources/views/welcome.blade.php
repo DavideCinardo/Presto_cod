@@ -56,6 +56,7 @@
 
                 </div>
             </div>
+        
             
             <div class="row justify-content-center">
                 @foreach($lastArticles as $lastArticle)
