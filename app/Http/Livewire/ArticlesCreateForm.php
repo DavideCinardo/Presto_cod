@@ -20,12 +20,10 @@ class ArticlesCreateForm extends Component
             'description' => 'required|min:10',
             'location' => 'required',
             'category' => 'required',
-            'cover' => 'required|image',
         ];
         protected $message = [
             '*.required' => 'Il campo è obbligatorio',
             'description.min' => 'Il minimo è di 10 caratteri',
-            'cover.image' => 'Il file deve essere un\'immagine',
         ];
          
         public function updateImage(){
@@ -44,7 +42,6 @@ class ArticlesCreateForm extends Component
                 'price' => $this -> price,
                 'description' => $this -> description,
                 'location' => $this -> location,
-                'cover' => $this->cover->store('public/cover'),
                 'user_id' => Auth::user()->id,
             ]);
             
