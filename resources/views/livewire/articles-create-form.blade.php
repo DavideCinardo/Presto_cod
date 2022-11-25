@@ -1,11 +1,10 @@
-<div class="container my-5">
+<div class="container mt-5">
   
   <div class="row justify-content-center">
     @if (session('articleCreated'))
-    
-    <div class="alert alert-success">
-      {{session('articleCreated')}}
-    </div>
+      <div class="alert alert-success">
+        {{session('articleCreated')}}
+      </div>
     @endif
     <div class="col-12 col-md-8">
       <form wire:submit.prevent="create" enctype="multipart/form-data">
