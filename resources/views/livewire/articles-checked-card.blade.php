@@ -11,8 +11,10 @@
                         </a>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">{{$article_checked->title}}</h5>
-                        <p class="card-text">Descrizione card creata . . . . .</p>
+                        <h5 class="card-title">{{ $article_checked->title }}</h5>
+                            <p class="card-text">{{ $article_checked->description }}</p>
+                            <p class="card-text">{{ $article_checked->created_at }}</p>
+                            <p class="card-text">Prezzo: {{ $article_checked->price }}</p>
                         @if($last_checked->id == $article_checked->id)
                             <form action="{{route('revaisor.null_revision', compact('article_checked'))}}" method="POST">
                                 @csrf

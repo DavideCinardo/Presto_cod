@@ -12,7 +12,9 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">{{ $article->title }}</h5>
-                        <p class="card-text">Descrizione card creata . . . .</p>
+                            <p class="card-text">{{ $article->description }}</p>
+                            <p class="card-text">{{ $article->created_at }}</p>
+                            <p class="card-text">Prezzo: {{ $article->price }}</p>
                         <a href="{{ route('articles.show', compact('article')) }}" class="btn btn-primary">Leggi di
                             più</a>
                     </div>

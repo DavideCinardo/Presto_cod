@@ -12,8 +12,10 @@
                         </a>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">{{$article->title}}</h5>
-                        <p class="card-text">Descrizione card creata . . . . .</p>
+                        <h5 class="card-title">{{ $article->title }}</h5>
+                            <p class="card-text">{{ $article->description }}</p>
+                            <p class="card-text">{{ $article->created_at }}</p>
+                            <p class="card-text">Prezzo: {{ $article->price }}</p>
                         <a href="#!" class="btn btn-primary">Scopri di più</a>
                     </div>
                 </div>

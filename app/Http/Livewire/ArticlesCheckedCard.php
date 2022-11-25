@@ -10,7 +10,7 @@ class ArticlesCheckedCard extends Component
 {
     public function render(){
 
-        $articles_checked = Article::where('revisioned_from', Auth::user()->id)->orderBy('updated_at', 'DESC')->get();
+        $articles_checked = Article::where('revisioned_from', Auth::user()->id)->where('is_accepted', !null)->orderBy('updated_at', 'DESC')->get();
         $last_checked = Article::where('revisioned_from', Auth::user()->id)->orderBy('updated_at', 'DESC')->first();
         return view('livewire.articles-checked-card', compact('articles_checked', 'last_checked'));
     }
