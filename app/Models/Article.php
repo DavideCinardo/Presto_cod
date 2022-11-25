@@ -33,12 +33,12 @@ class Article extends Model
     }
 
     //relazione con category
-    public function Category(){
+    public function category(){
         return $this->belongsTo(Category::class);
     }
 
     //relazione con user
-    public function User(){
+    public function user(){
         return $this->belongsTo(User::class);
     }
 
