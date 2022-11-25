@@ -134,6 +134,7 @@ return [
         'key' => env('MEILISEARCH_KEY', null),
     ],
 
+
     'tntsearch' => [
         'storage' => storage_path(),
             'fuzziness' => env('TNTSEARCH_FUZZINESS', true),
