@@ -4,12 +4,13 @@ namespace App\Http\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class ArticlesCard extends Component
 {
     public function render()
-    {
-        $articles = Article::orderBy('created_at', 'DESC')->get();
+    {   
+        $articles = Article::where('is_accepted', !null)->orderBy('created_at', 'DESC')->get();
 
         return view('livewire.articles-card', compact('articles'));
     }
