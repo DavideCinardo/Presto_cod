@@ -12,14 +12,17 @@ font-family: 'Numans', sans-serif;
 font-family: 'Taviraj', serif; */
 
 body {
-    background: rgb(251, 240, 218);
-    background: linear-gradient(130deg, rgba(251, 240, 218, 1) 0%, rgba(241, 171, 134, 0.65) 100%);
+    background-image: url(/public/media/BGvintage.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background: rgb(251, 240, 218); */
+    /* background: linear-gradient(130deg, rgba(251, 240, 218, 1) 0%, rgba(241, 171, 134, 0.65) 100%); */
 }
 
 nav {
-    margin-top: 35px;
-    border-top: solid 4px var(--terzo);
-    border-radius: 50px 0 20px 10px;
+    border-bottom: solid 4px var(--terzo);
+    border-radius: 0px 0px 50px 50px;
     background: rgb(30, 45, 47);
     background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);
 }
@@ -29,13 +32,60 @@ nav {
 }
 
 .logo{
+    width: 120%;
+}
+
+.logo-home{
+    display: block;  
+}
+
+#toggle {
     width: 30%;
 }
+
 
 @media only screen and (max-width: 425px){
     .logo {
         width: 100%;
     }
+    #toggle {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+        width: 100%;
+
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .logo {
+        width: 100%;
+    }
+    #toggle {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+        width: 100%;
+        
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .logo {
+        width: 100%;
+    }
+    #toggle {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+        width: 100%;
+        
+    }
+}
+
+.size{
+    font-size: 1.5em;
+
 }
 
 .toggle-color {
@@ -97,4 +147,15 @@ footer {
 
 .HoverFooter:hover {
     color: var(--terzo);
+}
+
+
+.formCreate{
+    margin-top: 200px;
+}
+
+.SearchBar {
+    background-color: #FBF0DA;
+    border: solid 1px var(--primario);
+    margin-top: 350px;
 }

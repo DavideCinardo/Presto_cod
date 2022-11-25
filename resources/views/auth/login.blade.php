@@ -1,7 +1,7 @@
 <x-layout>
 
     <div class="container mt-5 min-vh-100">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center formCreate">
             <div class="col-12 col-md-8">
                 {{-- form register --}}
                     <form action="{{route('login')}}" method="POST">
