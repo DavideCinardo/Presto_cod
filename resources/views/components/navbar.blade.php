@@ -86,7 +86,7 @@
                 <div class="nav-item dropdown colorText size me-5 d-flex">
                     {{-- Inserisci annuncio --}}
                     <div class="me-5">
-                      <a class="dropdown-item colorTextDD" href="{{route('articles.create')}}">Inserisci annuncio +</a>
+                      <a class="dropdown-item colorTextDD ciao" href="{{route('articles.create')}}">Inserisci annuncio</a>
                     </div>
 
                   {{-- Accedi --}}
