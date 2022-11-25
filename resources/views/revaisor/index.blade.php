@@ -1,6 +1,6 @@
 <x-layout>
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid formCreate">
+        <div class="row text-center justify-content-center p-5 RowRevaisor">
             <div class="col-12 col-md-8">
                 {{-- se ci sono annunci primo titolo altrimenti secondo --}}
                 {{$articles_unchecked ? 'Tutti gli articoli da revisionare' : 'Non ci sono articoli da revisionare'}}
