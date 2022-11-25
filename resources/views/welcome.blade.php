@@ -2,13 +2,14 @@
     
     <div class="container-fluid p-0">
         @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-                @endif
-            </ul>
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
             
             <div class="row justify-content-center">
                 @foreach($lastArticles as $lastArticle)
@@ -28,7 +29,8 @@
                 </div>
                 
                 
-                @endforeach
+        @endforeach
+    </div>
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-md-3 min-vh-100">

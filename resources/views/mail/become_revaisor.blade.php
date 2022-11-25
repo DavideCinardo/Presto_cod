@@ -12,6 +12,8 @@
         <h3>I suoi dati :</h3>
         <p>{{$user->name}}</p>
         <p>{{$user->email}}</p>
+        <h4>La sua candidature è :</h4>
+        <p>{{$whyWork}}</p>
         <h4>Puoi renderlo tale cliccando qui :</h4>
         <a href="{{route('make.revaisor', compact('user'))}}">Rendi revisore</a>
     </div>
