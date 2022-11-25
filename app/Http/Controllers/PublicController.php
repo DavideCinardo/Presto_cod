@@ -11,13 +11,11 @@ class PublicController extends Controller
 {   
     //funzione che ci fa visualizzare la homepage
     public function homepage(){
-        // mostra gli ultimi 3 articoli
-        $lastArticles = Article::all()->sortByDesc('created_at')->take(3);
         
         // passa gli articoli alla homepage
         $articles = Article::all();
-        $articles = compact('articles');
-        return view ('welcome', compact('lastArticles'));
+        $categories = Category::all();
+        return view ('welcome', compact('articles', 'categories'));
     }
    
 
