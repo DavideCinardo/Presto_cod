@@ -15,15 +15,13 @@
                 @foreach($lastArticles as $lastArticle)
                 <div class="col-12 col-md-4">
                     <div class="card OurCards">
-                        <img src="{{Storage::url($lastArticle->cover)}}" class="card-img-top" alt="...">
+                        <img src="{{ Storage::url($lastArticle->cover) }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{$lastArticle->title}}</h5>
-                            <p class="card-text">{{$lastArticle->description}}</p>
-                            <p class="card-text">{{$lastArticle->created_at}}</p>
-                            <p class="card-text">Prezzo:{{$lastArticle->price}}</p>
-                            
-                            
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{ $lastArticle->title }}</h5>
+                            <p class="card-text">{{ $lastArticle->description }}</p>
+                            <p class="card-text">{{ $lastArticle->created_at }}</p>
+                            <p class="card-text">Prezzo: {{ $lastArticle->price }}</p>
+                            <a href="#" class="btn btn-primary">Scopri di più</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +44,6 @@
             </div>
         </div>
     </div>
-</div>
 
-<x-footer />
+    <x-footer />
 </x-layout>

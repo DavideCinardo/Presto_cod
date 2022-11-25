@@ -1,9 +1,9 @@
-<div class="container my-5">
+<div class="container formCreate">
     <div class="row justify-content-center">
         @forelse($articles as $article)
             <div class="col-12 col-md-4">
                 {{-- Card --}}
-                <div class="card my-5 OurCards">
+                <div class="card  OurCards">
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{ Storage::url($article->cover) }}" class="img-fluid" />
                         <a href="#!">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         @empty
-            <div class="container my-5 min-vh-100">
+            <div class="container min-vh-100">
                 <div class="row">
                     <div class="col-12">
                         <h3>Non ci sono annunci per la categorie : {{ $category->name }}</h3>
