@@ -67,19 +67,25 @@
                         @foreach($category->articles as $article)
                             <div class="swiper-slide">
                                 <div class="card p-0 w-100">
-                                    <a href="" class="card">
                                         <img src="https://picsum.photos/200" class="card__image" alt="" />
                                         <div class="card__overlay">
                                             <div class="card__header">
                                                 <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>  
-                                                <div class="card__header-text">
-                                                    <h3 class="card__title">Jessica Parker</h3>            
-                                                    <span class="card__status">1 hour ago</span>
+                                                <div class="card__header-text d-flex justify-content-between w-100">
+                                                    <div class=" text-start">
+                                                        <h3 class="card__title">{{$article->title}}</h3>            
+                                                        <span class="card__status">{{$article->location}}</span>
+                                                    </div>
+                                                    <div>
+                                                        <h3 class="card__title">&euro;{{$article->price}}</h3>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
-                                        </div>
-                                    </a>      
+                                            <div class="card__descrition mb-2">
+                                                <p class="card__status">{{$article->description}}</p>
+                                                <a href="{{route('articles.show', compact('article'))}}" class="btn btn-outline-warning small">Scopri di più</a>
+                                            </div>
+                                        </div>     
                                 </div>
                             </div>
                         @endforeach

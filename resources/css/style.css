@@ -287,7 +287,8 @@ footer {
     right: 0;
     z-index: 1;      
     border-radius: calc(var(--curve) * 1px);    
-    background-color: var(--surface-color);      
+    background: rgb(30, 45, 47);
+    background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);      
     transform: translateY(100%);
     transition: .2s ease-in-out;
   }
@@ -302,8 +303,11 @@ footer {
     align-items: center;
     gap: 2em;
     padding: 2em;
-    border-radius: calc(var(--curve) * 1px) 0 0 0;    
-    background-color: var(--surface-color);
+    border-radius: calc(var(--curve) * 1px) 0 0 0; 
+    border-top: solid 4px var(--terzo);
+    border-radius: 0px 0px 50px 50px; 
+    background: rgb(30, 45, 47);
+    background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);
     transform: translateY(-100%);
     transition: .2s ease-in-out;
   }
@@ -318,7 +322,7 @@ footer {
   }
   
   .card__arc path {
-    fill: var(--surface-color);
+    fill: var(--quinto);
     d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
   }       
   
@@ -336,7 +340,7 @@ footer {
   .card__title {
     font-size: 1em;
     margin: 0 0 .3em;
-    color: #6A515E;
+    color: var(--sesto);
   }
   
   .card__tagline {
@@ -344,18 +348,18 @@ footer {
     margin: 1em 0;
     font-family: "MockFlowFont";  
     font-size: .8em; 
-    color: #D7BDCA;  
+    color: var(--sesto);  
   }
   
   .card__status {
     font-size: .8em;
-    color: #D7BDCA;
+    color: var(--sesto);
   }
   
   .card__description {
     padding: 0 2em 2em;
     margin: 0;
-    color: #D7BDCA;
+    color: var(--sesto);
     font-family: "MockFlowFont";   
     display: -webkit-box;
     -webkit-box-orient: vertical;
