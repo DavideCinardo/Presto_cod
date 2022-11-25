@@ -6,7 +6,7 @@
                     <div class="col-12 col-md-4">
                         <div class="card my-5 OurCards">
                             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="{{Storage::url($article->cover)}}" class="img-fluid" />
+                                <img src="https://picsum.photos/200/135" class="img-fluid" />
                                 <a href="#!">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                                 </a>

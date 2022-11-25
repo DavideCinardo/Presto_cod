@@ -16,7 +16,7 @@
             </div>
         @endif
         <div class="col-12 col-md-8">
-            <form wire:submit.prevent="create" enctype="multipart/form-data" class="formCreate">
+            <form wire:submit.prevent="create" class="formCreate">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Titolo</label>
@@ -33,10 +33,6 @@
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
                     </select>
-                </div>
-                <div class="mb-3">
-                    <label for="cover" class="form-label">Immagine</label>
-                    <input type="file" wire:model="cover" class="form-control @error('cover') is-invalid @enderror" id="cover">
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Prezzo</label>

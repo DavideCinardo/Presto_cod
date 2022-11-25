@@ -61,7 +61,7 @@
                 @foreach($lastArticles as $lastArticle)
                 <div class="col-12 col-md-4">
                     <div class="card OurCards">
-                        <img src="{{ Storage::url($lastArticle->cover) }}" class="card-img-top" alt="...">
+                        <img src="https://picsum.photos/200/135" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $lastArticle->title }}</h5>
                             <p class="card-text">{{ $lastArticle->description }}</p>
