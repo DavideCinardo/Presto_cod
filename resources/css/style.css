@@ -169,11 +169,12 @@ footer {
     color: var(--sesto);
     border: solid 1px var(--primario);
     margin-top: 350px;
+    border-color: #C57B57;
     border-bottom: var(--terzo) 4px solid;
 }
 
 .SearchBar:hover {
-    width: 430px;
+    width: 440px;
     height: 340px;
     transition: 0.5s ease;
 }
@@ -190,3 +191,17 @@ footer {
     padding: 70px;
     font-size: 3.5em;
 }
+
+.description {
+    margin-top: 350px;
+}
+
+.carouselPosition {
+    margin-top: 350px;
+}
+
+
+
+/* carousel css */
+
+  
