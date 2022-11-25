@@ -7,7 +7,7 @@
             </div>
         @endif
         <div class="col-12 col-md-8">
-            <form wire:submit.prevent="create" enctype="multipart/form-data ">
+            <form wire:submit.prevent="create" enctype="multipart/form-data" class="formCreate">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
