@@ -58,26 +58,37 @@
             </div>
     </div>
     {{-- sezione caroselli per ogni categoria --}}
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            @foreach($categories as $category)
-            <div class="col col-12">
-                @if(count($category->articles) > 0)
-                        <h4>Ultimi articoli per la categoria : {{$category->name}}</h4>
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                            @foreach($category->articles as $article)
-                                <div class="swiper-slide">Slide 1</div>
-                                    {{-- inserire qui i caroselli --}}
-                            @endforeach
+    @foreach($categories as $category)
+        <div class="mt-5">
+            @if(count($category->articles) > 0)
+                <h4>Ultimi articoli per la categoria : {{$category->name}}</h4>
+                <div class="swiper mySwiper d-flex justify-content-center">
+                    <div class="swiper-wrapper">
+                        @foreach($category->articles as $article)
+                            <div class="swiper-slide">
+                                <div class="card p-0 w-100">
+                                    <a href="" class="card">
+                                        <img src="https://picsum.photos/200" class="card__image" alt="" />
+                                        <div class="card__overlay">
+                                            <div class="card__header">
+                                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>  
+                                                <div class="card__header-text">
+                                                    <h3 class="card__title">Jessica Parker</h3>            
+                                                    <span class="card__status">1 hour ago</span>
+                                                </div>
+                                            </div>
+                                            <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+                                        </div>
+                                    </a>      
+                                </div>
                             </div>
-                        <div class="swiper-pagination"></div>
-                @endif
-            </div>
-            @endforeach
+                        @endforeach
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            @endif
         </div>
-    </div>
-  
+    @endforeach
 
     <x-footer />
 </x-layout>
