@@ -5,6 +5,7 @@
             <div class="alert alert-success">
                 {{ session('articleCreated') }}
             </div>
+
         @endif
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -43,6 +44,7 @@
                     <textarea type="text" wire:model="description" class="form-control @error('description') is-invalid @enderror" id="description" rows="8"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Inserisci annuncio</button>
+                
             </form>
         </div>
     </div>
