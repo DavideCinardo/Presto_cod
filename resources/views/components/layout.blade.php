@@ -36,7 +36,7 @@
         
     {{-- end messaggio di errore accesso ad area non consentita --}}
     
-    <div class="min-vh-100">
+    <div class="min-vh-100 formCreate">
         {{$slot}}
     </div>
 
