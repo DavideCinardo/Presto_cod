@@ -56,74 +56,27 @@
 
                 </div>
             </div>
-        
-            
-            {{-- <div class="row justify-content-center">
-                @foreach($lastArticles as $lastArticle)
-                <div class="col-12 col-md-4">
-                    <div class="card OurCards">
-                        <img src="https://picsum.photos/200/135" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $lastArticle->title }}</h5>
-                            <p class="card-text">{{ $lastArticle->description }}</p>
-                            <p class="card-text">{{ $lastArticle->created_at }}</p>
-                            <p class="card-text">Prezzo: {{ $lastArticle->price }}</p>
-                            <a href="#" class="btn btn-primary">Scopri di più</a>
-                        </div>
-                    </div>
-                </div>                     
-                @endforeach--}}
     </div>
     {{-- sezione caroselli per ogni categoria --}}
-        @foreach($categories as $category)
-            @if(count($category->articles) > 0)
-                <h4>Ultimi articoli per la categoria : {{$category->name}}</h4>
-                @foreach($category->articles as $article)
-                        {{-- inserire qui i caroselli --}}
-                @endforeach
-            @endif
-        @endforeach
-    </div>
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-3 min-vh-100">
-                <div class="SearchBar d-flex flex-column-reverse">
-                    <form class=" my-3" role="search">
-                      <label for="search">Cosa cherchi?</label>
-                      <input class="form-control me-2 d-inline" name="search" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
-
-                  </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
+            @foreach($categories as $category)
             <div class="col col-12">
-                <h1>Ultimi Annunci Inseriti</h1>
-                 <!-- Swiper -->
-                    <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    </div>
-      
+                @if(count($category->articles) > 0)
+                        <h4>Ultimi articoli per la categoria : {{$category->name}}</h4>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            @foreach($category->articles as $article)
+                                <div class="swiper-slide">Slide 1</div>
+                                    {{-- inserire qui i caroselli --}}
+                            @endforeach
+                            </div>
+                        <div class="swiper-pagination"></div>
+                @endif
             </div>
+            @endforeach
         </div>
     </div>
-
   
 
     <x-footer />
