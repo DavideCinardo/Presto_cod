@@ -23,6 +23,9 @@ Route::get('/articles/create', [ArticleController::class, 'create'])->middleware
 Route::get('/articles/index', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articles/show/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
+//rotte per articoli inseriti dall'utente loggato
+Route::get('/articles/own', [ArticleController::class, 'own'])->name('articles.own');
+
 //rotte del revisore
 Route::get('/revaisor/index', [RevaisorController::class, 'index'])->middleware('isRevaisor')->name('revaisor.index');
 Route::get('revaisor/article/show/{article_unchecked}', [RevaisorController::class, 'show'])->name('article.unchecked');

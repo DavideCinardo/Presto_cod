@@ -61,7 +61,7 @@
                   </a>
                   <ul class="dropdown-menu bg-menu">
                     <li><a class="dropdown-item colorTextDD" href="">I tuoi ordini</a></li>
-                      <li><a class="dropdown-item colorTextDD" href="">I tuoi annunci</a></li>
+                      <li><a class="dropdown-item colorTextDD" href="{{route('articles.own')}}">I tuoi annunci</a></li>
                       <li><a class="dropdown-item colorTextDD" href="">Preferiti</a></li>
                       <li><a class="dropdown-item colorTextDD" href="">Messaggi</a></li>
                       <li><a class="dropdown-item colorTextDD" href="">Contattaci</a></li>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -36,6 +37,11 @@ class ArticleController extends Controller
     public function show(Article $article){
 
         return view('articles.show', compact('article'));
+    }
+
+    public function own(){
+        $articles = Article::where('is_accepted', true)->where('user_id', Auth::user()->id)->orderBy('updated_at', 'DESC')->get();
+        return view('articles.own',compact('articles'));
     }
 
     /**
