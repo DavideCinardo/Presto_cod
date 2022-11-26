@@ -18,9 +18,9 @@
             <a class="nav-link active colorText size" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
 
-          {{-- Contattaci --}}
-          <li class="nav-item">
-            <a class="nav-link active colorText size" aria-current="page" href="">Contattaci</a>
+          {{-- Inserisci annuncio --}}
+          <li>
+            <a class="nav-link active colorText size" href="{{route('articles.create')}}">Inserisci annuncio</a>
           </li>
 
           {{-- Annunci --}}
@@ -64,11 +64,10 @@
                       <li><a class="dropdown-item colorTextDD" href="">I tuoi annunci</a></li>
                       <li><a class="dropdown-item colorTextDD" href="">Preferiti</a></li>
                       <li><a class="dropdown-item colorTextDD" href="">Messaggi</a></li>
+                      <li><a class="dropdown-item colorTextDD" href="">Contattaci</a></li>
                       <li><a class="dropdown-item colorTextDD" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                       <form class="d-none" method="POST" action="{{route('logout')}}" id="form-logout">@csrf</form>
-                      <li>
-                        <a class="dropdown-item colorTextDD" href="{{route('articles.create')}}">Inserisci annuncio</a>
-                      </li>
+                      
                         <button type="button" class="dropdown-item colorTextDD" data-bs-toggle="modal" data-bs-target="#workModal">
                           Lavora con noi
                         </button>  
@@ -84,10 +83,7 @@
 
       
                 <div class="nav-item dropdown colorText size me-5 d-flex">
-                    {{-- Inserisci annuncio --}}
-                    <div class="me-5">
-                      <a class="dropdown-item colorTextDD" href="{{route('articles.create')}}">Inserisci annuncio</a>
-                    </div>
+                    
 
                   {{-- Accedi --}}
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

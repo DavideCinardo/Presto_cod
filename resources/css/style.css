@@ -218,7 +218,7 @@ footer {
     height: 100%;
   }
 
-  .swiper-slide {
+ -head-slide {
     text-align: center;
     font-size: 18px;
 
@@ -237,7 +237,7 @@ footer {
     align-items: center;
   }
 
-  .swiper-slide img {
+ -head-slide img {
     display: block;
     width: 100%;
     height: 100%;
@@ -361,3 +361,15 @@ footer {
     -webkit-line-clamp: 3;
     overflow: hidden;
   } 
+
+  .etichetta{
+    background-color: var(--quinto);
+    color: var(--sesto);
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border: solid 5px var(--terzo);
+  }

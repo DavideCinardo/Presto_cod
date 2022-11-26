@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid formCreate">
+    <div class="container-fluid formCreate mt-0">
         <div class="row text-center justify-content-center RowRevaisor">
             <div class="col-12 col-md-8">
                 {{-- se ci sono annunci primo titolo altrimenti secondo --}}
@@ -14,7 +14,7 @@
     {{-- end --}}
 
     {{-- gli annunci revisionati dal revisore loggato --}}
-        <div class="container-fluid">
+        <div class="container-fluid mt-5">
             <div class="row text-center justify-content-center RowRevaisor">
                 <div class="col-12 col-md-8">
                     {{-- se ci sono annunci primo titolo altrimenti secondo --}}
