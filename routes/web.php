@@ -43,4 +43,9 @@ Route::get('give/revaisor/{user}', [RevaisorController::class, 'makeRevaisor'])-
 //rotta per ricercare gli annunci con laravel scout
 Route::get('/search/article', [PublicController::class, 'seachArticles'])->name('articles.search');
 
+//rotta per like articolo
+Route::post('/article/like/{article}', [PublicController::class, 'like'])->middleware('auth')->name('article.like');
+//rotta per dislike articolo
+Route::post('/article/dislike/{article}', [PublicController::class, 'dislike'])->middleware('auth')->name('article.dislike');
+
 

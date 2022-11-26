@@ -42,6 +42,11 @@ class Article extends Model
         return $this->belongsTo(User::class);
     }
 
+    //relazione MtM con users
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
+
     //salvataggio cambio parametro accettazione
     public function setAccepted($value){
         $this->is_accepted = $value;

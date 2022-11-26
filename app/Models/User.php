@@ -47,4 +47,9 @@ class User extends Authenticatable
     public function articles(){
         return $this->hasMany(Article::class);
     }
+
+    //relazione MtM con articles
+    public function articleslike(){
+        return $this->belongsToMany(Article::class);
+    }
 }

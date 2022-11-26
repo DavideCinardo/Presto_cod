@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller
 
@@ -31,5 +32,17 @@ class PublicController extends Controller
         $search = $request->searched;
         $articles_searched = Article::search($request->searched)->where('is_accepted', true)->get();
         return view('articles.searched', compact('articles_searched', 'search'));
+    }
+
+    //funzione per creare una like relation tra user e article
+    public function like(Article $article){
+        $article->users()->attach(Auth::user()->id);
+        return redirect()->back();
+    }
+
+    //funzione per creare una like relation tra user e article
+    public function dislike(Article $article){
+        $article->users()->detach(Auth::user()->id);
+        return redirect()->back();
     }
 }
