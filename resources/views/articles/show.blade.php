@@ -32,13 +32,10 @@
                   <p class="fst-italic text-secondary">{{$article->user->name}}</p>
                   <div class="col-12 col-md-6 text-start">
                     <p class="fs-1">&euro;{{$article->price}}</p>
+                    <a href="{{Route('homepage')}}" class="btn btn-outline-secondary">Torn alla home</a>
                   </div>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center mt-5">
-            
-            
         </div>
     </div>
     
