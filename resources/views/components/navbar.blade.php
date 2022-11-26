@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg p-2">
+<nav class="navbar fixed-top navbar-expand-lg p-2 mb-5">
   <div class="container-fluid">
     {{-- Logo --}}
     <div id="toggle" class="container-fluid">
@@ -106,6 +106,7 @@
     </div>
     
   </nav>
+  <div class="separatore"></div>
 
   <div class="modal fade" id="workModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

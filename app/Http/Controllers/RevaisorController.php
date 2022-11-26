@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Article;
 use App\Mail\BecomeRevaisor;
+use App\Mail\YouAreRevaisor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -61,6 +62,7 @@ class RevaisorController extends Controller
     //funzione per rendere l'utente un revisore attraverso la mail
     public function makeRevaisor(User $user){
         Artisan::call('presto:makeUserRevaisor', ['email'=>$user->email]);
+        Mail::to($user->email)->send(new YouAreRevaisor($user));
         return redirect(route('homepage'))->with('message', 'L\'utente ora è revisore');
     }
 }
