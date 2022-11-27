@@ -54,9 +54,14 @@
             @foreach($categories as $category)
                 <div class="mt-5">
                     @if(count($category->articles) > 0)
-                        <div class="etichetta">
-                            <h4>Ultimi articoli per la categoria : {{$category->name}}</h4>
-                        </div>
+                        @foreach($category->articles as $article)
+                            @if($article->is_accepted)
+                                <div class="etichetta">
+                                    <h4>Ultimi articoli per la categoria : {{$category->name}}</h4>
+                                </div>
+                                @break
+                            @endif
+                        @endforeach
                         <div class="swiper mySwiper d-flex justify-content-center mt-3">
                             <div class="swiper-wrapper">
                                 @foreach($category->articles as $article)

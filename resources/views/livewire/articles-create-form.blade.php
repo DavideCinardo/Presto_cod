@@ -43,7 +43,8 @@
                     <label for="description" class="form-label">Descrizione</label>
                     <textarea type="text" wire:model="description" class="form-control @error('description') is-invalid @enderror" id="description" rows="8"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Inserisci annuncio</button>
+                <button type="submit" class="btn btn-success">Inserisci annuncio</button>
+                <a href="{{route('homepage')}}" class="btn btn-outline-secondary">Torna alla home</a>
                 
             </form>
         </div>
