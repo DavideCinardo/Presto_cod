@@ -15,7 +15,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('articles.index');
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'DESC')->get();
+        return view('articles.index', compact('articles'));
     }
 
     /**
