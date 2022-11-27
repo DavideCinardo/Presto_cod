@@ -31,13 +31,7 @@ Route::get('/articles/prefer', [ArticleController::class, 'prefer'])->middleware
 
 //rotte del revisore
 Route::get('/revaisor/index', [RevaisorController::class, 'index'])->middleware('isRevaisor')->name('revaisor.index');
-Route::get('revaisor/article/show/{article_unchecked}', [RevaisorController::class, 'show'])->name('article.unchecked');
-//rotta accetta articolo
-Route::patch('accetta/article/{article}', [RevaisorController::class, 'acceptArticle'])->middleware('isRevaisor')->name('revaisor.accept_article');
-//rotta rifiuta articolo
-Route::patch('rifiuta/article/{article}', [RevaisorController::class, 'rejectArticle'])->middleware('isRevaisor')->name('revaisor.reject_article');
-//rotta annulla ultima revisione
-Route::patch('null/revision/{article_checked}', [RevaisorController::class, 'nullRevision'])->middleware('isRevaisor')->name('revaisor.null_revision');
+
 //rotta diventa revisore
 Route::post('become/revaisor', [RevaisorController::class, 'becomeRevaisor'])->middleware('auth')->name('become.revaisor');
 //rotta rendi utente revisore
