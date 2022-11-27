@@ -1,5 +1,5 @@
     {{-- Card --}}
-    <div class="card p-0 w-100 position-relative">
+    <div class="card p-0 w-100 position-relative shadow-lg">
         
         <img src="https://picsum.photos/200" class="card__image" alt="" />
         @auth

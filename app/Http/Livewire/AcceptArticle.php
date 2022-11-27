@@ -14,7 +14,7 @@ class AcceptArticle extends Component
         $this->article->revisioned_from = Auth::user()->id;
         $this->article->is_accepted = true;
         $this->article->save();
-
+        
         session()->flash('accept', 'Hai accettato l\'articolo');
         
     }
