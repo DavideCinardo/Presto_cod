@@ -20,10 +20,12 @@ class ArticlesCreateForm extends Component
         'description' => 'required|min:10',
         'location' => 'required',
         'category' => 'required',
+
     ];
     protected $message = [
         '*.required' => 'Il campo è obbligatorio',
         'description.min' => 'Il minimo è di 10 caratteri',
+        
     ];
     
 
