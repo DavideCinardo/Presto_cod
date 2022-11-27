@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container formCreate">
+    <div class="container">
         <div class="row justify-content-center">
             @forelse($articles as $article)
                 <div class="col-12 col-md-4 mb-4">

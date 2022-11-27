@@ -62,7 +62,7 @@
                   <ul class="dropdown-menu bg-menu">
                     <li><a class="dropdown-item colorTextDD" href="">I tuoi ordini</a></li>
                       <li><a class="dropdown-item colorTextDD" href="{{route('articles.own')}}">I tuoi annunci</a></li>
-                      <li><a class="dropdown-item colorTextDD" href="">Preferiti</a></li>
+                      <li><a class="dropdown-item colorTextDD" href="{{route('articles.prefer')}}">Preferiti</a></li>
                       <li><a class="dropdown-item colorTextDD" href="">Messaggi</a></li>
                       <li><a class="dropdown-item colorTextDD" href="">Contattaci</a></li>
                       <li><a class="dropdown-item colorTextDD" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>

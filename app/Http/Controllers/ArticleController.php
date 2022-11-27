@@ -40,9 +40,16 @@ class ArticleController extends Controller
         return view('articles.show', compact('article'));
     }
 
+    //funzione articoli inseriti dall'utente
     public function own(){
         $articles = Article::where('is_accepted', true)->where('user_id', Auth::user()->id)->orderBy('updated_at', 'DESC')->get();
         return view('articles.own',compact('articles'));
+    }
+
+    //funzione articoli preferito dall'utente
+    public function prefer(){
+        $articles = Article::where('is_accepted', true)->orderBy('updated_at', 'DESC')->get();
+        return view('articles.prefer',compact('articles'));
     }
 
     /**

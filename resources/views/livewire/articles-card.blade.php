@@ -2,24 +2,26 @@
     <div class="card p-0 w-100 position-relative">
         
         <img src="https://picsum.photos/200" class="card__image" alt="" />
-        @forelse($article->users as $user)
-            @if($user->id == Auth::user()->id)
-                <form action="{{route('article.dislike', compact('article'))}}" method="POST">
-                    @csrf
-                    <button type="submit"class="heart d-flex justify-content-center"><i class="fa-solid text-danger fa-heart"></i></button>
-                </form>
-            @else
+        @auth
+            @forelse($article->users as $user)
+                @if($user->id == Auth::user()->id)
+                    <form action="{{route('article.dislike', compact('article'))}}" method="POST">
+                        @csrf
+                        <button type="submit"class="heart d-flex justify-content-center"><i class="fa-solid text-danger fa-heart"></i></button>
+                    </form>
+                @else
+                    <form action="{{route('article.like', compact('article'))}}" method="POST">
+                        @csrf
+                        <button type="submit"class="heart d-flex justify-content-center"><i class="fa-regular fa-heart"></i></button>
+                    </form>
+                @endif
+            @empty
                 <form action="{{route('article.like', compact('article'))}}" method="POST">
                     @csrf
                     <button type="submit"class="heart d-flex justify-content-center"><i class="fa-regular fa-heart"></i></button>
                 </form>
-            @endif
-        @empty
-            <form action="{{route('article.like', compact('article'))}}" method="POST">
-                @csrf
-                <button type="submit"class="heart d-flex justify-content-center"><i class="fa-regular fa-heart"></i></button>
-            </form>
-        @endforelse
+            @endforelse
+        @endauth
         <div class="card__overlay">
             <div class="card__header">
                 <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>  

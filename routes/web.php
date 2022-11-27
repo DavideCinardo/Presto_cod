@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevaisorController;
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +25,9 @@ Route::get('/articles/index', [ArticleController::class, 'index'])->name('articl
 Route::get('/articles/show/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
 //rotte per articoli inseriti dall'utente loggato
-Route::get('/articles/own', [ArticleController::class, 'own'])->name('articles.own');
+Route::get('/articles/own', [ArticleController::class, 'own'])->middleware('auth')->name('articles.own');
+//rotta per articoli preferito dall'utente loggato
+Route::get('/articles/prefer', [ArticleController::class, 'prefer'])->middleware('auth')->name('articles.prefer');
 
 //rotte del revisore
 Route::get('/revaisor/index', [RevaisorController::class, 'index'])->middleware('isRevaisor')->name('revaisor.index');
