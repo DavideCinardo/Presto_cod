@@ -3,24 +3,7 @@
         
         <img src="https://picsum.photos/200" class="card__image" alt="" />
         @auth
-            @forelse($article->users as $user)
-                @if($user->id == Auth::user()->id)
-                    <form action="{{route('article.dislike', compact('article'))}}" method="POST">
-                        @csrf
-                        <button type="submit"class="heart d-flex justify-content-center"><i class="fa-solid text-danger fa-heart"></i></button>
-                    </form>
-                @else
-                    <form action="{{route('article.like', compact('article'))}}" method="POST">
-                        @csrf
-                        <button type="submit"class="heart d-flex justify-content-center"><i class="fa-regular fa-heart"></i></button>
-                    </form>
-                @endif
-            @empty
-                <form action="{{route('article.like', compact('article'))}}" method="POST">
-                    @csrf
-                    <button type="submit"class="heart d-flex justify-content-center"><i class="fa-regular fa-heart"></i></button>
-                </form>
-            @endforelse
+            @livewire('heart-botton', ['article' => $article])
         @endauth
         <div class="card__overlay">
             <div class="card__header">
