@@ -31,7 +31,9 @@
                             <label for="password_confirmation" class="form-label">Conferma Password</label>
                             <input type="password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" id="password">
                         </div>
-                        <button type="submit" class="btn btn-primary">Registrati</button>
+                        <button type="submit" class="btn btn-success">Registrati</button>
+                        <a href="{{route('homepage')}}" class="btn btn-outline-secondary">Torna alla home</a>
+                        <a class="btn btn-outline-primary" href="{{route('login')}}">Sei gia iscritto? Accedi da qui.</a>
                     </form>
                 {{--  end form register --}}
             </div>

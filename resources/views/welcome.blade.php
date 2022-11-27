@@ -1,5 +1,4 @@
 <x-layout>
-
     <div class="container">
         <div class="row justify-content-center">
             {{-- carosello --}}
@@ -30,71 +29,55 @@
             </div>
             {{-- descrizione --}}
             <div class="col-12 col-md-4">
-                <div class="description ">
+                <div class="description">
                     <h1>descrizione</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi incidunt deserunt autem et! Nemo quos eum ab modi quidem quasi magni explicabo possimus ipsum, enim cumque quisquam fugiat laboriosam unde!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi incidunt deserunt autem et! Nemo quos eum ab modi quidem quasi magni explicabo possimus ipsum, enim cumque quisquam fugiat laboriosam unde!</p>
                 </div>
             </div>
             {{-- form cerca --}}
             <div class="col-12 col-md-3">
                 <div class="shadow-lg SearchBar d-flex flex-column-reverse">
-                    <form class="my-3" role="search">
+                    <form action="{{route('articles.search')}}" method="GET" class="my-3" role="search">
                         @csrf
-                        <label for="search">Cosa cerchi?</label>
-                        <input class="form-control me-2 d-inline my-2" name="search" type="search"
-                            placeholder="Macchina vintage, monete antiche..." aria-label="Search">
-                            <label for="category" class="form-label">In quale categoria?</label>
-                    <select wire:model.defer="category" id="category" class="form-control">
-                        @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
-                        @endforeach
-                        <option value="{{ $category->id }}">{{ $category->all }}</option>
-                    </select>
-                        <label for="place">Dove?</label>
-                        <input class="form-control me-2 my-2" name="place" type="search" placeholder="Luogo" aria-label="Search">
+                        <label for="searched">Cosa cerchi?</label>
+                        <input class="form-control me-2 d-inline my-2" id="searched" name="searched" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
+                        <button type="submit" class="btn btn-outline-warning">Cerca</button>
                     </form>
 
                 </div>
             </div>
-    </div>
-    {{-- sezione caroselli per ogni categoria --}}
-    @foreach($categories as $category)
-        <div class="mt-5">
-            @if(count($category->articles) > 0)
-                <h4>Ultimi articoli per la categoria : {{$category->name}}</h4>
-                <div class="swiper mySwiper d-flex justify-content-center">
-                    <div class="swiper-wrapper">
-                        @foreach($category->articles as $article)
-                            <div class="swiper-slide">
-                                <div class="card p-0 w-100">
-                                        <img src="https://picsum.photos/200" class="card__image" alt="" />
-                                        <div class="card__overlay">
-                                            <div class="card__header">
-                                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>  
-                                                <div class="card__header-text d-flex justify-content-between w-100">
-                                                    <div class=" text-start">
-                                                        <h3 class="card__title">{{$article->title}}</h3>            
-                                                        <span class="card__status">{{$article->location}}</span>
-                                                    </div>
-                                                    <div>
-                                                        <h3 class="card__title">&euro;{{$article->price}}</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card__descrition mb-2">
-                                                <p class="card__status">{{$article->description}}</p>
-                                                <a href="{{route('articles.show', compact('article'))}}" class="btn btn-outline-warning small">Scopri di più</a>
-                                            </div>
-                                        </div>     
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            @endif
         </div>
-    @endforeach
+    </div>
+    
+    <div class="container">
+        {{-- sezione caroselli per ogni categoria --}}
+            @foreach($categories as $category)
+                <div class="mt-5">
+                    @if(count($category->articles) > 0)
+                        @foreach($category->articles as $article)
+                            @if($article->is_accepted)
+                                <div class="etichetta">
+                                    <h4>Ultimi articoli per la categoria : {{$category->name}}</h4>
+                                </div>
+                                @break
+                            @endif
+                        @endforeach
+                        <div class="swiper mySwiper d-flex justify-content-center mt-3">
+                            <div class="swiper-wrapper">
+                                @foreach($category->articles as $article)
+                                    @if ($article->is_accepted)
+                                        <div class="swiper-slide">
+                                            @livewire('articles-card', ['article' => $article])
+                                        </div>         
+                                    @endif
+                                @endforeach
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    @endif
+                </div>
+            @endforeach
+    </div>
 
     <x-footer />
 </x-layout>

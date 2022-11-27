@@ -31,15 +31,33 @@
         {{-- allert di errore --}}
             @if(session('error'))
                 <div class="alert alert-danger">
-                    {{session('erroe')}}
+                    {{session('error')}}
                 </div>
             @endif
         {{-- end allert di errore --}}
+        {{-- alert area non consentita --}}
+            @if(session('notAccessArea'))
+                <div class="alert alert-danger">
+                    {{session('notAccessArea')}}
+                    <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#workModal">
+                        Lavora con noi
+                      </button>
+                </div>
+            @enderror
+        {{-- end alert area non consentita --}}
+        {{-- alert area non consentita --}}
+            @if(session('accessRevaisor'))
+                <div class="alert alert-warning">
+                    {{session('accessRevaisor')}}
+                    <a class="btn btn-outline-warning" href="{{route('login')}}">
+                        Accedi
+                    </a>
+                </div>
+            @enderror
+        {{-- end alert area non consentita --}}
     {{-- end messaggi di successo/errore --}}
-        
-    {{-- end messaggio di errore accesso ad area non consentita --}}
     
-    <div class="min-vh-100 formCreate">
+    <div>
         {{$slot}}
     </div>
 

@@ -1,4 +1,11 @@
 <div class="container">
+    {{-- messaggi di sessione --}}
+        @if(session('nullRevision'))
+            <div class="alert alert-success">
+                {{session('nullRevision')}}
+            </div>
+        @endif
+    {{-- end messaggi di sessione --}}
     <div class="row justify-content-center">
         @foreach ($articles_checked as $article_checked)
             <div class="col-12 col-md-4 my-4">
@@ -22,11 +29,7 @@
                             <div>
                                 <p class="card__status">{{$article_checked->description}}</p>
                                 @if($last_checked->id == $article_checked->id)
-                                    <form action="{{route('revaisor.null_revision', compact('article_checked'))}}" method="POST">
-                                        @csrf
-                                        @method('PATCH')
-                                        <button type="submit" class="btn btn-danger">Annulla ultima revisione</button>
-                                    </form>
+                                    @livewire('dismiss-revision', ['article' => $last_checked])
                                 @endif
                             </div>
                         </div>

@@ -37,19 +37,12 @@
                                 <p class="fs-1">&euro;{{$article->price}}</p>
                             </div>
                             <div class="col-12 col-md-6 mb-2">
-                                <form action="{{route('revaisor.accept_article', ['article' => $article])}}" method="POST">
-                                    @csrf
-                                    @method('PATCH')
-                                    <button type="submit" class="btn btn-success">Accetta</button>
-                                </form>
-                
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <form action="{{route('revaisor.reject_article', ['article' => $article])}}" method="POST">
-                                    @csrf
-                                    @method('PATCH')
-                                    <button type="submit" class="btn btn-danger">Rifiuta</button>
-                                </form>
+                                <div class="me-2">
+                                    @livewire('accept-article', ['article' => $article])
+                                </div>
+                                <div>
+                                    @livewire('reject-article', ['article' => $article])
+                                </div>
                             </div>
                             </div>
                         </div>

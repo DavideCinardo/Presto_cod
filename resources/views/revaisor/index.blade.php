@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid formCreate">
+    <div class="container-fluid formCreate mt-0">
         <div class="row text-center justify-content-center RowRevaisor">
             <div class="col-12 col-md-8">
                 {{-- se ci sono annunci primo titolo altrimenti secondo --}}
@@ -7,6 +7,26 @@
             </div>
         </div>
     </div>
+    {{-- messaggi di sessione flash --}}
+
+        {{-- messaggio accetta --}}
+            @if(session('accept'))
+                <div class="alert alert-success">
+                    {{session('accept')}}
+                </div>
+            @endif
+        {{-- end messaggio accetta --}}
+
+        {{-- messaggio rifiuta --}}
+            @if(session('reject'))
+                <div class="alert alert-success">
+                    {{session('reject')}}
+                </div>
+            @endif
+        {{-- end messaggio rifiuta --}}
+        
+    {{-- end messaggi di sessione flash --}}
+
     {{-- se ci sono gli annunci --}}
         @if($articles_unchecked)
             @livewire('articles-unchecked-card')
@@ -14,7 +34,7 @@
     {{-- end --}}
 
     {{-- gli annunci revisionati dal revisore loggato --}}
-        <div class="container-fluid">
+        <div class="container-fluid mt-5">
             <div class="row text-center justify-content-center RowRevaisor">
                 <div class="col-12 col-md-8">
                     {{-- se ci sono annunci primo titolo altrimenti secondo --}}

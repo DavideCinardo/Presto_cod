@@ -32,13 +32,20 @@
                   <p class="fst-italic text-secondary">{{$article->user->name}}</p>
                   <div class="col-12 col-md-6 text-start">
                     <p class="fs-1">&euro;{{$article->price}}</p>
+                    <a href="{{Route('homepage')}}" class="btn btn-outline-secondary">Torn alla home</a>
                   </div>
+                  @auth
+                    @if(Auth::user()->is_revaisor && !$article->is_accepted)
+                    <div class="my-2">
+                        @livewire('accept-article', ['article' => $article])
+                    </div>
+                    <div>
+                        @livewire('reject-article', ['article' => $article])
+                    </div>
+                    @endif
+                  @endauth
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center mt-5">
-            
-            
         </div>
     </div>
     

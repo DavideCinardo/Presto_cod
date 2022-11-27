@@ -5,31 +5,28 @@ namespace App\Mail;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class BecomeRevaisor extends Mailable
+class YouAreRevaisor extends Mailable
 {
     use Queueable, SerializesModels;
 
+
+    public $user;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public $user;
-    public $whyWork;
-
-    public function __construct(User $user, $whyWork)
+    public function __construct(User $user)
     {
-        $this->user =$user;
-        $this->whyWork = $whyWork;
+        $this->user = $user;
     }
 
     public function build(){
-        return $this->from($this->user->email)->view('mail.become_revaisor');
+        return $this->from('admin@presto.it')->view('mail.youAreRevaisor');
     }
 }

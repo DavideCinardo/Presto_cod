@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevaisorController;
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,15 +24,14 @@ Route::get('/articles/create', [ArticleController::class, 'create'])->middleware
 Route::get('/articles/index', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articles/show/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
+//rotte per articoli inseriti dall'utente loggato
+Route::get('/articles/own', [ArticleController::class, 'own'])->middleware('auth')->name('articles.own');
+//rotta per articoli preferito dall'utente loggato
+Route::get('/articles/prefer', [ArticleController::class, 'prefer'])->middleware('auth')->name('articles.prefer');
+
 //rotte del revisore
 Route::get('/revaisor/index', [RevaisorController::class, 'index'])->middleware('isRevaisor')->name('revaisor.index');
-Route::get('revaisor/article/show/{article_unchecked}', [RevaisorController::class, 'show'])->name('article.unchecked');
-//rotta accetta articolo
-Route::patch('accetta/article/{article}', [RevaisorController::class, 'acceptArticle'])->middleware('isRevaisor')->name('revaisor.accept_article');
-//rotta rifiuta articolo
-Route::patch('rifiuta/article/{article}', [RevaisorController::class, 'rejectArticle'])->middleware('isRevaisor')->name('revaisor.reject_article');
-//rotta annulla ultima revisione
-Route::patch('null/revision/{article_checked}', [RevaisorController::class, 'nullRevision'])->middleware('isRevaisor')->name('revaisor.null_revision');
+
 //rotta diventa revisore
 Route::post('become/revaisor', [RevaisorController::class, 'becomeRevaisor'])->middleware('auth')->name('become.revaisor');
 //rotta rendi utente revisore
@@ -39,4 +39,5 @@ Route::get('give/revaisor/{user}', [RevaisorController::class, 'makeRevaisor'])-
 
 //rotta per ricercare gli annunci con laravel scout
 Route::get('/search/article', [PublicController::class, 'seachArticles'])->name('articles.search');
+
 

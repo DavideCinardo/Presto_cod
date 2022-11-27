@@ -19,8 +19,10 @@ class isRevaisor
     {
         if(Auth::check() && Auth::user()->is_revaisor){
             return $next($request);
+        } elseif (Auth::check()){
+            return redirect(route('homepage'))->with('notAccessArea', 'Non sei revisore, invia la tua richiesta cliccando qui :');
         }
 
-        return redirect(route('homepage'))->with('accessNot', 'Solo i revisori possono accedere a quest\'area');
+        return redirect(route('homepage'))->with('accessRevaisor', 'Solo i revisori possono accedere a quest\'area, se lo sei accedi da qui');
     }
 }
