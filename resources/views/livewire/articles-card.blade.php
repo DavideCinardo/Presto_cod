@@ -25,12 +25,12 @@
                         <a href="{{route('articles.show', compact('article'))}}" class="btn btn-outline-warning me-2">Scopri di più</a>
                         @auth
                             @if(Auth::user()->is_revaisor && !$article->is_accepted)
-                            <div class="me-2">
-                                @livewire('accept-article', ['article' => $article])
-                            </div>
-                            <div>
-                                @livewire('reject-article', ['article' => $article])
-                            </div>
+                                <div class="me-2">
+                                    @livewire('accept-article', ['article' => $article])
+                                </div>
+                                <div>
+                                    @livewire('reject-article', ['article' => $article])
+                                </div>
                             @endif
                         @endauth
                     </div>
