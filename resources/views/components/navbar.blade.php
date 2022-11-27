@@ -48,8 +48,8 @@
             <div class="nav-item">
               <a href="{{route('revaisor.index')}}" class="position-relative">
                 Articoli da revisionare
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  {{App\Models\Article::toBeRevaisonedCount()}}
+                <span class="position-absolute top-0 start-100 translate-middle ">
+                  @livewire('not-revisione-count')
                 </span>
               </a>
             </div>

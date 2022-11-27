@@ -10,7 +10,8 @@ class RejectArticle extends Component
 
     //funzione per rifiutare l'articolo
     public function rejectArticle(){
-        $this->article->setAccepted(false);
+        $this->article->is_accepted = false;
+        $this->article->save();
 
         session()->flash('reject', 'Hai rifiutato l\'articolo');
     }

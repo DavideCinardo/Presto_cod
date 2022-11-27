@@ -11,7 +11,7 @@ class DismissRevision extends Component
 
     //funzione per annullare ultima revisione
     public function nullRevision(){
-        $this->article->setAccepted(null);
+        $this->article->is_accepted = null;
         $this->article->revisioned_from = 1;
         $this->article->save();
 

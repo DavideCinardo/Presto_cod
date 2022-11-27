@@ -8,6 +8,7 @@
         </div>
     </div>
     {{-- messaggi di sessione flash --}}
+
         {{-- messaggio accetta --}}
             @if(session('accept'))
                 <div class="alert alert-success">
@@ -15,6 +16,7 @@
                 </div>
             @endif
         {{-- end messaggio accetta --}}
+
         {{-- messaggio rifiuta --}}
             @if(session('reject'))
                 <div class="alert alert-success">
@@ -22,7 +24,9 @@
                 </div>
             @endif
         {{-- end messaggio rifiuta --}}
+        
     {{-- end messaggi di sessione flash --}}
+
     {{-- se ci sono gli annunci --}}
         @if($articles_unchecked)
             @livewire('articles-unchecked-card')
