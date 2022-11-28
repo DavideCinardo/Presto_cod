@@ -3,17 +3,17 @@
 namespace App\Models;
 
 use App\Models\Article;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Image extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['path'];
+    protected $fillable = ['path', 'article_id'];
 
-public function article()
-    {
-        return $this->belongsToMany(Article::class);
+    //funzione di relazione con article
+    public function article(){
+        $this->belongsTo(Article::class);
     }
 }
