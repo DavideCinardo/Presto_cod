@@ -380,12 +380,3 @@ body {
   border: solid 5px var(--terzo);
 }
 
-  .heart{
-    background-color: white;
-    width: 10%;
-    height: 5%;
-    border-radius: 50%;
-    position: absolute;
-    top: 2%;
-    right: 4%;
-  }
