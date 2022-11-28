@@ -27,8 +27,9 @@
                             <input type="checkbox" name="remember" class="form-check-input" id="rememberMe">
                             <label class="form-check-label" for="rememberMe">Ricordami</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Accedi</button>
-                        <a href="{{route('homepage')}}" class="btn btn-white">Torna alla home</a>
+                        <button type="submit" class="btn btn-success">Accedi</button>
+                        <a href="{{route('homepage')}}" class="btn btn-outline-secondary">Torna alla home</a>
+                        <a class="btn btn-outline-primary" href="{{route('register')}}">Non sei iscritto? Clicca qui.</a>
                     </form>
                 {{--  end form register --}}
             </div>

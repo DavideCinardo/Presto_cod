@@ -1,6 +1,6 @@
 <x-layout>
-    @livewire('articles-card')
     
-
+    {{-- @livewire('articles-card') --}}
+    
     <x-footer />
 </x-layout>

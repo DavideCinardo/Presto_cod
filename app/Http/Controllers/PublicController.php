@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller
 
@@ -13,9 +14,10 @@ class PublicController extends Controller
     public function homepage(){
         
         // passa gli articoli alla homepage
-        $articles = Article::all();
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'DESC')->get();
         $categories = Category::all();
-        return view ('welcome', compact('articles', 'categories'));
+        $last_articles = Article::where('is_accepted', true)->orderBy('created_at', 'DESC')->take(3)->get();
+        return view ('welcome', compact('articles', 'categories', 'last_articles'));
     }
    
 

@@ -8,10 +8,12 @@ use Illuminate\Support\Facades\Auth;
 
 class ArticlesCard extends Component
 {
+    public $article;
+
     public function render()
     {   
-        $articles = Article::where('is_accepted', !null)->orderBy('created_at', 'DESC')->get();
+        $article = $this->article;
 
-        return view('livewire.articles-card', compact('articles'));
+        return view('livewire.articles-card', compact('article'));
     }
 }

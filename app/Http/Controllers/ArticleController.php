@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -14,7 +15,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('articles.index');
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'DESC')->get();
+        return view('articles.index', compact('articles'));
     }
 
     /**
@@ -36,6 +38,18 @@ class ArticleController extends Controller
     public function show(Article $article){
 
         return view('articles.show', compact('article'));
+    }
+
+    //funzione articoli inseriti dall'utente
+    public function own(){
+        $articles = Article::where('is_accepted', true)->where('user_id', Auth::user()->id)->orderBy('updated_at', 'DESC')->get();
+        return view('articles.own',compact('articles'));
+    }
+
+    //funzione articoli preferito dall'utente
+    public function prefer(){
+        $articles = Article::where('is_accepted', true)->orderBy('updated_at', 'DESC')->get();
+        return view('articles.prefer',compact('articles'));
     }
 
     /**
