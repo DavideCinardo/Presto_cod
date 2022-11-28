@@ -16,7 +16,7 @@ class ArticlesCreateForm extends Component
     public $title, $price, $description, $location, $category, $cover;
     protected $rules = [
         'title' => 'required',
-        'price' => 'required',
+        'price' => 'required|numeric|gt:0',
         'description' => 'required|min:10',
         'location' => 'required',
         'category' => 'required',

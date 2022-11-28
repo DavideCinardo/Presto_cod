@@ -46,4 +46,8 @@ class Article extends Model
     public function users(){
         return $this->belongsToMany(User::class);
     }
+
+    public function images(){
+        return $this->hasToMany(Image::class);
+    }
 }
