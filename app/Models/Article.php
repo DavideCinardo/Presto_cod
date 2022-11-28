@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Image;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -45,5 +46,10 @@ class Article extends Model
     //relazione MtM con users
     public function users(){
         return $this->belongsToMany(User::class);
+    }
+
+    //funzione di relazione con image
+    public function images(){
+        return $this->hasMany(Image::class);
     }
 }

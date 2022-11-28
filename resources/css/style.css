@@ -383,3 +383,8 @@ footer {
     top: 2%;
     right: 4%;
   }
+
+  .img-preview{
+    height: 200px;
+    width: 200px;
+  }
