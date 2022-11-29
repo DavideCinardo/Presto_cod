@@ -34,7 +34,9 @@ body {
   background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);
 } */
 
-
+.navDistance{
+  height: 200px;
+}
 /* navbar logo */
 .wrapperTitle {
   position: relative;
@@ -264,8 +266,6 @@ footer {
 .SearchBar {
   position: relative;
   border: #ffbd59;
-  margin-top: 200px;
-  margin-bottom: 150px;
   font-size: 1.3em;
   padding: 20px;
 }
@@ -485,7 +485,7 @@ body {
 }
 
 .heart{
-  background-color: white;
+  background-color: transparent;
   width: 12%;
   height: 8%;
   border-radius: 50%;
@@ -585,7 +585,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 }
 
 .distanza{
-  margin-top: 100px;
+  margin-top: 60px;
+  width: 80%;
 }
 .profileCard .profileContent::before{
   content: "";

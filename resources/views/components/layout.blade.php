@@ -16,12 +16,15 @@
 
 </head>
 <body>
-    {{-- navbar --}}
-    <x-navbar />
+    <div class="navDistance">
+        {{-- navbar --}}
+        <x-navbar />
+    </div>
 
-    {{-- messaggi di successo/errore --}}
-        {{-- allert di successo --}}
-            @if(session('message'))
+    <div class="min-vh-100">
+        {{-- messaggi di successo/errore --}}
+                {{-- allert di successo --}}
+                @if(session('message'))
                 <div class="alert alert-success">
                     {{session('message')}}
                 </div>
@@ -41,7 +44,7 @@
                     {{session('notAccessArea')}}
                     <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#workModal">
                         {{__('ui.workUs')}}
-                      </button>
+                    </button>
                 </div>
             @enderror
         {{-- end alert area non consentita --}}
@@ -55,10 +58,11 @@
                 </div>
             @enderror
         {{-- end alert area non consentita --}}
-    {{-- end messaggi di successo/errore --}}
-    
-    <div>
+        {{-- end messaggi di successo/errore --}}
+
+        <div>
         {{$slot}}
+        </div>
     </div>
 
 

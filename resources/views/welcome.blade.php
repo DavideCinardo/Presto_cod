@@ -5,7 +5,7 @@
             <div class="col-12">  
                     <form action="{{route('articles.search')}}" method="GET" class="my-3" role="search">
                         @csrf
-                        <div class="container SearchBar">
+                        <div class="container SearchBar my-5">
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-12 col-md-3 text-center">
                                     <label class="Lbl-text" for="searched">{{__('ui.search')}}</label>
@@ -64,7 +64,7 @@
                         @foreach($category->articles as $article)
                             @if($article->is_accepted)
                                 <div class="etichetta">
-                                    <h4>Ultimi articoli per la categoria : 
+                                    <h4>{{__('ui.latestaAd')}} : 
                                         @switch(Config::get('app.locale'))
                                             @case('it')
                                                 {{$category->nameIt}}
