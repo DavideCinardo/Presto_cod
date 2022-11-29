@@ -219,6 +219,14 @@ a,
   
 }
 
+.border-bottom{
+  border-color: var(--oro)!important;
+}
+
+.title-h{
+  height: 10vh;
+}
+
 .SectionFoot2 {
   
   color: var(--oro) !important;
@@ -593,8 +601,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   position:absolute;
   top:0;
   left:0;
-  width:50%;
-  height:40%;
+  width:40%;
+  height:30%;
   border:3px solid #222;
   border-right:3px solid transparent;
   border-bottom:3px solid transparent;
@@ -626,8 +634,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   position:absolute;
   bottom:0;
   right:0;
-  width:50%;
-  height:40%;
+  width:40%;
+  height:30%;
   border:3px solid #222;
   border-left:3px solid transparent;
   border-top:3px solid transparent;
@@ -642,7 +650,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   height:100%;
   padding:50% 4%;
   text-align: center;
-  background-color: rgba(255,255,255,0.4);
 }
 .profileCard .profileContent .titleCard{
   font-size:24px;
@@ -652,6 +659,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   text-transform:uppercase;
   transform: translateY(-100px);
   transition:all 900ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.20s;
+  background-color: rgba(255,255,255,0.4);
 }
 .profileCard:hover .titleCard{
   opacity:1;

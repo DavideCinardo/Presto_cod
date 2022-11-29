@@ -9,10 +9,10 @@
             </div>
             <div class="profileContent d-flex justify-content-center">
                 <div class="distanza">
-                    <h2 class="titleCard">{{$article->title}}
+                    <h2 class="titleCard p-3">{{$article->title}}
                         <span>{{$article->location}}</span>
-                        <span>{{$article->description}}</span>
-                        <span>&euro;{{$article->price}}</span>
+                        <span class="text-truncate">{{$article->description}}</span>
+                        <span class="fs-2">&euro;{{$article->price}}</span>
                         <a href="{{route('articles.show', compact('article'))}}" class="btn btn-outline-warning me-2">{{__('ui.more')}}</a>
                     </h2>
                 </div>
