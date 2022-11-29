@@ -522,7 +522,7 @@ a.dropdown-item:hover {
   color: var(--oro)
 }
 .nav-item{
-  min-width:12vw;
+  margin-right: 2rem;
 }
 #mainNavigation {
   position:fixed;
@@ -574,3 +574,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   
 }
 
+.space{
+  width: 174px;
+}

@@ -24,8 +24,9 @@
           <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
         </button>
       </div>
-      <div class="text-center mt-0 collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mx-auto mt-2 ">
+      <div class="text-center mt-0 collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <div class="space"></div>
+        <ul class="navbar-nav mt-2 d-flex justify-content-center w-100">
           <li class="nav-item">
             <a class="nav-link active home" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
@@ -105,7 +106,7 @@
      
      
            
-                     <div class="nav-item dropdown colorText size d-flex">
+                     <div class="nav-item dropdown colorText size">
                          
      
                        {{-- Accedi --}}
@@ -123,7 +124,7 @@
              @endauth
         </ul>
         {{-- tasti cambio lingua --}}
-            <div class="mx-end">
+            <div class="d-flex">
               <x-_locale lang="it" />
               <x-_locale lang="en" />
               <x-_locale lang="es" />
