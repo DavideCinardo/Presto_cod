@@ -38,7 +38,7 @@ return[
     'cancelReview'=>'Annulla revisione',
     'reviewBecome'=>'Vuoi diventare revisore? ',
     'why'=>'Dicci perchè?',
-    'apply'=>'Invia candidatura',
+    'apply'=>'Candidati',
 
 
     'register'=>'Registrati',

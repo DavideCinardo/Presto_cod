@@ -18,7 +18,7 @@
                                     @livewire('heart-botton', ['article' => $article])
                                 @endauth
                         </div>
-                        <div class="profileContent d-flex justify-content-center">
+                        <div class="profileContent d-flex justify-content-center mb-2">
                             <div class="distanza">
                                 <h2 class="titleCard">{{$article->title}}
                                     <span>{{$article->location}}</span>
