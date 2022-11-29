@@ -127,20 +127,21 @@ a,
   background-color: var(--quarto);
 }
 
-.SectionFoot1 {
-  border-radius: 75px 70px 0px 0px;
-  background-color: var(--quinto);
+ .border-top {
+  border-color: var(--oro)!important;
+  
 }
 
 .SectionFoot2 {
-  background-color: var(--quarto);
-  color: var(--primario) !important
+  
+  color: var(--oro) !important;
 }
 
 footer {
-  border-top: solid 4px var(--terzo);
-  border-radius: 75px 70px 0px 0px;
-}
+  border-top: solid 4px var(--oro);
+  
+} 
+
 
 .titoli {
   font-family: 'Taviraj', serif;

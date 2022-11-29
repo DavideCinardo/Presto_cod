@@ -1,5 +1,5 @@
-<!-- Footer -->
-<footer class="text-center text-lg-start SectionFoot2 text-muted mt-5">
+
+<footer class="text-center text-lg-start SectionFoot2 text-muted mt-5 border-top">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center p-4 SectionFoot1">
       <!-- Left -->
@@ -38,10 +38,10 @@
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>Company name
+              <i class="fas fa-gem me-3"></i>Code Of Duty
             </h6>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas minima dolorum voluptatibus aspernatur magnam quibusdam asperiores excepturi nulla ab laudantium quas, laborum quis voluptatum magni? Fugit possimus architecto eveniet reprehenderit!
+              Azienda specilizzata nella vendita al dettaglio di preziosi e merci da collezione. Dopo la fondazione nel 2022 e dopo essere riusciti a scappare dal mondo del contrabbando di diamanti i Code Of Duty si inseriscono prepotentemente nel mercato portando sempre una nota di eleganza, raffinatezza e soprattutto qualità.
             </p>
           </div>
           <!-- Grid column -->
