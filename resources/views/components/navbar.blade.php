@@ -24,8 +24,8 @@
           <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
         </button>
       </div>
-      <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mx-auto ">
+      <div class="text-center mt-0 collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto mt-2 ">
           <li class="nav-item">
             <a class="nav-link active home" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
@@ -95,8 +95,9 @@
                                 {{__('ui.workUs')}}
                               </button>  
                             
-                        </ul>       
-             </div>
+                        </ul>
+                      </div>       
+             
              
              {{-- end dropdown registrato --}}
              @else
@@ -104,7 +105,7 @@
      
      
            
-                     <div class="nav-item dropdown colorText size me-5 d-flex">
+                     <div class="nav-item dropdown colorText size d-flex">
                          
      
                        {{-- Accedi --}}
@@ -121,9 +122,11 @@
                  {{-- end drop down utente --}}
              @endauth
              {{-- tasti cambio lingua --}}
+            <div class="mx-end">
               <x-_locale lang="it" />
               <x-_locale lang="en" />
               <x-_locale lang="es" />
+            </div>
              {{-- end tasti cambio lingua --}}
         </ul>
       </div>
