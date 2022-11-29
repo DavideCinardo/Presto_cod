@@ -8,13 +8,13 @@
                         <div class="container SearchBar">
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-12 col-md-3 text-center">
-                                    <label for="searched">{{__('ui.search')}}</label>
+                                    <label class="Lbl-text" for="searched">{{__('ui.search')}}</label>
                                 </div>
                                 <div class="col-12 col-md-4 text-center">
                                     <input class="form-control me-2 d-inline my-2" id="searched" name="searched" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
                                 </div>
                                 <div class="col-12 col-md-3 text-center">
-                                    <button type="submit" class="btn btn-outline-warning">{{__('ui.searchBtn')}}</button>
+                                    <button type="submit" class="btn Btn-text">{{__('ui.searchBtn')}}</button>
                                 </div>
                             </div>
                         </div>
