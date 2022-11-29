@@ -11,10 +11,22 @@
                                     <label class="Lbl-text" for="searched">{{__('ui.search')}}</label>
                                 </div>
                                 <div class="col-12 col-md-4 text-center">
-                                    <input class="form-control me-2 d-inline my-2" id="searched" name="searched" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
+                                    <input class="form-control rounded-0 me-2 d-inline my-2" id="searched" name="searched" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
                                 </div>
                                 <div class="col-12 col-md-3 text-center">
-                                    <button type="submit" class="btn Btn-text">{{__('ui.searchBtn')}}</button>
+                                    <btn-custom>
+                                        <ul>
+                                            <li>
+                                              <a class="facebook" href="#">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                {{__('ui.searchBtn')}}
+                                              </a>
+                                            </li>
+                                        </ul>
+                                    </btn-custom>
                                 </div>
                             </div>
                         </div>
@@ -103,12 +115,33 @@
                                     </div>
                                 </div>
                             </div>
-                        </dvi> 
-                        
+                        </div>
+                    {{-- @elseif(count($category->orderBy('id', 'DESC')->first()->articles) == 0) 
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-1 border-start border-top"></div>
+                                <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">Non ci sono annunci al momento</div>
+                                <div class="col-1 border-end border-bottom"></div>
+                            </div>
+                        </div>  --}}
                     @endif
-                </div>
+                </div>     
             @endforeach
     </div>
 
     <x-footer />
 </x-layout>
+
+{{-- <btn-custom>
+    <ul>
+        <li>
+          <a class="facebook" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Inserisci
+          </a>
+        </li>
+    </ul>
+</btn-custom> --}}

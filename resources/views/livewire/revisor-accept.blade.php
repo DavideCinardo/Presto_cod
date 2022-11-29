@@ -55,10 +55,34 @@
                   @auth
                     @if(Auth::user()->is_revaisor && !$article->is_accepted)
                     <div class="my-2">
-                      <button wire:click="acceptArticle" class="btn btn-success">{{__('ui.accept')}}</button>
+                      <btn-custom wire:click="acceptArticle">
+                        <ul>
+                            <li>
+                              <a class="facebook" href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                {{__('ui.accept')}}
+                              </a>
+                            </li>
+                        </ul>
+                    </btn-custom>
                     </div>
                     <div>
-                      <button wire:click="rejectArticle" class="btn btn-danger">{{__('ui.reject')}}</button>
+                      <btn-custom wire:click="rejectArticle">
+                        <ul>
+                            <li>
+                              <a class="facebook" href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                {{__('ui.reject')}}
+                              </a>
+                            </li>
+                        </ul>
+                    </btn-custom>
                     </div>
                     @endif
                   @endauth

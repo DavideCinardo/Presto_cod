@@ -4,7 +4,7 @@
   --terzo:#17181D;
   --quarto: #ffbd59;
   --surface-color: #fff;
-  --oro: rgb(187, 154, 55);
+  --oro: #bb9a37;
   --curve: 40;
 }
 
@@ -659,7 +659,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   text-transform:uppercase;
   transform: translateY(-100px);
   transition:all 900ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.20s;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.7);
 }
 .profileCard:hover .titleCard{
   opacity:1;
@@ -670,7 +670,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   display:block;
   width:50%;
   margin:10px auto;
-  border-bottom:2px solid #222;
 }
 .profileCard .profileContent .titleCard > span{
   display:block;
@@ -723,4 +722,92 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 .space{
   width: 174px;
+}
+
+btn-custom ul{
+  padding: 0!important;
+}
+btn-custom ul li {
+  list-style:none;
+  display: flex;
+  justify-content: center;
+}
+btn-custom ul li a {
+  display:block;
+  position:relative;
+  width:200px;
+  height:60px;
+  line-height:60px;
+  font-size:20px;
+  text-align:center;
+  text-decoration:none;
+  color:#927f4d;
+  transition:.5s;
+}
+btn-custom ul li a span {
+  position:absolute;
+  transition: transform .5s;
+}
+btn-custom ul li a span:nth-child(1),
+btn-custom ul li a span:nth-child(3){
+  width:100%;
+  height:3px;
+  background:#927f4d;
+}
+btn-custom ul li a span:nth-child(1) {
+  top:0;
+  left:0;
+  transform-origin: right;
+}
+btn-custom ul li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:transform .5s;
+}
+
+btn-custom ul li a span:nth-child(3) {
+  bottom:0;
+  left:0;
+  transform-origin: left;
+}
+btn-custom ul li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition:transform .5s;
+}
+
+btn-custom ul li a span:nth-child(2),
+btn-custom ul li a span:nth-child(4){
+  width:3px;
+  height:100%;
+  background:#927f4d;
+}
+btn-custom ul li a span:nth-child(2) {
+  top:0;
+  left:0;
+  transform:scale(0);
+  transform-origin: bottom;
+}
+btn-custom ul li a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition:transform .5s;
+}
+btn-custom ul li a span:nth-child(4) {
+  top:0;
+  right:0;
+  transform:scale(0);
+  transform-origin: top;
+}
+btn-custom ul li a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition:transform .5s;
+}
+
+.facebook:hover {
+  color: #bb9a37;
+}
+.facebook:hover span { 
+  background: #bb9a37;
 }
