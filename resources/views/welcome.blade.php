@@ -72,7 +72,7 @@
                                     @endif
                                 @endforeach
                             </div>
-                            <div class="swiper-pagination"></div>
+                            {{-- <div class="swiper-pagination"></div> --}}
                         </div>
                     @endif
                 </div>
