@@ -5,7 +5,7 @@
             <div class="col-12">  
                     <form action="{{route('articles.search')}}" method="GET" class="my-3" role="search">
                         @csrf
-                        <div class="container SearchBar my-5">
+                        <div class="container SearchBar">
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-12 col-md-3 text-center">
                                     <label class="Lbl-text" for="searched">{{__('ui.search')}}</label>
@@ -63,48 +63,37 @@
                     @if(count($category->articles) > 0)
                         @foreach($category->articles as $article)
                             @if($article->is_accepted)
-                                <div class="row title-h justify-content-center">
-                                    <div class="col-1 border-start border-top"></div>
-                                    <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
-                                        <h4>{{__('ui.latestaAd')}} : 
-                                            @switch(Config::get('app.locale'))
-                                                @case('it')
-                                                    {{$category->nameIt}}
-                                                    @break
-                                                @case('en')
-                                                    {{$category->nameEn}}
-                                                    @break
-                                                @case('es')
-                                                    {{$category->nameEs}}
-                                                    @break
-                                                @default
-                                            @endswitch
-                                        </h4>
-                                    </div>
-                                    <div class="col-1 border-end border-bottom"></div>
+                                <div class="etichetta">
+                                    <h4>Ultimi articoli per la categoria : 
+                                        @switch(Config::get('app.locale'))
+                                            @case('it')
+                                                {{$category->nameIt}}
+                                                @break
+                                            @case('en')
+                                                {{$category->nameEn}}
+                                                @break
+                                            @case('es')
+                                                {{$category->nameEs}}
+                                                @break
+                                            @default
+                                        @endswitch
+                                    </h4>
                                 </div>
                                 @break
                             @endif
                         @endforeach
-                        <dvi class="container">
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-12">
-                                    <div class="swiper mySwiper mt-5">
-                                        <div class="swiper-wrapper">
-                                            @foreach($category->articles as $article)
-                                                @if ($article->is_accepted)
-                                                    <div class="swiper-slide">
-                                                        @livewire('articles-card', ['article' => $article])
-                                                    </div>         
-                                                @endif
-                                            @endforeach
-                                        </div>
-                                        {{-- <div class="swiper-pagination"></div> --}}
-                                    </div>
-                                </div>
+                        <div class="swiper mySwiper d-flex justify-content-center mt-5">
+                            <div class="swiper-wrapper">
+                                @foreach($category->articles as $article)
+                                    @if ($article->is_accepted)
+                                        <div class="swiper-slide">
+                                            @livewire('articles-card', ['article' => $article])
+                                        </div>         
+                                    @endif
+                                @endforeach
                             </div>
-                        </dvi> 
-                        
+                            {{-- <div class="swiper-pagination"></div> --}}
+                        </div>
                     @endif
                 </div>
             @endforeach
