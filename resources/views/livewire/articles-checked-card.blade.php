@@ -10,8 +10,8 @@
         @foreach ($articles_checked as $article_checked)
             <div class="col-12 col-md-4 my-4">
                 {{-- Card --}}
-                <div class="card p-0 w-100">
-                    <img src="{{!$article_checked->images()->get()->isEmpty() ? $article_checked->images()->first()->getUrl(300,400) : "https://picsum.photos/200"}}" class="card__image" alt="" />
+                <div class="card p-0 w-100 ">
+                    <img src="{{!$article_checked->images()->get()->isEmpty() ? $article_checked->images()->first()->getUrl(300,400) : "https://picsum.photos/300/400"}}" class="card__image" alt="" />
                     <div class="card__overlay">
                         <div class="card__header">
                             <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>  
