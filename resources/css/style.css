@@ -461,16 +461,6 @@ body {
 } 
 
 .etichetta{
-<<<<<<< HEAD
-  color: var(--oro);
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* border-top-left-radius: 100%;
-  border-bottom-right-radius: 100%; */
-  border: solid 1px var(--oro);
-=======
   background-color: var(--terzo);
   color: var(--quarto);
   height: 15vh;
@@ -484,7 +474,6 @@ body {
 
 .Sez-Articoli {
   margin: 100px;
->>>>>>> 4a3586699c1ccff683941ed183e77828ed4e2948
 }
 
 .heart{
@@ -569,7 +558,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   background-position: center;
 }
 
-<<<<<<< HEAD
 
 
 /* style card */
@@ -693,7 +681,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 
 /* end style card */
-=======
 .form-label{
   color: var(--oro);
 }
@@ -709,4 +696,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   
 }
 
->>>>>>> 4a3586699c1ccff683941ed183e77828ed4e2948
