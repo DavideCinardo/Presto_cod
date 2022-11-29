@@ -42,7 +42,7 @@ body {
 
 .cardTitle {
   grid-area: 1 / 1;
-  height: 70px;
+  height: 30px;
   width: 180px;
   transform: translateX(10px) rotateY(25deg) rotateX(10deg);
   background: var(--oro);
@@ -452,15 +452,14 @@ body {
 } 
 
 .etichetta{
-  background-color: var(--quinto);
-  color: var(--sesto);
-  height: 15vh;
+  color: var(--oro);
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top-left-radius: 100%;
-  border-bottom-right-radius: 100%;
-  border: solid 5px var(--terzo);
+  /* border-top-left-radius: 100%;
+  border-bottom-right-radius: 100%; */
+  border: solid 1px var(--oro);
 }
 
 .heart{
@@ -542,3 +541,127 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   background-size: cover;
   background-position: center;
 }
+
+
+
+/* style card */
+
+.profileCard{
+  position:relative;
+  overflow: hidden;
+  margin-bottom:10px;
+}
+.profileCard .profileImg .cardImg {
+  width:100%;
+  height:auto;
+}
+.profileCard .profileContent::before{
+  content: "";
+  position:absolute;
+  top:0;
+  left:0;
+  width:50%;
+  height:40%;
+  border:3px solid #222;
+  border-right:3px solid transparent;
+  border-bottom:3px solid transparent;
+  transform: scale(1,1);
+  transition: all 0.50s linear;
+}
+.profileCard .profileContent::after{
+  content: "";
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:50%;
+  height:40%;
+  border:3px solid #222;
+  border-left:3px solid transparent;
+  border-top:3px solid transparent;
+  transition: all 0.50s linear;
+}
+.profileCard:hover .profileContent:before{
+  top:20px;
+  left:20px;
+}
+.profileCard:hover .profileContent:after{
+  bottom:20px;
+  right:20px;
+}
+.profileCard .profileContent::after{
+  content: "";
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:50%;
+  height:40%;
+  border:3px solid #222;
+  border-left:3px solid transparent;
+  border-top:3px solid transparent;
+  transform: scale(1,1);
+  transition: all 0.50s linear;
+}
+.profileCard .profileContent{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  padding:50% 4%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.4);
+}
+.profileCard .profileContent .titleCard{
+  font-size:24px;
+  color:#333;
+  opacity:0;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  transform: translateY(-100px);
+  transition:all 900ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.20s;
+}
+.profileCard:hover .titleCard{
+  opacity:1;
+  transform: translateY(0);
+}
+.profileCard:hover .titleCard::after{
+  content:"";
+  display:block;
+  width:50%;
+  margin:10px auto;
+  border-bottom:2px solid #222;
+}
+.profileCard .profileContent .titleCard > span{
+  display:block;
+  margin:5px 0;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.profileCard .profileContent .social-link{
+  margin:20px 0;
+  padding:0;
+  opacity:0;
+  transform: translateY(100px);
+  transition:all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.20s;
+}
+.profileCard:hover .social-link{
+  opacity:1;
+  transform: translateY(0);
+}
+.profileCard .profileContent .social-link {
+  display: inline-block;
+  list-style: none;
+  margin:0 4px;
+}
+.profileCard .profileContent .social-link  {
+  color:#333;
+  width:30px;
+  height:25px;
+  line-height:24px;
+  text-align: center;
+  border-radius:5px;
+  background-color: #fff;
+}
+
+
+/* end style card */
