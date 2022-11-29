@@ -312,11 +312,11 @@ footer {
 
 /* carousel css */
 .swiper {
-  width: 100%;
-  height: 100%;
+  width: 55%;
+  height: 420px;
 }
 
--head-slide {
+.head-slide {
   text-align: center;
   font-size: 18px;
 
@@ -335,7 +335,7 @@ footer {
   align-items: center;
 }
 
--head-slide img {
+.head-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -473,13 +473,13 @@ body {
 }
 
 .Sez-Articoli {
-  margin-top: 200px;
+  margin: 100px;
 }
 
 .heart{
   background-color: white;
-  width: 10%;
-  height: 5%;
+  width: 12%;
+  height: 8%;
   border-radius: 50%;
   position: absolute;
   top: 2%;
