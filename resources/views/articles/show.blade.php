@@ -23,12 +23,12 @@
                 </div>
             </div>
                 <div class="col-12 col-md-4 text-start ps-2">
-                  <h3>{{$article->title}}</h3>
-                  <p class="text-secondary fst-italic">Categoria {{$article->category->name}}</p>
-                  <p class="text-secondary fst-italic">{{$article->location}}</p>
-                  <p>{{$article->description}}</p>
-                  <p class="fst-italic text-secondary">{{$article->user->name}}</p>
-                  <div class="col-12 col-md-6 text-start">
+                  <h3 class="description">{{$article->title}}</h3>
+                  <p class="text-white fst-italic">Categoria {{$article->category->name}}</p>
+                  <p class="text-white fst-italic">{{$article->location}}</p>
+                  <p class="text-white">{{$article->description}}</p>
+                  <p class="fst-italic text-white">{{$article->user->name}}</p>
+                  <div class="description col-12 col-md-6 text-start">
                     <p class="fs-1">&euro;{{$article->price}}</p>
                     <a href="{{Route('homepage')}}" class="btn btn-outline-secondary">Home</a>
                   </div>
