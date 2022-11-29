@@ -1,7 +1,7 @@
     {{-- Card --}}
     <div class="card p-0 w-100 position-relative shadow-lg">
         
-        <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300,400) : "https://picsum.photos/200"}}" class="card__image" alt="" />
+        <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300,400) : "https://picsum.photos/300"}}" class="card__image" alt="" />
         @auth
             @livewire('heart-botton', ['article' => $article])
         @endauth
