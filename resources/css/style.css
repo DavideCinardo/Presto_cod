@@ -49,6 +49,10 @@ body {
   color: var(--oro);
 }
 
+.logos{
+  width: 10%;
+}
+
 
 /* nav {
   border-bottom: solid 4px var(--secondario);
