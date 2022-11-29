@@ -1,4 +1,34 @@
 <x-layout>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md8">
+
+                {{-- form cerca --}}
+                <div class="shadow-lg d-flex flex-column-reverse">
+                    <form action="{{route('articles.search')}}" method="GET" class="my-3" role="search">
+                        @csrf
+                        <div class="container SearchBar">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-3 text-center">
+                                    <label for="searched">Cosa cerchi?</label>
+                                </div>
+                                <div class="col-12 col-md-4 text-center">
+                                    <input class="form-control me-2 d-inline my-2" id="searched" name="searched" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
+                                </div>
+                                <div class="col-12 col-md-3 text-center">
+                                    <button type="submit" class="btn btn-outline-warning">Cerca</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     <div class="container">
         <div class="row justify-content-center">
             {{-- carosello --}}
@@ -27,24 +57,6 @@
                   </div>
 
             </div>
-            {{-- descrizione --}}
-            <div class="col-12 col-md-4">
-                <div class="description">
-                    <h1>descrizione</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi incidunt deserunt autem et! Nemo quos eum ab modi quidem quasi magni explicabo possimus ipsum, enim cumque quisquam fugiat laboriosam unde!</p>
-                </div>
-            </div>
-            {{-- form cerca --}}
-            <div class="col-12 col-md-3">
-                <div class="shadow-lg SearchBar d-flex flex-column-reverse">
-                    <form action="{{route('articles.search')}}" method="GET" class="my-3" role="search">
-                        @csrf
-                        <label for="searched">Cosa cerchi?</label>
-                        <input class="form-control me-2 d-inline my-2" id="searched" name="searched" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
-                        <button type="submit" class="btn btn-outline-warning">Cerca</button>
-                    </form>
-
-                </div>
             </div>
         </div>
     </div>

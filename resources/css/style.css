@@ -14,6 +14,7 @@
 font-family: 'Numans', sans-serif;
 font-family: 'Taviraj', serif; */
 
+
 body {
   background-image: url(/public/media/SfondoScuro.jpeg);
   background-position: center;
@@ -29,6 +30,87 @@ body {
   background: rgb(30, 45, 47);
   background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);
 } */
+
+
+/* navbar logo */
+.wrapperTitle {
+  position: relative;
+  perspective: 40em;
+  display: grid;
+  transform-style: preserve-3d;
+}
+
+.cardTitle {
+  grid-area: 1 / 1;
+  height: 70px;
+  width: 180px;
+  transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+  background: var(--oro);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 900;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
+}
+
+.fontTitle {
+  font-size: 20px;
+  /* font-weight: 900; */
+}
+
+.cardTitle .enclosed {
+  background: #000;
+  line-height: 1;
+  color: var(--oro);
+  padding: 0 5px;
+  display: inline-block;
+  transform: translate(-1px, 1px) scale(0.75);
+  transform-origin: right center;
+}
+
+.wrapperTitle:before {
+  --bw: 9px;
+  grid-area: 1 / 1;
+  content: '';
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  margin-top: calc(-1 * var(--bw));
+  margin-left: calc(-1 * var(--bw));
+  background: transparent;
+  transform: translateX(-60px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+  pointer-events: none;
+  border: var(--bw) solid #000;
+  box-sizing: content-box;
+}
+
+
+.wrapperTitle:hover > div,
+.wrapperTitle:hover:before {
+  transform: none;
+}
+
+
+.wrapperTitle > div,
+.wrapperTitle:before {
+  will-change: transform;
+  transition: .3s transform cubic-bezier(.25,.46,.45,1);
+}
+.LogoSize {
+  display: grid;
+  place-items: center;
+}
+/* fine navbar logo */
+
+
+
+
+
 
 .vh {
 height: 30vh;
@@ -176,23 +258,23 @@ footer {
 }
 
 .SearchBar {
-  height: 320px;
-  padding: 20px;
+  height: 50px;
+  margin-bottom: 100px;
+  /* padding: 20px; */
   font-size: 1.3em;
-  border-radius: 30px;
-  background: rgb(30, 45, 47);
-  background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);
-  color: var(--sesto);
-  border: solid 1px var(--primario);
-  border-color: #C57B57;
-  border-bottom: var(--terzo) 4px solid;
+  /* border-radius: 30px; */
+  /* background: rgb(30, 45, 47);
+  background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%); */
+  color: var(--oro);
+  border: solid 1px var(--oro);
+  border-bottom: var(--oro) 1px solid;
 }
 
-.SearchBar:hover {
+/* .SearchBar:hover {
   width: 440px;
   height: 340px;
   transition: 0.5s ease;
-}
+} */
 
 .BoxWelcomeCards {
   margin-top: 130px;
