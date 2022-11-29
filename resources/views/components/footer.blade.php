@@ -92,14 +92,14 @@
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Contatti</h6>
-            <p><i class="fas fa-home"></i>Strada S. Giorgio Martire, 2D
-                70124 Bari (BA)</p>
+            <p><i class="fas fa-home"></i> E Harris AveLas Vegas, NV, Stati Uniti
+</p>
             <p>
               <i class="fas fa-envelope"></i>
-              info@example.com
+              codofduty@presto.com
             </p>
-            <p><i class="fas fa-phone"></i>+ 01 234 567 88</p>
-            <p><i class="fas fa-print"></i>+ 01 234 567 89</p>
+            <p><i class="fas fa-phone"></i>+ 39 3475825382</p>
+            <p><i class="fas fa-print"></i>+ 39 0774571008</p>
           </div>
           <!-- Grid column -->
         </div>

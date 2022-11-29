@@ -10,8 +10,8 @@
             <div class="container min-vh-100">
                 <div class="row">
                     <div class="col-12">
-                        <h3>{{__('ui.noAds')}} : {{ $category->name }}</h3>
-                        <a href="{{ route('articles.create') }}" class="btn btn-outline-dark">{{__('ui.insert')}}</a>
+                        <h3 class="categoryPrompt">{{__('ui.noAds')}} : {{ $category->name }}</h3>
+                        <a href="{{ route('articles.create') }}" class="btn btn-outline-warning">{{__('ui.insert')}}</a>
                     </div>
                 </div>
             </div>
