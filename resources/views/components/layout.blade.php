@@ -43,7 +43,7 @@
                 <div class="alert alert-danger">
                     {{session('notAccessArea')}}
                     <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#workModal">
-                        Lavora con noi
+                        {{__('ui.workUs')}}
                       </button>
                 </div>
             @enderror
@@ -53,7 +53,7 @@
                 <div class="alert alert-warning">
                     {{session('accessRevaisor')}}
                     <a class="btn btn-outline-warning" href="{{route('login')}}">
-                        Accedi
+                        Login
                     </a>
                 </div>
             @enderror

@@ -33,4 +33,10 @@ class PublicController extends Controller
         $articles_searched = Article::search($request->searched)->where('is_accepted', true)->get();
         return view('articles.searched', compact('articles_searched', 'search'));
     }
+
+    //funzione per lo switch delle lingue
+    public function setLanguage($lang){
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

@@ -25,11 +25,11 @@
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" name="remember" class="form-check-input" id="rememberMe">
-                            <label class="form-check-label" for="rememberMe">Ricordami</label>
+                            <label class="form-check-label" for="rememberMe">{{__('ui.remember')}}</label>
                         </div>
-                        <button type="submit" class="btn btn-success">Accedi</button>
-                        <a href="{{route('homepage')}}" class="btn btn-outline-secondary">Torna alla home</a>
-                        <a class="btn btn-outline-primary" href="{{route('register')}}">Non sei iscritto? Clicca qui.</a>
+                        <button type="submit" class="btn btn-success">Login</button>
+                        <a href="{{route('homepage')}}" class="btn btn-outline-secondary">Home</a>
+                        <a class="btn btn-outline-primary" href="{{route('register')}}">{{__('ui.notRegister')}}</a>
                     </form>
                 {{--  end form register --}}
             </div>

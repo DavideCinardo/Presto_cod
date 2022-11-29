@@ -20,6 +20,11 @@ body {
   background-size: cover;
   /* background: rgb(251, 240, 218); */
   /* background: linear-gradient(130deg, rgba(251, 240, 218, 1) 0%, rgba(241, 171, 134, 0.65) 100%); */
+  font-family: 'Cabin', sans-serif;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.4)
 }
 
 /* nav {
@@ -497,6 +502,7 @@ body {
   text-transform:uppercase;
   letter-spacing:2px;
   text-shadow:1px 1px 2px rgba(0,0,0,0.4)
+  
 }
  
 .dropdown-menu {
@@ -524,6 +530,7 @@ a.dropdown-item:hover {
   width:100%;
   z-index:123;
   padding-bottom:120px;
+  
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density /
 background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); / FF3.6-15 /
 background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); / Chrome10-25,Safari5.1-6 /
@@ -550,3 +557,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   background-size: cover;
   background-position: center;
 }
+
+.form-label{
+  color: var(--oro);
+}
+
+/* NON TOCCARE */
+
+.categoryPrompt{
+  color: var(--oro);
+}
+
+.navbar-down{
+  background-image: url(/public/media/SfondoScuro.jpeg);
+  
+}
+

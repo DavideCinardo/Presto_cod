@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Complimenti {{$user->name}}!</h1>
-    <h4>Ora sei un revisore</h4>
-    <p>Clicca qui per iniziare a revisionare gli articoli in attesa.</p>
-    <a href="{{route('revaisor.index')}}">Accedi</a>
+    <h1>{{__('ui.compliments')}} {{$user->name}}!</h1>
+    <h4>{{__('ui.youAreRevisor')}}</h4>
+    <p>{{__('ui.clickRevisor')}}</p>
+    <a href="{{route('revaisor.index')}}">Login</a>
     
 </body>
 </html>

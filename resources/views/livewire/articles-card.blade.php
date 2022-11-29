@@ -22,7 +22,7 @@
                 <div>
                     <p class="card__status">{{$article->description}}</p>
                     <div class="d-flex justify-content-center">
-                        <a href="{{route('articles.show', compact('article'))}}" class="btn btn-outline-warning me-2">Scopri di più</a>
+                        <a href="{{route('articles.show', compact('article'))}}" class="btn btn-outline-warning me-2">{{__('ui.more')}}</a>
                         @auth
                             @if(Auth::user()->is_revaisor && !$article->is_accepted)
                                 <div class="me-2">

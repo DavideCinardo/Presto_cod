@@ -28,12 +28,12 @@
                             <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password">
                         </div>
                         <div class="mb-3">
-                            <label for="password_confirmation" class="form-label">Conferma Password</label>
+                            <label for="password_confirmation" class="form-label">{{__('ui.confPass')}}</label>
                             <input type="password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" id="password">
                         </div>
-                        <button type="submit" class="btn btn-success">Registrati</button>
-                        <a href="{{route('homepage')}}" class="btn btn-outline-secondary">Torna alla home</a>
-                        <a class="btn btn-outline-primary" href="{{route('login')}}">Sei gia iscritto? Accedi da qui.</a>
+                        <button type="submit" class="btn btn-success">{{__('ui.register')}}</button>
+                        <a href="{{route('homepage')}}" class="btn btn-outline-secondary">Home</a>
+                        <a class="btn btn-outline-primary" href="{{route('login')}}">{{__('ui.alredySub')}}</a>
                     </form>
                 {{--  end form register --}}
             </div>
