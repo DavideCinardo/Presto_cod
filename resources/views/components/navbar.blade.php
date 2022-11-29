@@ -91,10 +91,13 @@
                             <li><a class="dropdown-item colorTextDD" href="">{{__('ui.contactUs')}}</a></li>
                             <li><a class="dropdown-item colorTextDD" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                             <form class="d-none" method="POST" action="{{route('logout')}}" id="form-logout">@csrf</form>
-                            
-                              <button type="button" class="dropdown-item colorTextDD" data-bs-toggle="modal" data-bs-target="#workModal">
-                                {{__('ui.workUs')}}
-                              </button>  
+                            <li>
+                              <a>
+                                <button type="button" class="dropdown-item colorTextDD" data-bs-toggle="modal" data-bs-target="#workModal">
+                                  {{__('ui.workUs')}}
+                                </button> 
+                              </a>
+                            </li> 
                             
                         </ul>
                       </div>       
@@ -137,19 +140,43 @@
   
   <div class="modal fade" id="workModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content rounded-0">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">{{__('ui.reviewBecome')}}</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="bg-transparent border-0" data-bs-dismiss="modal" aria-label="Close"><i class="fa-sharp fa-solid fs-2 fa-xmark"></i></button>
         </div>
         <div class="modal-body">
           <form action="{{route('become.revaisor')}}" method="POST">
             @csrf
             <label for="whyWork">{{__('ui.why')}}</label>
             <textarea class="form-control" name="whyWork" id="whyWork" cols="30" rows="7"></textarea>
-            <div class="mt-2">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">{{__('ui.apply')}}</button>
+            <div class="mt-2 d-flex justify-content-center">
+                <btn-custom data-bs-dismiss="modal" class="me-4">
+                  <ul>
+                      <li>
+                        <a class="facebook" href="#">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          Close
+                        </a>
+                      </li>
+                  </ul>
+              </btn-custom>
+                <btn-custom type="submit">
+                  <ul>
+                      <li>
+                        <a class="facebook" href="#">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          {{__('ui.apply')}}
+                        </a>
+                      </li>
+                  </ul>
+              </btn-custom>
             </div>
           </form>
         </div>

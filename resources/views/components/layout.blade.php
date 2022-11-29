@@ -21,7 +21,7 @@
         <x-navbar />
     </div>
 
-    <div class="min-vh-100">
+    <div class="container">
         {{-- messaggi di successo/errore --}}
                 {{-- allert di successo --}}
                 @if(session('message'))
@@ -60,11 +60,11 @@
         {{-- end alert area non consentita --}}
         {{-- end messaggi di successo/errore --}}
 
-        <div>
-        {{$slot}}
-        </div>
     </div>
-
+    
+    <div>
+    {{$slot}}
+    </div>
 
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
