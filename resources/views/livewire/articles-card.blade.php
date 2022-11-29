@@ -38,3 +38,27 @@
             </div>
         </div>     
     </div>
+
+
+
+
+
+    {{-- new card --}}
+
+    {{-- 
+        
+        <div class="profileCard">
+              <div class="profileImg">
+                  <img class="cardImg" src="https://picsum.photos/300"/>
+              </div>
+              <div class="profileContent">
+                  <h2 class="titleCard">Title
+                      <span>Location</span>
+                      <span>Description</span>
+                      <span>Price</span>
+                      <span><a href="" class="btn btn-warning">Vai all'articolo</a></span>
+                  </h2>
+              </div>
+          </div>
+
+        --}}
