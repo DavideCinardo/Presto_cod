@@ -507,7 +507,7 @@ body {
 }
  
 .dropdown-menu {
-  background:#03727d
+  background-image:url(/public/media/SfondoScuro.jpeg) ;
 }
 a.dropdown-toggle {
   color: var(--oro) !important
