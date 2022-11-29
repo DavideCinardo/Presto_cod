@@ -29,11 +29,11 @@ let subNav = document.getElementById('subNav');
 window.onscroll = function(){
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
     navLogo.classList.add('d-none');
-    subNav.classList.add('bg-danger');
+    subNav.classList.add('bg-warning');
     
   } else {
     navLogo.classList.remove('d-none');
-    subNav.classList.remove('bg-danger');
+    subNav.classList.remove('bg-warning');
   }
 }
 
