@@ -86,18 +86,25 @@
                                 @break
                             @endif
                         @endforeach
-                        <div class="swiper mySwiper d-flex justify-content-center mt-5">
-                            <div class="swiper-wrapper">
-                                @foreach($category->articles as $article)
-                                    @if ($article->is_accepted)
-                                        <div class="swiper-slide">
-                                            @livewire('articles-card', ['article' => $article])
-                                        </div>         
-                                    @endif
-                                @endforeach
+                        <dvi class="container">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-12">
+                                    <div class="swiper mySwiper mt-5">
+                                        <div class="swiper-wrapper">
+                                            @foreach($category->articles as $article)
+                                                @if ($article->is_accepted)
+                                                    <div class="swiper-slide">
+                                                        @livewire('articles-card', ['article' => $article])
+                                                    </div>         
+                                                @endif
+                                            @endforeach
+                                        </div>
+                                        {{-- <div class="swiper-pagination"></div> --}}
+                                    </div>
+                                </div>
                             </div>
-                            {{-- <div class="swiper-pagination"></div> --}}
-                        </div>
+                        </dvi> 
+                        
                     @endif
                 </div>
             @endforeach
