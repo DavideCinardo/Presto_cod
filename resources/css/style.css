@@ -315,11 +315,16 @@ footer {
 .swiper {
   width: 55%;
   height: 420px;
+  margin-left: 0!important;
+  margin-right: 0!important;
 }
-
+.swiper-slide{
+  width: 350px!important;
+}
 .head-slide {
   text-align: center;
   font-size: 18px;
+  width: 400px;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -371,9 +376,11 @@ body {
 
 .card__image {      
   width: 100%;
-  height: auto;
+  height: 100%;
 }
-
+.btn{
+  z-index: 1999!important;
+}
 .card__overlay {
   position: absolute;
   bottom: 0;
@@ -485,6 +492,7 @@ body {
   position: absolute;
   top: 2%;
   right: 4%;
+  z-index: 1999;
 }
 
 /* DESCRIZIONE */
@@ -530,7 +538,7 @@ a.dropdown-item:hover {
   left:0;
   width:100%;
   z-index:123;
-  padding-bottom:120px;
+  margin-bottom:120px;
   
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density /
 background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); / FF3.6-15 /
@@ -571,6 +579,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 .profileCard .profileImg .cardImg {
   width:100%;
   height:auto;
+}
+.profileContent{
+  padding: 0!important;
+}
+
+.distanza{
+  margin-top: 100px;
 }
 .profileCard .profileContent::before{
   content: "";

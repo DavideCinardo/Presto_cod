@@ -31,7 +31,20 @@
                     <label for="category" class="form-label">{{__('ui.category')}}</label>
                     <select wire:model.defer="category" id="category" class="form-control @error('category') is-invalid @enderror">
                         @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            <option value="{{ $category->id }}">
+                                @switch(Config::get('app.locale'))
+                                    @case('it')
+                                        {{$category->nameIt}}
+                                        @break
+                                    @case('en')
+                                        {{$category->nameEn}}
+                                        @break
+                                    @case('es')
+                                        {{$category->nameEs}}
+                                        @break
+                                    @default
+                                @endswitch  
+                            </option>
                         @endforeach
                     </select>
                 </div>

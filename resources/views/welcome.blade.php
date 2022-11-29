@@ -64,7 +64,20 @@
                         @foreach($category->articles as $article)
                             @if($article->is_accepted)
                                 <div class="etichetta">
-                                    <h4>Ultimi articoli per la categoria : {{$category->name}}</h4>
+                                    <h4>Ultimi articoli per la categoria : 
+                                        @switch(Config::get('app.locale'))
+                                            @case('it')
+                                                {{$category->nameIt}}
+                                                @break
+                                            @case('en')
+                                                {{$category->nameEn}}
+                                                @break
+                                            @case('es')
+                                                {{$category->nameEs}}
+                                                @break
+                                            @default
+                                        @endswitch
+                                    </h4>
                                 </div>
                                 @break
                             @endif
