@@ -4,7 +4,18 @@
     <nav role="navigation">
   
       <div class="py-3 text-center border-bottom under-line" id="navLogo" >
-      <a class="navbar-brand colorText p-0 ms-2 home "href="{{route('homepage')}}"><img src="/media/presto.png" alt="" class="invert logo-image" height="100" width="100"></a>
+      <a class="navbar-brand colorText p-0 ms-2 home "href="{{route('homepage')}}">
+        {{-- <img src="/media/presto.png" alt="" class="invert logo-image" height="100" width="100"> --}}
+        <div class="LogoSize">
+          <div class="wrapperTitle">
+            <div class="cardTitle">
+              <h1 class="fontTitle">
+                <span class="enclosedTitle">Presto</span>.it
+              </h1>
+            </div>
+          </div>
+        </div>
+      </a>
       </div>
     </nav>
     <div class="navbar-expand-md" id="subNav">
