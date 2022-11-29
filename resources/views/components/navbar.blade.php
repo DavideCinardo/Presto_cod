@@ -19,7 +19,7 @@
       </div>
     </nav>
     <div class="navbar-expand-md" id="subNav">
-      <div class="navbar-dark text-center my-2">
+      <div class="navbar-dark text-center">
         <button class="navbar-toggler w-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
         </button>
