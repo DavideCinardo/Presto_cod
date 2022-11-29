@@ -65,17 +65,17 @@
             </ul>
           </div>
           @auth
-        {{-- dropdown utente registrato --}}
-        {{-- tasto per i revisori --}}
-          @if (Auth::user()->is_revaisor)
-              <div class="nav-item">
-                <a href="{{route('revaisor.index')}}" class="position-relative">
-                  {{__('ui.reviewAds')}}
+          {{-- dropdown utente registrato --}}
+          {{-- tasto per i revisori --}}
+            @if (Auth::user()->is_revaisor)
+                <div class="nav-item d-flex align-items-center me-4 position-relative">
+                  <a href="{{route('revaisor.index')}}">
+                    {{__('ui.reviewAds')}}
+                  </a>
                   <span class="position-absolute top-0 start-100 translate-middle ">
                     @livewire('not-revisione-count')
                   </span>
-                </a>
-              </div>
+                </div>
             @endif
             {{-- end tasto dei revisori --}}
             <div class="nav-item dropdown colorText">
@@ -121,14 +121,14 @@
                      </div>
                  {{-- end drop down utente --}}
              @endauth
-             {{-- tasti cambio lingua --}}
+        </ul>
+        {{-- tasti cambio lingua --}}
             <div class="mx-end">
               <x-_locale lang="it" />
               <x-_locale lang="en" />
               <x-_locale lang="es" />
             </div>
-             {{-- end tasti cambio lingua --}}
-        </ul>
+        {{-- end tasti cambio lingua --}}
       </div>
     </div>
   </div>
