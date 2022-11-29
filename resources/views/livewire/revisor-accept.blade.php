@@ -1,25 +1,26 @@
 <div>
 
-    {{-- messaggi di sessione flash --}}
+    
+    <div class="container mt-5">
+      {{-- messaggi di sessione flash --}}
 
-    {{-- messaggio accetta --}}
+            {{-- messaggio accetta --}}
             @if(session('accept'))
-                <div class="alert alert-success">
-                    {{session('accept')}}
-                </div>
-            @endif
-    {{-- end messaggio accetta --}}
-
-    {{-- messaggio rifiuta --}}
-        @if(session('reject'))
             <div class="alert alert-success">
-                {{session('reject')}}
+                {{session('accept')}}
             </div>
         @endif
-    {{-- end messaggio rifiuta --}}
+      {{-- end messaggio accetta --}}
 
-    {{-- end messaggi di sessione flash --}}
-    <div class="container mt-5">
+      {{-- messaggio rifiuta --}}
+      @if(session('reject'))
+        <div class="alert alert-success">
+            {{session('reject')}}
+        </div>
+      @endif
+      {{-- end messaggio rifiuta --}}
+
+      {{-- end messaggi di sessione flash --}}
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -42,17 +43,40 @@
                     </button>
                 </div>
             </div>
-                <div class="col-12 col-md-4 text-start ps-2">
+                <div class="col-12 col-md-4 text-start ps-2 Lbl-text">
                   <h3>{{$article->title}}</h3>
-                  <p class="text-secondary fst-italic">Categoria {{$article->category->name}}</p>
+                  <p class="text-secondary fst-italic">{{__('ui.category')}} 
+                    @switch(Config::get('app.locale'))
+                        @case('it')
+                            {{$article->category->nameIt}}
+                            @break
+                        @case('en')
+                            {{$article->category->nameEn}}
+                            @break
+                        @case('es')
+                            {{$article->category->nameEs}}
+                            @break
+                        @default
+                    @endswitch
+                  </p>
                   <p class="text-secondary fst-italic">{{$article->location}}</p>
                   <p>{{$article->description}}</p>
                   <p class="fst-italic text-secondary">{{$article->user->name}}</p>
                   <div class="col-12 col-md-6 text-start">
                     <p class="fs-1">&euro;{{$article->price}}</p>
-                    <a href="{{Route('homepage')}}" class="btn btn-outline-secondary">Home</a>
-                  </div>
-                  @auth
+                    <btn-custom>
+                      <ul>
+                          <li>
+                            <a href="{{Route('homepage')}}" class="facebook" href="#">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              Home
+                            </a>
+                          </li>
+                      </ul>
+                      @auth
                     @if(Auth::user()->is_revaisor && !$article->is_accepted)
                     <div class="my-2">
                       <btn-custom wire:click="acceptArticle">
@@ -86,6 +110,9 @@
                     </div>
                     @endif
                   @endauth
+                  </btn-custom>
+                  </div>
+                  
                 </div>
             </div>
         </div>

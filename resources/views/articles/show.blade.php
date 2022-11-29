@@ -30,18 +30,20 @@
                   <p class="fst-italic text-white">{{$article->user->name}}</p>
                   <div class="description col-12 col-md-6 text-start">
                     <p class="fs-1">&euro;{{$article->price}}</p>
-                    <a href="{{Route('homepage')}}" class="btn btn-outline-secondary">Home</a>
+                    <btn-custom>
+                      <ul>
+                          <li>
+                            <a href="{{route('homepage')}}" class="facebook">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              Home
+                            </a>
+                          </li>
+                      </ul>
+                  </btn-custom>
                   </div>
-                  @auth
-                    @if(Auth::user()->is_revaisor && !$article->is_accepted)
-                    <div class="my-2">
-                        @livewire('accept-article', ['article' => $article])
-                    </div>
-                    <div>
-                        @livewire('reject-article', ['article' => $article])
-                    </div>
-                    @endif
-                  @endauth
                 </div>
             </div>
         </div>
