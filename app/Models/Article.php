@@ -44,7 +44,7 @@ class Article extends Model
     }
 
     //relazione MtM con users
-    public function users(){
+    public function user_like(){
         return $this->belongsToMany(User::class);
     }
 

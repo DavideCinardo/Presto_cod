@@ -2,25 +2,26 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Article;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 
 class HeartBotton extends Component
 {
-    public $article;
-    public $like;
+    public $article_id;
+    public $like = false;
 
     //funzione like
-    public function like(){
-        $this->article->users()->attach(Auth::user()->id);
-        $this->like = true;
+    public function like_menager(Article $article){
+        if($this->like == false){
+            $this->like = true;
+            $article->user_like()->attach(Auth::user()->id);
+        } else {
+            $this->like= false;
+            $article->user_like()->detach(Auth::id());
+        }
     }
 
-    //funzione dislike
-    public function dislike(){
-        $this->article->users()->detach(Auth::user()->id);
-        $this->like = false;
-    }
 
     public function render()
     {

@@ -6,8 +6,10 @@ use App\Models\Image;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 
 class ArticlesCreateForm extends Component
@@ -45,7 +47,7 @@ class ArticlesCreateForm extends Component
         }
     }
 
-    public function removeImages($key){
+    public function removeImage($key){
         if(in_array($key, array_keys($this->images))){
             unset($this->images[$key]);
         }
@@ -59,8 +61,14 @@ class ArticlesCreateForm extends Component
          //salvataggio delle immagini
          if(count($this->images)){
              foreach($this->images as $image){
-                 $article->images()->create(['path' => $image->store('images', 'public')]);
+                 //$article->images()->create(['path' => $image->store('images', 'public')]);
+                 $newFileName = "articles/{$this->article->id}";
+                 $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
+
+                 dispatch(new ResizeImage($newImage->path, 400,300));
              }
+
+             File::deleteDirectory(storage_path('/app/livewire-tmp'));
          }
 
          $article->user()->associate(Auth::user());

@@ -1,3 +1,8 @@
 <div>
-    <button wire:click="{{$like == true ? "dislike" : "like"}}" class="heart d-flex justify-content-center"><i class="{{$like == true ? "text-danger fa-solid " : "fa-regular"}} fa-heart"></i></button>
+    <button wire:click="like_menager({{$article_id}})" type="submit" class="heart d-flex justify-content-center">
+        <i class="{{Auth::user()->articleslike->contains($article_id) ? "text-danger fa-solid " : "fa-regular"}} fa-heart"></i>
+    </button>
 </div>
+
+
+
