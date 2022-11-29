@@ -14,8 +14,8 @@
                 <div class="container min-vh-100">
                     <div class="row">
                         <div class="col-12">
-                            <h3>Non hai messo like a nessun annuncio.</h3>
-                            <h5>Esplora i nostri annunci : </h5>
+                            <h3>{{__('ui.noLike')}}</h3>
+                            <h5>{{__('ui.explore')}} : </h5>
                             <a href="{{ route('articles.index') }}" class="btn btn-outline-dark">Inseriscine uno</a>
                         </div>
                     </div>

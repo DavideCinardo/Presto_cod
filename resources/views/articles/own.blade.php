@@ -9,7 +9,7 @@
                 <div class="container min-vh-100">
                     <div class="row">
                         <div class="col-12">
-                            <h3>Non ci sono annunci inseriti da te</h3>
+                            <h3>{{__('ui.noYourAds')}}</h3>
                             <a href="{{ route('articles.create') }}" class="btn btn-outline-dark">Inseriscine uno</a>
                         </div>
                     </div>

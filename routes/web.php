@@ -40,4 +40,7 @@ Route::get('give/revaisor/{user}', [RevaisorController::class, 'makeRevaisor'])-
 //rotta per ricercare gli annunci con laravel scout
 Route::get('/search/article', [PublicController::class, 'seachArticles'])->name('articles.search');
 
+//rotta per lo switch delle lingue
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');
+
 

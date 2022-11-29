@@ -10,8 +10,8 @@
             <div class="container min-vh-100">
                 <div class="row">
                     <div class="col-12">
-                        <h3>Non ci sono annunci per la categorie : {{ $category->name }}</h3>
-                        <a href="{{ route('articles.create') }}" class="btn btn-outline-dark">Inseriscine uno</a>
+                        <h3>{{__('ui.noAds')}} : {{ $category->name }}</h3>
+                        <a href="{{ route('articles.create') }}" class="btn btn-outline-dark">{{__('ui.insert')}}</a>
                     </div>
                 </div>
             </div>

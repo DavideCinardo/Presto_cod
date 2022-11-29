@@ -10,7 +10,7 @@
                 @empty
                     <div class="col-12">
                         <div class="alert alert-danger">
-                            <p>Non ci sono annunci relativi alla tua ricerca : "{{$search}}"</p>
+                            <p>{{__('ui.noSearch')}} : "{{$search}}"</p>
                         </div>
                     </div>
                 @endforelse
