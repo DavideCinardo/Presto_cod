@@ -1,6 +1,6 @@
 <x-layout>
 
-
+    {{-- Video di sfondo --}}
     <div class="container-fluid p-0">
         <video src="/media/VideoHeader.mp4" type="video/mp4" muted autoplay loop class="videofullscreen"></video>
     </div>
