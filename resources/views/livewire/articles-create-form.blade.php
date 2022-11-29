@@ -31,7 +31,20 @@
                     <label for="category" class="form-label">{{__('ui.category')}}</label>
                     <select wire:model.defer="category" id="category" class="form-control @error('category') is-invalid @enderror">
                         @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            <option value="{{ $category->id }}">
+                                @switch(Config::get('app.locale'))
+                                    @case('it')
+                                        {{$category->nameIt}}
+                                        @break
+                                    @case('en')
+                                        {{$category->nameEn}}
+                                        @break
+                                    @case('es')
+                                        {{$category->nameEs}}
+                                        @break
+                                    @default
+                                @endswitch  
+                            </option>
                         @endforeach
                     </select>
                 </div>
@@ -65,7 +78,7 @@
                     <label for="description" class="form-label">{{__('ui.description')}}</label>
                     <textarea type="text" wire:model="description" class="form-control @error('description') is-invalid @enderror" id="description" rows="8"></textarea>
                 </div>
-                <button type="submit" class="btn btn-success">{{__('ui.postAds')}}</button>
+                <button type="submit" class="btn btn-success">Accetta</button>
                 <a href="{{route('homepage')}}" class="btn btn-outline-secondary">Home</a>
                 
             </form>

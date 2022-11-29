@@ -34,7 +34,9 @@ body {
   background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);
 } */
 
-
+.navDistance{
+  height: 200px;
+}
 /* navbar logo */
 .wrapperTitle {
   position: relative;
@@ -217,6 +219,14 @@ a,
   
 }
 
+.border-bottom{
+  border-color: var(--oro)!important;
+}
+
+.title-h{
+  height: 10vh;
+}
+
 .SectionFoot2 {
   
   color: var(--oro) !important;
@@ -264,8 +274,6 @@ footer {
 .SearchBar {
   position: relative;
   border: #ffbd59;
-  margin-top: 200px;
-  margin-bottom: 150px;
   font-size: 1.3em;
   padding: 20px;
 }
@@ -315,11 +323,16 @@ footer {
 .swiper {
   width: 55%;
   height: 420px;
+  margin-left: 0!important;
+  margin-right: 0!important;
 }
-
+.swiper-slide{
+  width: 350px!important;
+}
 .head-slide {
   text-align: center;
   font-size: 18px;
+  width: 400px;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -371,9 +384,11 @@ body {
 
 .card__image {      
   width: 100%;
-  height: auto;
+  height: 100%;
 }
-
+.btn{
+  z-index: 1999!important;
+}
 .card__overlay {
   position: absolute;
   bottom: 0;
@@ -478,13 +493,14 @@ body {
 }
 
 .heart{
-  background-color: white;
+  background-color: transparent;
   width: 12%;
   height: 8%;
   border-radius: 50%;
   position: absolute;
   top: 2%;
   right: 4%;
+  z-index: 1999;
 }
 
 /* DESCRIZIONE */
@@ -530,7 +546,7 @@ a.dropdown-item:hover {
   left:0;
   width:100%;
   z-index:123;
-  padding-bottom:120px;
+  margin-bottom:120px;
   
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density /
 background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); / FF3.6-15 /
@@ -572,13 +588,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   width:100%;
   height:auto;
 }
+.profileContent{
+  padding: 0!important;
+}
+
+.distanza{
+  margin-top: 60px;
+  width: 80%;
+}
 .profileCard .profileContent::before{
   content: "";
   position:absolute;
   top:0;
   left:0;
-  width:50%;
-  height:40%;
+  width:40%;
+  height:30%;
   border:3px solid #222;
   border-right:3px solid transparent;
   border-bottom:3px solid transparent;
@@ -610,8 +634,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   position:absolute;
   bottom:0;
   right:0;
-  width:50%;
-  height:40%;
+  width:40%;
+  height:30%;
   border:3px solid #222;
   border-left:3px solid transparent;
   border-top:3px solid transparent;
@@ -626,7 +650,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   height:100%;
   padding:50% 4%;
   text-align: center;
-  background-color: rgba(255,255,255,0.4);
 }
 .profileCard .profileContent .titleCard{
   font-size:24px;
@@ -636,6 +659,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   text-transform:uppercase;
   transform: translateY(-100px);
   transition:all 900ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.20s;
+  background-color: rgba(255,255,255,0.4);
 }
 .profileCard:hover .titleCard{
   opacity:1;

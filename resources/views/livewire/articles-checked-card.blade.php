@@ -6,34 +6,29 @@
             </div>
         @endif
     {{-- end messaggi di sessione --}}
-    <div class="row justify-content-center">
+    <div class="row justify-content-around">
         @foreach ($articles as $article)
-            <div class="col-12 col-md-4 my-4">
-                {{-- Card --}}
-                <div class="card p-0 w-100 ">
-                    <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300,400) : "https://picsum.photos/300/400"}}" class="card__image" alt="" />
-                    <div class="card__overlay">
-                        <div class="card__header">
-                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>  
-                            <div class="card__header-text d-flex justify-content-between w-100">
-                                <div class=" text-start">
-                                    <h3 class="card__title">{{$article->title}}</h3>            
-                                    <span class="card__status">{{$article->location}}</span>
-                                </div>
-                                <div>
-                                    <h3 class="card__title">&euro;{{$article->price}}</h3>
-                                </div>
+            <div class="col-12 col-md-3 my-4">
+                    {{-- Card --}}
+                <div class="card p-0 shadow-lg rounded-0">
+                    <div class="profileCard position-relative h-100">
+                        <div class="profileImg">
+                            <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300,400) : "https://picsum.photos/200"}}" class="card__image" alt="" />
+                                @auth
+                                    @livewire('heart-botton', ['article' => $article])
+                                @endauth
+                        </div>
+                        <div class="profileContent d-flex justify-content-center">
+                            <div class="distanza">
+                                <h2 class="titleCard">{{$article->title}}
+                                    <span>{{$article->location}}</span>
+                                    <span>{{$article->description}}</span>
+                                    <span>&euro;{{$article->price}}</span>
+                                    <a href="{{route('articles.show', compact('article'))}}" class="btn btn-outline-warning me-2">{{__('ui.more')}}</a>
+                                </h2>
                             </div>
                         </div>
-                        <div class="card__descrition mb-2 d-flex justify-content-center">
-                            <div>
-                                <p class="card__status">{{$article->description}}</p>
-                                @if($last->id == $article->id)
-                                    <button wire:click="nullRevision" class="btn btn-danger">{{__('ui.cancelReview')}}</button>
-                                @endif
-                            </div>
-                        </div>
-                    </div>     
+                    </div>
                 </div>
             </div>
         @endforeach

@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container">
-        <div class="row justify-content-center">
+    <div class="container mt-5">
+        <div class="row justify-content-around">
             @foreach($articles as $article)
-                <div class="col-12 col-md-6 mb-4">
+                <div class="col-12 col-md-3 mb-4">
                     @livewire('articles-card', ['article' => $article])
                 </div>
 
