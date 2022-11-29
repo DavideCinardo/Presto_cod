@@ -812,3 +812,9 @@ btn-custom ul li a:hover span:nth-child(4) {
 .facebook:hover span { 
   background: #bb9a37;
 }
+
+video {
+  width: 100%;
+  
+}
+
