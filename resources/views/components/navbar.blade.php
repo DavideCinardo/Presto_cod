@@ -10,14 +10,8 @@
   {{-- FINE BOTTONE ANIMATO --}}
 
 
-        <div class="py-3 text-center border-bottom under-line" id="navLogo">
-            <div class="d-flex justify-content-end">
-                <x-_locale lang="it" />
-                <x-_locale lang="en" />
-                <x-_locale lang="es" />
-            </div>
-            <a class="navbar-brand colorText p-0 ms-2 home "href="{{ route('homepage') }}">
-                {{-- <img src="/media/presto.png" alt="" class="invert logo-image" height="100" width="100"> --}}
+            
+            {{-- <a class="navbar-brand colorText p-0 ms-2 home "href="{{ route('homepage') }}">
                 <div class="LogoSize">
                     <div class="wrapperTitle">
                         <div class="cardTitle">
@@ -28,9 +22,14 @@
                     </div>
                 </div>
             </a>
-  
+   --}}
       <div class="py-3 text-center border-bottom under-line" id="navLogo" >
       <a class="navbar-brand colorText p-0 ms-2 home "href="{{route('homepage')}}">
+        <div class="d-flex justify-content-end">
+            <x-_locale lang="it" />
+            <x-_locale lang="en" />
+            <x-_locale lang="es" />
+        </div>
         {{-- <img src="/media/presto.png" alt="" class="invert logo-image" height="100" width="100"> --}}
         {{-- <div class="LogoSize">
           <div class="wrapperTitle">
@@ -206,19 +205,21 @@
                                 </li>
                             </ul>
                         </btn-custom>
-                        <btn-custom type="submit">
-                            <ul>
-                                <li>
-                                    <a class="facebook" href="#">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        {{ __('ui.apply') }}
-                                    </a>
-                                </li>
-                            </ul>
-                        </btn-custom>
+                        <button class="border-0 bg-transparent" type="submit">
+                            <btn-custom >
+                                <ul>
+                                    <li>
+                                        <a  class="facebook">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            {{ __('ui.apply') }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </btn-custom>
+                        </button>
                     </div>
                 </form>
             </div>
