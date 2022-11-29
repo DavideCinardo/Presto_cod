@@ -20,7 +20,7 @@ class ArticlesCreateForm extends Component
 
     protected $rules = [
         'title' => 'required',
-        'price' => 'required',
+        'price' => 'required|numeric|gt:0',
         'description' => 'required|min:10',
         'images.*' => 'image|max:1024',
         'temporary_images.*' => 'image|max:1024',
