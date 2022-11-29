@@ -36,7 +36,7 @@ body {
 } */
 
 .navDistance{
-  height: 200px;
+  height: 0;
 }
 /* navbar logo */
 .wrapperTitle {
@@ -195,7 +195,7 @@ height: 30vh;
 }
 
 .toggle-color {
-  color: var(--quarto);
+  color: var(--oro);
 }
 
 .bg-menu {
@@ -204,17 +204,17 @@ height: 30vh;
 }
 
 .navbar-toggler {
-  color: var(--quarto);
+  color: var(--oro);
 }
 
 a,
 .colorTextDD {
-  color: var(--quarto);
+  color: var(--oro);
   text-decoration: none;
 }
 
 .colorTextDD:hover {
-  color: var(--quarto);
+  color: var(--oro);
   background-color: var(--terzo);
 }
 
@@ -247,7 +247,7 @@ footer {
 }
 
 .OurCards {
-  color: var(--quarto);
+  color: var(--oro);
   width: 350px;
   min-height: 450px;
   margin: 15px;
@@ -818,6 +818,6 @@ btn-custom ul li a:hover span:nth-child(4) {
 
 video {
   width: 100%;
-  
+
 }
 

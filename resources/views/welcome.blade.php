@@ -77,7 +77,7 @@
                             @endif
                         @endforeach
                         <div class="swiper mySwiper d-flex justify-content-center mt-5">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper d-flex justify-content-center">
                                 @foreach($category->articles as $article)
                                     @if ($article->is_accepted)
                                         <div class="swiper-slide">
