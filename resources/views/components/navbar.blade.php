@@ -38,13 +38,29 @@
             <a class="nav-link dropdown-toggle colorText size" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{__('ui.ads')}}
             </a>
-  
           {{-- Dropdown annunci --}}
             <ul class="dropdown-menu bg-menu mt-2">
               <a href="{{route('articles.index')}}"><li class="dropdown-item colorText colorTextDD">{{__('ui.allAds')}}</li></a>
                 <hr class="line-separator">
                   @foreach($categories as $category)
-                    <a href="{{route('category', compact('category'))}}"><li class="dropdown-item colorTextDD">{{$category->name}}</li></a>
+                    <a href="{{route('category', compact('category'))}}">
+                      <li class="dropdown-item colorTextDD">
+                        
+                        @switch(Config::get('app.locale'))
+                            @case('it')
+                                {{$category->nameIt}}
+                                @break
+                            @case('en')
+                                {{$category->nameEn}}
+                                @break
+                            @case('es')
+                                {{$category->nameEs}}
+                                @break
+                            @default
+                        @endswitch  
+                      </li>
+
+                    </a>
                   @endforeach
             </ul>
           </div>

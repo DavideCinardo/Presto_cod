@@ -1,5 +1,4 @@
 <x-layout>
-
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md8">
@@ -11,13 +10,13 @@
                         <div class="container SearchBar">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-3 text-center">
-                                    <label for="searched">Cosa cerchi?</label>
+                                    <label for="searched">{{__('ui.search')}}</label>
                                 </div>
                                 <div class="col-12 col-md-4 text-center">
                                     <input class="form-control me-2 d-inline my-2" id="searched" name="searched" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
                                 </div>
                                 <div class="col-12 col-md-3 text-center">
-                                    <button type="submit" class="btn btn-outline-warning">Cerca</button>
+                                    <button type="submit" class="btn btn-outline-warning">{{__('ui.searchBtn')}}</button>
                                 </div>
                             </div>
                         </div>

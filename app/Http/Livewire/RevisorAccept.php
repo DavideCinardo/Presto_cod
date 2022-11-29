@@ -5,7 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 
-class AcceptArticle extends Component
+class RevisorAccept extends Component
 {
     public $article;
 
@@ -18,9 +18,17 @@ class AcceptArticle extends Component
         session()->flash('accept', 'Hai accettato l\'articolo');
         
     }
+    
+    //funzione per rifiutare l'articolo
+    public function rejectArticle(){
+        $this->article->is_accepted = false;
+        $this->article->save();
+
+        session()->flash('reject', 'Hai rifiutato l\'articolo');
+    }
 
     public function render()
-    {   
-        return view('livewire.accept-article');
+    {
+        return view('livewire.revisor-accept');
     }
 }
