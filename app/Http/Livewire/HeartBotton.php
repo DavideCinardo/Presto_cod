@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class HeartBotton extends Component
 {
-    public $article_id;
+    public $article;
     public $like = false;
 
     //funzione like
