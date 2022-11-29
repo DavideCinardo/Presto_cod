@@ -19,13 +19,13 @@
       </div>
     </nav>
     <div class="navbar-expand-md" id="subNav">
-      <div class="navbar-dark text-center my-2">
+      <div class="navbar-dark text-center">
         <button class="navbar-toggler w-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
         </button>
       </div>
-      <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mx-auto ">
+      <div class="text-center mt-0 collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto mt-2 ">
           <li class="nav-item">
             <a class="nav-link active home" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
@@ -38,28 +38,44 @@
             <a class="nav-link dropdown-toggle colorText size" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{__('ui.ads')}}
             </a>
-  
           {{-- Dropdown annunci --}}
             <ul class="dropdown-menu bg-menu mt-2">
               <a href="{{route('articles.index')}}"><li class="dropdown-item colorText colorTextDD">{{__('ui.allAds')}}</li></a>
                 <hr class="line-separator">
                   @foreach($categories as $category)
-                    <a href="{{route('category', compact('category'))}}"><li class="dropdown-item colorTextDD">{{$category->name}}</li></a>
+                    <a href="{{route('category', compact('category'))}}">
+                      <li class="dropdown-item colorTextDD">
+                        
+                        @switch(Config::get('app.locale'))
+                            @case('it')
+                                {{$category->nameIt}}
+                                @break
+                            @case('en')
+                                {{$category->nameEn}}
+                                @break
+                            @case('es')
+                                {{$category->nameEs}}
+                                @break
+                            @default
+                        @endswitch  
+                      </li>
+
+                    </a>
                   @endforeach
             </ul>
           </div>
           @auth
-        {{-- dropdown utente registrato --}}
-        {{-- tasto per i revisori --}}
-          @if (Auth::user()->is_revaisor)
-              <div class="nav-item">
-                <a href="{{route('revaisor.index')}}" class="position-relative">
-                  {{__('ui.reviewAds')}}
+          {{-- dropdown utente registrato --}}
+          {{-- tasto per i revisori --}}
+            @if (Auth::user()->is_revaisor)
+                <div class="nav-item d-flex align-items-center me-4 position-relative">
+                  <a href="{{route('revaisor.index')}}">
+                    {{__('ui.reviewAds')}}
+                  </a>
                   <span class="position-absolute top-0 start-100 translate-middle ">
                     @livewire('not-revisione-count')
                   </span>
-                </a>
-              </div>
+                </div>
             @endif
             {{-- end tasto dei revisori --}}
             <div class="nav-item dropdown colorText">
@@ -79,8 +95,9 @@
                                 {{__('ui.workUs')}}
                               </button>  
                             
-                        </ul>       
-             </div>
+                        </ul>
+                      </div>       
+             
              
              {{-- end dropdown registrato --}}
              @else
@@ -88,7 +105,7 @@
      
      
            
-                     <div class="nav-item dropdown colorText size me-5 d-flex">
+                     <div class="nav-item dropdown colorText size d-flex">
                          
      
                        {{-- Accedi --}}
@@ -104,12 +121,14 @@
                      </div>
                  {{-- end drop down utente --}}
              @endauth
-             {{-- tasti cambio lingua --}}
+        </ul>
+        {{-- tasti cambio lingua --}}
+            <div class="mx-end">
               <x-_locale lang="it" />
               <x-_locale lang="en" />
               <x-_locale lang="es" />
-             {{-- end tasti cambio lingua --}}
-        </ul>
+            </div>
+        {{-- end tasti cambio lingua --}}
       </div>
     </div>
   </div>

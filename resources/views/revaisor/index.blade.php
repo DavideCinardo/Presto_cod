@@ -7,29 +7,9 @@
             </div>
         </div>
     </div>
-    {{-- messaggi di sessione flash --}}
-
-        {{-- messaggio accetta --}}
-            @if(session('accept'))
-                <div class="alert alert-success">
-                    {{session('accept')}}
-                </div>
-            @endif
-        {{-- end messaggio accetta --}}
-
-        {{-- messaggio rifiuta --}}
-            @if(session('reject'))
-                <div class="alert alert-success">
-                    {{session('reject')}}
-                </div>
-            @endif
-        {{-- end messaggio rifiuta --}}
-        
-    {{-- end messaggi di sessione flash --}}
-
     {{-- se ci sono gli annunci --}}
         @if($articles_unchecked)
-            @livewire('articles-unchecked-card')
+            @livewire('revisor-accept', ['article'=> $articles_unchecked])
         @endif
     {{-- end --}}
 
@@ -44,9 +24,10 @@
         </div>
         {{-- se ci sono gli annunci --}}
             @if($articles_checked)
-                @livewire('articles-checked-card')
+                @livewire('articles-checked-card', ['article' => $articles_checked->first()])
             @endif
         {{-- end --}}
     {{-- end gli annunci revisionati dal revisore loggato --}}
 
+    <x-footer />
 </x-layout>

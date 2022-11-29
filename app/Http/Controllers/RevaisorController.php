@@ -18,7 +18,7 @@ class RevaisorController extends Controller
     public function index(){
 
         //prendere gli articoli da revisionare
-        $articles_unchecked = Article::where('is_accepted', null)->get();
+        $articles_unchecked = Article::where('is_accepted', null)->first();
         //prendere gli articoli revisionati dal revisore loggato
         $articles_checked = Article::where('revisioned_from', Auth::user()->id)->get();
         //torna alla vista con questa variabile

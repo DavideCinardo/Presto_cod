@@ -1,13 +1,11 @@
 :root {
-  --primario: rgb(187, 154, 55);
-  --secondario: #F1AB86;
-  --terzo: #C57B57;
-  --quarto:#17181D;
-  --quinto: #17181D;
-  --sesto: #ffbd59;
+  --primario: #F1AB86;
+  --secondario: #C57B57;
+  --terzo:#17181D;
+  --quarto: #ffbd59;
   --surface-color: #fff;
-  --curve: 40;
   --oro: rgb(187, 154, 55);
+  --curve: 40;
 }
 
 /* font-family: 'Mukta', sans-serif;
@@ -22,10 +20,15 @@ body {
   background-size: cover;
   /* background: rgb(251, 240, 218); */
   /* background: linear-gradient(130deg, rgba(251, 240, 218, 1) 0%, rgba(241, 171, 134, 0.65) 100%); */
+  font-family: 'Cabin', sans-serif;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.4)
 }
 
 /* nav {
-  border-bottom: solid 4px var(--terzo);
+  border-bottom: solid 4px var(--secondario);
   border-radius: 0px 0px 50px 50px;
   background: rgb(30, 45, 47);
   background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);
@@ -122,7 +125,7 @@ height: 30vh;
 
 
 .colorText {
-  color: var(--sesto) !important;
+  color: var(--quarto) !important;
 }
 
 .logo {
@@ -186,7 +189,7 @@ height: 30vh;
 }
 
 .toggle-color {
-  color: var(--sesto);
+  color: var(--quarto);
 }
 
 .bg-menu {
@@ -195,18 +198,18 @@ height: 30vh;
 }
 
 .navbar-toggler {
-  color: var(--sesto);
+  color: var(--quarto);
 }
 
 a,
 .colorTextDD {
-  color: var(--sesto);
+  color: var(--quarto);
   text-decoration: none;
 }
 
 .colorTextDD:hover {
-  color: var(--sesto);
-  background-color: var(--quarto);
+  color: var(--quarto);
+  background-color: var(--terzo);
 }
 
  .border-top {
@@ -230,13 +233,13 @@ footer {
 }
 
 .OurCards {
-  color: var(--sesto);
+  color: var(--quarto);
   width: 350px;
   min-height: 450px;
   margin: 15px;
   border-radius: 15px;
-  border: 1px solid var(--quarto);
-  border-bottom: 4px solid var(--terzo);
+  border: 1px solid var(--terzo);
+  border-bottom: 4px solid var(--secondario);
 }
 
 .CardImg {
@@ -250,7 +253,7 @@ footer {
 }
 
 .HoverFooter:hover {
-  color: var(--terzo);
+  color: var(--secondario);
 }
 
 
@@ -259,23 +262,29 @@ footer {
 }
 
 .SearchBar {
-  height: 50px;
-  margin-bottom: 100px;
-  /* padding: 20px; */
+  position: relative;
+  border: #ffbd59;
+  margin-bottom: 150px;
   font-size: 1.3em;
-  /* border-radius: 30px; */
-  /* background: rgb(30, 45, 47);
-  background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%); */
-  color: var(--oro);
-  border: solid 1px var(--oro);
-  border-bottom: var(--oro) 1px solid;
+  padding: 20px;
 }
 
-/* .SearchBar:hover {
-  width: 440px;
-  height: 340px;
-  transition: 0.5s ease;
-} */
+
+.Lbl-text {
+  color: var(--oro);
+}
+
+.Btn-text {
+  background-color: var(--oro);
+  color: var(--terzo);
+  font-size: 0.8em;
+}
+
+.Btn-text:hover{
+  color: var(--oro);
+  font-size: 1.3em;
+  transition: 1s font-size;
+}
 
 .BoxWelcomeCards {
   margin-top: 130px;
@@ -285,29 +294,29 @@ footer {
 .RowRevaisor {
   background: rgb(30, 45, 47);
   background: linear-gradient(94deg, rgba(30, 45, 47, 1) 0%, rgba(7, 54, 53, 0.8575805322128851) 100%);
-  color: var(--sesto);
+  color: var(--quarto);
   padding: 70px;
   font-size: 3.5em;
 }
 
 
 .dropdown-menu {
-  border-top: solid 4px var(--terzo);
+  border-top: solid 4px var(--secondario);
 }
 
 .line-separator {
-  color: var(--terzo);
+  color: var(--secondario);
   
 }
 
 
 /* carousel css */
 .swiper {
-  width: 100%;
-  height: 100%;
+  width: 55%;
+  height: 420px;
 }
 
--head-slide {
+.head-slide {
   text-align: center;
   font-size: 18px;
 
@@ -326,7 +335,7 @@ footer {
   align-items: center;
 }
 
--head-slide img {
+.head-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -372,7 +381,7 @@ body {
   z-index: 1;      
   border-radius: calc(var(--curve) * 1px);    
   background: var(--oro);
-  background: linear-gradient(0deg, var(--oro) 0%, var(--quarto) 100%);      
+  background: linear-gradient(0deg, var(--oro) 0%, var(--terzo) 100%);      
   transform: translateY(100%);
   transition: .2s ease-in-out;
 }
@@ -388,9 +397,9 @@ body {
   gap: 2em;
   padding: 2em;
   border-radius: calc(var(--curve) * 1px) 0 0 0; 
-  border-top: solid 4px var(--terzo);
+  border-top: solid 4px var(--secondario);
   border-radius: 0px 0px 50px 50px; 
-  background: var(--quarto);
+  background: var(--terzo);
   
   transform: translateY(-100%);
   transition: .2s ease-in-out;
@@ -406,7 +415,7 @@ body {
 }
 
 .card__arc path {
-  fill: var(--quinto);
+  fill: var(--terzo);
   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }       
 
@@ -424,7 +433,7 @@ body {
 .card__title {
   font-size: 1em;
   margin: 0 0 .3em;
-  color: var(--sesto);
+  color: var(--quarto);
 }
 
 .card__tagline {
@@ -432,18 +441,18 @@ body {
   margin: 1em 0;
   font-family: "MockFlowFont";  
   font-size: .8em; 
-  color: var(--sesto);  
+  color: var(--quarto);  
 }
 
 .card__status {
   font-size: .8em;
-  color: var(--sesto);
+  color: var(--quarto);
 }
 
 .card__description {
   padding: 0 2em 2em;
   margin: 0;
-  color: var(--sesto);
+  color: var(--quarto);
   font-family: "MockFlowFont";   
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -452,6 +461,7 @@ body {
 } 
 
 .etichetta{
+<<<<<<< HEAD
   color: var(--oro);
   height: 50px;
   display: flex;
@@ -460,12 +470,27 @@ body {
   /* border-top-left-radius: 100%;
   border-bottom-right-radius: 100%; */
   border: solid 1px var(--oro);
+=======
+  background-color: var(--terzo);
+  color: var(--quarto);
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border: solid 5px var(--secondario);
+}
+
+.Sez-Articoli {
+  margin: 100px;
+>>>>>>> 4a3586699c1ccff683941ed183e77828ed4e2948
 }
 
 .heart{
   background-color: white;
-  width: 10%;
-  height: 5%;
+  width: 12%;
+  height: 8%;
   border-radius: 50%;
   position: absolute;
   top: 2%;
@@ -488,6 +513,7 @@ body {
   text-transform:uppercase;
   letter-spacing:2px;
   text-shadow:1px 1px 2px rgba(0,0,0,0.4)
+  
 }
  
 .dropdown-menu {
@@ -515,6 +541,7 @@ a.dropdown-item:hover {
   width:100%;
   z-index:123;
   padding-bottom:120px;
+  
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density /
 background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); / FF3.6-15 /
 background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); / Chrome10-25,Safari5.1-6 /
@@ -542,6 +569,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   background-position: center;
 }
 
+<<<<<<< HEAD
 
 
 /* style card */
@@ -665,3 +693,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 
 /* end style card */
+=======
+.form-label{
+  color: var(--oro);
+}
+
+/* NON TOCCARE */
+
+.categoryPrompt{
+  color: var(--oro);
+}
+
+.navbar-down{
+  background-image: url(/public/media/SfondoScuro.jpeg);
+  
+}
+
+>>>>>>> 4a3586699c1ccff683941ed183e77828ed4e2948

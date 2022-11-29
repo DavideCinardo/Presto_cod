@@ -19,9 +19,6 @@
     {{-- navbar --}}
     <x-navbar />
 
-    {{-- header --}}
-    <x-header />
-
     {{-- messaggi di successo/errore --}}
         {{-- allert di successo --}}
             @if(session('message'))

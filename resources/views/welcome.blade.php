@@ -1,35 +1,30 @@
 <x-layout>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 col-md8">
-
-                {{-- form cerca --}}
-                <div class="shadow-lg d-flex flex-column-reverse">
+            <div class="col-12">  
                     <form action="{{route('articles.search')}}" method="GET" class="my-3" role="search">
                         @csrf
                         <div class="container SearchBar">
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center align-items-center">
                                 <div class="col-12 col-md-3 text-center">
-                                    <label for="searched">Cosa cerchi?</label>
+                                    <label for="searched">{{__('ui.search')}}</label>
                                 </div>
                                 <div class="col-12 col-md-4 text-center">
                                     <input class="form-control me-2 d-inline my-2" id="searched" name="searched" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
                                 </div>
                                 <div class="col-12 col-md-3 text-center">
-                                    <button type="submit" class="btn btn-outline-warning">Cerca</button>
+                                    <button type="submit" class="btn btn-outline-warning">{{__('ui.searchBtn')}}</button>
                                 </div>
                             </div>
                         </div>
                     </form>
-                </div>
-
             </div>
         </div>
     </div>
 
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             {{-- carosello --}}
             <div class="col-12 col-md-5">
@@ -61,10 +56,10 @@
         </div>
     </div>
     
-    <div class="container">
+    <div class="container-fluid">
         {{-- sezione caroselli per ogni categoria --}}
             @foreach($categories as $category)
-                <div class="mt-5">
+                <div class="Sez-Articoli">
                     @if(count($category->articles) > 0)
                         @foreach($category->articles as $article)
                             @if($article->is_accepted)
@@ -74,7 +69,7 @@
                                 @break
                             @endif
                         @endforeach
-                        <div class="swiper mySwiper d-flex justify-content-center mt-3">
+                        <div class="swiper mySwiper d-flex justify-content-center mt-5">
                             <div class="swiper-wrapper">
                                 @foreach($category->articles as $article)
                                     @if ($article->is_accepted)
