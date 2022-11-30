@@ -12,9 +12,7 @@
         </div>
     </div>
     {{-- se ci sono gli annunci --}}
-        @if($articles_unchecked)
-            @livewire('revisor-accept', ['article'=> $articles_unchecked])
-        @endif
+            @livewire('revisor-accept')
     {{-- end --}}
 
     {{-- gli annunci revisionati dal revisore loggato --}}
