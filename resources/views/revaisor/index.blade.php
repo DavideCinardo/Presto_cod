@@ -16,7 +16,7 @@
     {{-- end --}}
 
     {{-- gli annunci revisionati dal revisore loggato --}}
-        <div class="container-fluid formCreate mt-0 mb-5">
+        <div class="container-fluid formCreate my-5">
             <div class="row title-h justify-content-center">
                 <div class="col-1 border-start border-top"></div>
                 <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
@@ -29,9 +29,7 @@
             </div>
         </div>
         {{-- se ci sono gli annunci --}}
-            @if($articles_checked)
-                @livewire('articles-checked-card', ['article' => $articles_checked->first()])
-            @endif
+                @livewire('articles-checked-card')
         {{-- end --}}
     {{-- end gli annunci revisionati dal revisore loggato --}}
 
