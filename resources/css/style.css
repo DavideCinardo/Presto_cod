@@ -362,7 +362,7 @@ footer {
 
 
 .formCreate {
-  margin-top: 150px;
+  margin-top: 350px;  
 }
 
 .SearchBar {
@@ -935,3 +935,39 @@ video {
   width: 100%;
 
 }
+<<<<<<< HEAD
+=======
+
+.textRemember{
+  color: var(--oro);
+}
+
+.errorLogin{
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 425px){
+  .formCreate{
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .formCreate{
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .formCreate{
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (max-width: 1440px){
+  .formCreate{
+    margin-top: 200px;
+  }
+}
+>>>>>>> 9d0841c347b5a51d9f84e18a10b9a8fd9a0b06a4

@@ -52,7 +52,7 @@ return[
     'photoPreview'=>'Photo preview',
     'delete'=>'Delete',
     'remember' => 'Remember me',
-    'notRegister'=>'Not registered? Click here.',
+    'notRegister'=>'Register',
     'confPass'=>'Confirm password',
     'alredySub'=>'Are you already a member? Log in here.',
     'noYourAds'=>'There are no ads posted by you',
