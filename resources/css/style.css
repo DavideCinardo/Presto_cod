@@ -811,6 +811,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 .space{
   width: 174px;
+  /* infame per te solo le lame */
 }
 
 btn-custom ul{

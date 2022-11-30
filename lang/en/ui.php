@@ -54,7 +54,7 @@ return[
     'remember' => 'Remember me',
     'notRegister'=>'Register',
     'confPass'=>'Confirm password',
-    'alredySub'=>'Are you already a member? Log in here.',
+    'alredySub'=>'Login',
     'noYourAds'=>'There are no ads posted by you',
     'noLike'=>'You have not liked any ads.',
     'explore'=>'Explore our classifieds',

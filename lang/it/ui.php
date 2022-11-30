@@ -55,7 +55,7 @@ return[
     'remember' => 'Ricordami',
     'notRegister'=>'Registrati',
     'confPass'=>'Conferma password',
-    'alredySub'=>'Sei gia iscritto? Accedi da qui.',
+    'alredySub'=>'Accedi',
     'noYourAds'=>'Non ci sono annunci inseriti da te',
     'noLike'=>'Non hai messo like a nessun annuncio.',
     'explore'=>'Esplora i nostri annunci',

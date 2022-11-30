@@ -1,15 +1,7 @@
 <x-layout>
 
-    <div class="container my-5 min-vh-100">
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+    <div class="container my-5 min-vh-75">
+        
         <div class="row justify-content-center formCreate">
             <div class="col-12 col-md-8">
                 {{-- form register --}}
@@ -31,51 +23,81 @@
                             <label for="password_confirmation" class="form-label">{{__('ui.confPass')}}</label>
                             <input type="password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" id="password">
                         </div>
-                        <button type="submit" class="bg-transparent border-0">
-                            <btn-custom >
-                                <ul>
-                                    <li>
-                                      <a class="facebook accept">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        {{__('ui.register')}}
-                                      </a>
-                                    </li>
-                                </ul>
-                            </btn-custom>
-                        </button>
-                        <btn-custom>
-                            <ul>
-                                <li>
-                                  <a href="{{route('homepage')}}" class="facebook">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    Home
-                                  </a>
-                                </li>
-                            </ul>
-                        </btn-custom>
-                        <btn-custom>
-                            <ul>
-                                <li>
-                                  <a href="{{route('login')}}" class="facebook">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    {{__('ui.alredySub')}}
-                                  </a>
-                                </li>
-                            </ul>
-                        </btn-custom>
+
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-4">
+
+                                    <button type="submit" class="bg-transparent border-0">
+                                        <btn-custom >
+                                            <ul>
+                                                <li>
+                                                  <a class="facebook accept text-uppercase">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    {{__('ui.register')}}
+                                                  </a>
+                                                </li>
+                                            </ul>
+                                        </btn-custom>
+                                    </button>
+
+                                </div>
+                                <div class="col-12 col-md-4">
+
+                                    <btn-custom>
+                                        <ul>
+                                            <li>
+                                              <a href="{{route('homepage')}}" class="facebook">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                Home
+                                              </a>
+                                            </li>
+                                        </ul>
+                                    </btn-custom>
+
+                                </div>
+                                <div class="col-12 col-md-4">
+
+                                    <btn-custom>
+                                        <ul>
+                                            <li>
+                                              <a href="{{route('login')}}" class="facebook">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                LOGIN
+                                              </a>
+                                            </li>
+                                        </ul>
+                                    </btn-custom>
+
+                                </div>
+
+                            </div>
+                        </div>
+
                     </form>
                 {{--  end form register --}}
             </div>
         </div>
+
+        @if ($errors->any())
+            <div class="alert alert-danger errorLogin">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
     </div>
 
     <x-footer />
