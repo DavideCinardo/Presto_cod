@@ -362,7 +362,7 @@ footer {
 
 
 .formCreate {
-  margin-top: 350px;  
+  margin-top: 150px;
 }
 
 .SearchBar {
@@ -811,7 +811,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 .space{
   width: 174px;
-  /* infame per te solo le lame */
 }
 
 btn-custom ul{
@@ -945,6 +944,9 @@ video {
   margin-bottom: 0px;
   margin-top: 10px;
 }
+
+
+
 
 .marginShowTop{
   margin-top: 35vh;
