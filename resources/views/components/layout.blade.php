@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="/media/Presto.it (1)-PhotoRoom.png">
+    <link rel="icon" href="/media/72354C4F-26F1-4A89-B6E9-0A2DF47B8154_4_5005_c-PhotoRoom.png">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
@@ -21,7 +21,7 @@
         <x-navbar />
     </div>
 
-    <div class="min-vh-100">
+    <div class="container">
         {{-- messaggi di successo/errore --}}
                 {{-- allert di successo --}}
                 @if(session('message'))
@@ -60,11 +60,11 @@
         {{-- end alert area non consentita --}}
         {{-- end messaggi di successo/errore --}}
 
-        <div>
-        {{$slot}}
-        </div>
     </div>
-
+    
+    <div>
+    {{$slot}}
+    </div>
 
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

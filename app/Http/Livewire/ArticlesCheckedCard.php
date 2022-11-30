@@ -11,7 +11,8 @@ class ArticlesCheckedCard extends Component
     public $article;
 
     //funzione per annullare ultima revisione
-    public function nullRevision(){
+    public function nullRevision($id){
+        $this->article = Article::find($id);
         $this->article->is_accepted = null;
         $this->article->revisioned_from = 1;
         $this->article->save();
@@ -22,7 +23,7 @@ class ArticlesCheckedCard extends Component
     public function render(){
 
         $articles = Article::where('revisioned_from', Auth::user()->id)->where('is_accepted', !null)->orderBy('updated_at', 'DESC')->get();
-        $last = Article::where('revisioned_from', Auth::user()->id)->orderBy('updated_at', 'DESC')->first();
+        $last = Article::where('revisioned_from', Auth::user()->id)->where('is_accepted', !null)->orderBy('updated_at', 'DESC')->first();
         return view('livewire.articles-checked-card', compact('articles', 'last'));
     }
 }

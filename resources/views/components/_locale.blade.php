@@ -1,6 +1,8 @@
-<form action="{{route('set_language_locale', $lang)}}" method="POST" class="d-inline">
+
+<form action="{{ route('set_language_locale', $lang) }}" method="POST" class="d-inline">
     @csrf
-        <button type="submit" class="btn">
-            <img src="{{asset('vendor/blade-flags/language-'.$lang.'.svg')}}" width="32" height="32" alt="">
-        </button>
+    <button type="submit" class="btn">
+        <img src="{{ asset('vendor/blade-flags/language-' . $lang . '.svg') }}" width="28" height="28"
+            alt="">
+    </button>
 </form>

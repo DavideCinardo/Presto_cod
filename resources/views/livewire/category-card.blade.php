@@ -9,9 +9,21 @@
         @empty
             <div class="container min-vh-100">
                 <div class="row">
-                    <div class="col-12">
-                        <h3 class="categoryPrompt">{{__('ui.noAds')}} : {{ $category->name }}</h3>
-                        <a href="{{ route('articles.create') }}" class="btn btn-outline-warning">{{__('ui.insert')}}</a>
+                    <div class="col-12 d-flex">
+                        <h3 class="categoryPrompt me-4">{{__('ui.noAds')}} : {{ $category->name }}</h3>
+                        <btn-custom>
+                            <ul>
+                                <li>
+                                  <a href="{{ route('articles.create') }}" class="facebook" href="#">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    {{__('ui.insert')}}
+                                  </a>
+                                </li>
+                            </ul>
+                        </btn-custom>
                     </div>
                 </div>
             </div>

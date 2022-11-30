@@ -27,9 +27,49 @@
                             <input type="checkbox" name="remember" class="form-check-input" id="rememberMe">
                             <label class="form-check-label" for="rememberMe">{{__('ui.remember')}}</label>
                         </div>
-                        <button type="submit" class="btn btn-success">Login</button>
-                        <a href="{{route('homepage')}}" class="btn btn-outline-secondary">Home</a>
-                        <a class="btn btn-outline-primary" href="{{route('register')}}">{{__('ui.notRegister')}}</a>
+                        <button type="submit" class="bg-transparent border-0">
+                            <btn-custom>
+                                <ul>
+                                    <li>
+                                      <a class="facebook accept">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        Login
+                                      </a>
+                                    </li>
+                                </ul>
+                            </btn-custom>
+
+                        </button>
+                        <btn-custom>
+                            <ul>
+                                <li>
+                                  <a href="{{route('homepage')}}" class="facebook">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Home
+                                    
+                                  </a>
+                                </li>
+                            </ul>
+                        </btn-custom>
+                        <btn-custom>
+                            <ul>
+                                <li>
+                                  <a href="{{route('register')}}" class="facebook">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    {{__('ui.notRegister')}}
+                                  </a>
+                                </li>
+                            </ul>
+                        </btn-custom>
                     </form>
                 {{--  end form register --}}
             </div>

@@ -31,9 +31,47 @@
                             <label for="password_confirmation" class="form-label">{{__('ui.confPass')}}</label>
                             <input type="password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" id="password">
                         </div>
-                        <button type="submit" class="btn btn-success">{{__('ui.register')}}</button>
-                        <a href="{{route('homepage')}}" class="btn btn-outline-secondary">Home</a>
-                        <a class="btn btn-outline-primary" href="{{route('login')}}">{{__('ui.alredySub')}}</a>
+                        <button type="submit" class="bg-transparent border-0">
+                            <btn-custom >
+                                <ul>
+                                    <li>
+                                      <a class="facebook accept">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        {{__('ui.register')}}
+                                      </a>
+                                    </li>
+                                </ul>
+                            </btn-custom>
+                        </button>
+                        <btn-custom>
+                            <ul>
+                                <li>
+                                  <a href="{{route('homepage')}}" class="facebook">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Home
+                                  </a>
+                                </li>
+                            </ul>
+                        </btn-custom>
+                        <btn-custom>
+                            <ul>
+                                <li>
+                                  <a href="{{route('login')}}" class="facebook">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    {{__('ui.alredySub')}}
+                                  </a>
+                                </li>
+                            </ul>
+                        </btn-custom>
                     </form>
                 {{--  end form register --}}
             </div>
