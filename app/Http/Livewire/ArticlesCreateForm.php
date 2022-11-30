@@ -2,15 +2,16 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\LogoImg;
 use App\Models\Image;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
-use App\Jobs\RemoveFaces;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -68,6 +69,7 @@ class ArticlesCreateForm extends Component
                 $newImage = $article->images()->create(['path' => $image->store($newFileName, 'public')]);
 
                 RemoveFaces::withChain([
+                    new LogoImg($newImage->id),
                     new ResizeImage($newImage->path, 400,300),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
