@@ -946,9 +946,17 @@ video {
   margin-top: 10px;
 }
 
+.marginShowTop{
+  margin-top: 35vh;
+}
+
 @media only screen and (max-width: 425px){
   .formCreate{
     margin-top: 200px;
+  }
+  .marginShowTop{
+    margin-top: 100px;
+    background-color: red;
   }
 }
 
@@ -956,16 +964,25 @@ video {
   .formCreate{
     margin-top: 200px;
   }
+  .marginShowTop{
+    margin-top: 35vh;
+  }
 }
 
 @media only screen and (max-width: 1024px){
   .formCreate{
     margin-top: 200px;
   }
+  .marginShowTop{
+    margin-top: 35vh;
+  }
 }
 
 @media only screen and (max-width: 1440px){
   .formCreate{
     margin-top: 200px;
+  }
+  .marginShowTop{
+    margin-top: 35vh;
   }
 }
