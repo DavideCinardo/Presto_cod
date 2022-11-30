@@ -9,15 +9,7 @@
                 </div>
 
             @endif
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                    </ul>
-                </div>
-            @endif
+            
             <form wire:submit.prevent="store" class="formCreate">
                 @csrf
                 <div class="mb-3">
@@ -96,7 +88,7 @@
                         <btn-custom>
                             <ul>
                                 <li>
-                                    <a class="facebook accept">
+                                    <a class="facebook accept text-uppercase">
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -125,5 +117,15 @@
             </form>
         </div>
     </div>
+
+    @if ($errors->any())
+                <div class="alert alert-danger errorLogin">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                    </ul>
+                </div>
+            @endif
 
 </div>
