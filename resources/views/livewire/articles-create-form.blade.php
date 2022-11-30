@@ -65,7 +65,7 @@
                                             <btn-custom wire:click="removeImage({{$key}})" class="me-5">
                                                 <ul>
                                                     <li>
-                                                      <a class="facebook" href="#">
+                                                      <a class="facebook reject" href="#">
                                                         <span></span>
                                                         <span></span>
                                                         <span></span>
@@ -96,7 +96,7 @@
                         <btn-custom>
                             <ul>
                                 <li>
-                                    <a class="facebook">
+                                    <a class="facebook accept">
                                     <span></span>
                                     <span></span>
                                     <span></span>

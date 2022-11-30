@@ -31,7 +31,7 @@
                             <btn-custom>
                                 <ul>
                                     <li>
-                                      <a class="facebook">
+                                      <a class="facebook accept">
                                         <span></span>
                                         <span></span>
                                         <span></span>

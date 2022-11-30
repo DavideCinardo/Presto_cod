@@ -843,6 +843,36 @@ btn-custom ul li a span:nth-child(3){
   height:3px;
   background:#927f4d;
 }
+btn-custom ul li a.accept {
+  color: rgb(18, 69, 18);
+}
+btn-custom ul li a.accept span:nth-child(1),
+btn-custom ul li a.accept span:nth-child(3),
+btn-custom ul li a.accept span:nth-child(2),
+btn-custom ul li a.accept span:nth-child(4){
+  background:rgb(18, 69, 18);
+}
+.accept.facebook:hover {
+  color: green;
+}
+.accept.facebook:hover span { 
+  background: green;
+}
+btn-custom ul li a.reject {
+  color: rgb(94, 21, 21);
+}
+btn-custom ul li a.reject span:nth-child(1),
+btn-custom ul li a.reject span:nth-child(3),
+btn-custom ul li a.reject span:nth-child(2),
+btn-custom ul li a.reject span:nth-child(4){
+  background:rgb(94, 21, 21);
+}
+.reject.facebook:hover {
+  color: red;
+}
+.reject.facebook:hover span { 
+  background: red;
+}
 btn-custom ul li a span:nth-child(1) {
   top:0;
   left:0;

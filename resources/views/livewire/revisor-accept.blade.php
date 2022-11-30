@@ -82,7 +82,7 @@
                       <btn-custom wire:click="acceptArticle">
                         <ul>
                             <li>
-                              <a class="facebook" href="#">
+                              <a class="facebook accept" href="#">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -97,7 +97,7 @@
                       <btn-custom wire:click="rejectArticle">
                         <ul>
                             <li>
-                              <a class="facebook" href="#">
+                              <a class="facebook reject" href="#">
                                 <span></span>
                                 <span></span>
                                 <span></span>
