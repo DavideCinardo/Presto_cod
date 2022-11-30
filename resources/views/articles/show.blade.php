@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container mt-5">
+    <div class="container marginShowTop">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">

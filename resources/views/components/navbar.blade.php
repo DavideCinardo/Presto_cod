@@ -41,7 +41,7 @@
             </button>
         </div>
         <div class="text-center mt-0 collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-            <div class="space"></div>
+            {{-- <div class="space"></div> --}}
             <ul class="navbar-nav mt-2 d-flex justify-content-center w-100">
                 <li class="nav-item">
                     <a class="nav-link active home" aria-current="page" href="{{ route('homepage') }}">Home</a>
