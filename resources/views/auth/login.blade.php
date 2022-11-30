@@ -27,19 +27,22 @@
                             <input type="checkbox" name="remember" class="form-check-input" id="rememberMe">
                             <label class="form-check-label" for="rememberMe">{{__('ui.remember')}}</label>
                         </div>
-                        <btn-custom type="submit">
-                            <ul>
-                                <li>
-                                  <a class="facebook">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    Login
-                                  </a>
-                                </li>
-                            </ul>
-                        </btn-custom>
+                        <button type="submit" class="bg-transparent border-0">
+                            <btn-custom>
+                                <ul>
+                                    <li>
+                                      <a class="facebook">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        Login
+                                      </a>
+                                    </li>
+                                </ul>
+                            </btn-custom>
+
+                        </button>
                         <btn-custom>
                             <ul>
                                 <li>
