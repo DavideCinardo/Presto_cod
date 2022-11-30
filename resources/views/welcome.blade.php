@@ -45,58 +45,49 @@
    
     </div>
     
-    <div class="container-fluid">
+    <div class="container">
         {{-- sezione caroselli per ogni categoria --}}
             @foreach($categories as $category)
-                <div class="Sez-Articoli">
-                    @if(count($category->articles) > 0)
-                        @foreach($category->articles as $article)
-                            @if($article->is_accepted)
-                            <div class="container-fluid formCreate mt-0 mb-5">
-                                <div class="row title-h justify-content-center">
-                                    <div class="col-1 border-start border-top"></div>
-                                    <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
-                                        <h4>{{__('ui.latestaAd')}} : 
-                                            @switch(Config::get('app.locale'))
-                                                @case('it')
-                                                    {{$category->nameIt}}
-                                                    @break
-                                                @case('en')
-                                                    {{$category->nameEn}}
-                                                    @break
-                                                @case('es')
-                                                    {{$category->nameEs}}
-                                                    @break
-                                                @default
-                                            @endswitch
-                                        </h4>
-                                    </div>
-                                    <div class="col-1 border-end border-bottom"></div>
-                                </div>
-                            </div>
-                            @endif
-                        @endforeach
-                        <div class="swiper mySwiper d-flex justify-content-center mt-5">
-                            <div class="swiper-wrapper d-flex justify-content-center">
-                                @foreach($category->articles as $article)
-                                    @if ($article->is_accepted)
-                                        <div class="swiper-slide">
-                                            @livewire('articles-card', ['article' => $article])
-                                        </div>         
-                                    @endif
-                                @endforeach
-                            </div>
-                        </div>
-                    {{-- @elseif(count($category->orderBy('id', 'DESC')->first()->articles) == 0) 
-                        <div class="container">
-                            <div class="row justify-content-center">
+                @if(count($category->articles) > 0)
+                    @foreach($category->articles as $article)
+                        @if($article->is_accepted)
+                            <div class="row title-h mt-5 justify-content-center">
                                 <div class="col-1 border-start border-top"></div>
-                                <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">Non ci sono annunci al momento</div>
+                                <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
+                                    <h4 class="text-center">{{__('ui.latestaAd')}} : 
+                                        @switch(Config::get('app.locale'))
+                                            @case('it')
+                                                {{$category->nameIt}}
+                                                @break
+                                            @case('en')
+                                                {{$category->nameEn}}
+                                                @break
+                                            @case('es')
+                                                {{$category->nameEs}}
+                                                @break
+                                            @default
+                                        @endswitch
+                                    </h4>
+                                </div>
                                 <div class="col-1 border-end border-bottom"></div>
                             </div>
-                        </div>  --}}
-                    @endif
-                </div>     
+                        @endif
+                        @break
+                    @endforeach
+                    <div class="row w-100 swiper mySwiper d-flex justify-content-center mt-5">
+                        <div class="swiper-wrapper">
+                            @foreach($category->articles as $article)
+                                @if ($article->is_accepted)
+                                    <div class="col-12 col-md-4 swiper-slide">
+                                        @livewire('articles-card', ['article' => $article])
+                                    </div>         
+                                @endif
+                            @endforeach
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                
+                @endif   
             @endforeach
     </div>
 
