@@ -362,7 +362,7 @@ footer {
 
 
 .formCreate {
-  margin-top: 150px;
+  margin-top: 350px;  
 }
 
 .SearchBar {
@@ -936,3 +936,35 @@ video {
 
 }
 
+.textRemember{
+  color: var(--oro);
+}
+
+.errorLogin{
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 425px){
+  .formCreate{
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .formCreate{
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .formCreate{
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (max-width: 1440px){
+  .formCreate{
+    margin-top: 200px;
+  }
+}

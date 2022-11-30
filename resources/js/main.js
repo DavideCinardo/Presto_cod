@@ -27,7 +27,7 @@ let subNav = document.getElementById('subNav');
 // })
 
 window.onscroll = function(){
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+  if (document.body.scrollTop > 85 || document.documentElement.scrollTop > 85){
     navLogo.classList.add('d-none');
     subNav.classList.add('navbar-down');
     

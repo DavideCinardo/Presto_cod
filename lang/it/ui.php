@@ -53,7 +53,7 @@ return[
     'photoPreview'=>'Anteprima foto',
     'delete'=>'Cancella',
     'remember' => 'Ricordami',
-    'notRegister'=>'Non sei registrato? Clicca qui.',
+    'notRegister'=>'Registrati',
     'confPass'=>'Conferma password',
     'alredySub'=>'Sei gia iscritto? Accedi da qui.',
     'noYourAds'=>'Non ci sono annunci inseriti da te',
