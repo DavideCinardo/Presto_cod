@@ -18,13 +18,25 @@
                                     @livewire('heart-botton', ['article' => $article])
                                 @endauth
                         </div>
-                        <div class="profileContent d-flex justify-content-center">
+                        <div class="profileContent d-flex justify-content-center mb-2">
                             <div class="distanza">
                                 <h2 class="titleCard">{{$article->title}}
                                     <span>{{$article->location}}</span>
                                     <span>{{$article->description}}</span>
                                     <span>&euro;{{$article->price}}</span>
-                                    <a href="{{route('articles.show', compact('article'))}}" class="btn btn-outline-warning me-2">{{__('ui.more')}}</a>
+                                    <btn-custom>
+                                        <ul>
+                                            <li>
+                                              <a href="{{route('articles.show', compact('article'))}}" class="facebook" href="#">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                {{__('ui.more')}}
+                                              </a>
+                                            </li>
+                                        </ul>
+                                    </btn-custom>
                                 </h2>
                             </div>
                         </div>

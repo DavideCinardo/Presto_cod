@@ -1,10 +1,82 @@
+*{
+  box-sizing: border-box;
+}
+
+/* Bottone di ricerca */
+
+
+/************************************************************************************************************************************/
+
+
+
+/* .search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #22a6b3;
+  padding-right: 40px;
+  color:#fff;
+}
+.input-search::placeholder{
+  color:rgba(255,255,255,.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:#ffffff ;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+} */
+
+
+/************************************************************************************************************************************/
+
+
+/* Fine bottone */
+
 :root {
   --primario: #F1AB86;
   --secondario: #C57B57;
   --terzo:#17181D;
   --quarto: #ffbd59;
   --surface-color: #fff;
-  --oro: rgb(187, 154, 55);
+  --oro: #bb9a37;
   --curve: 40;
 }
 
@@ -26,6 +98,33 @@ body {
   letter-spacing:2px;
   text-shadow:1px 1px 2px rgba(0,0,0,0.4)
 }
+.modal-content {
+  background-image: url(/public/media/SfondoScuro.jpeg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background: rgb(251, 240, 218); */
+  /* background: linear-gradient(130deg, rgba(251, 240, 218, 1) 0%, rgba(241, 171, 134, 0.65) 100%); */
+  font-family: 'Cabin', sans-serif;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.4);
+  color: var(--oro);
+}
+
+.modal-header{
+  border-bottom: var(--oro) solid 1px;
+}
+
+.fa-xmark{
+  color: var(--oro);
+}
+
+.logos{
+  width: 10%;
+}
+
 
 /* nav {
   border-bottom: solid 4px var(--secondario);
@@ -35,7 +134,7 @@ body {
 } */
 
 .navDistance{
-  height: 200px;
+  height: 0;
 }
 /* navbar logo */
 .wrapperTitle {
@@ -45,6 +144,9 @@ body {
   transform-style: preserve-3d;
 }
 
+.form-control{
+  border-radius: 0;
+}
 .cardTitle {
   grid-area: 1 / 1;
   height: 30px;
@@ -106,15 +208,13 @@ body {
   will-change: transform;
   transition: .3s transform cubic-bezier(.25,.46,.45,1);
 }
+
 .LogoSize {
   display: grid;
   place-items: center;
 }
+
 /* fine navbar logo */
-
-
-
-
 
 
 .vh {
@@ -130,13 +230,8 @@ height: 30vh;
   color: var(--quarto) !important;
 }
 
-.logo {
-  width: 100%;
-}
 
-.logo-home {
-  display: block;
-}
+
 
 #toggle {
   width:10%;
@@ -191,26 +286,25 @@ height: 30vh;
 }
 
 .toggle-color {
-  color: var(--quarto);
+  color: var(--oro);
 }
 
 .bg-menu {
-  background: #17181D;
-  
+  background: #17181D; 
 }
 
 .navbar-toggler {
-  color: var(--quarto);
+  color: var(--oro);
 }
 
 a,
 .colorTextDD {
-  color: var(--quarto);
+  color: var(--oro);
   text-decoration: none;
 }
 
 .colorTextDD:hover {
-  color: var(--quarto);
+  color: var(--oro);
   background-color: var(--terzo);
 }
 
@@ -243,7 +337,7 @@ footer {
 }
 
 .OurCards {
-  color: var(--quarto);
+  color: var(--oro);
   width: 350px;
   min-height: 450px;
   margin: 15px;
@@ -308,13 +402,8 @@ footer {
   font-size: 3.5em;
 }
 
-
-.dropdown-menu {
-  border-top: solid 4px var(--secondario);
-}
-
 .line-separator {
-  color: var(--secondario);
+  color: var(--oro);
   
 }
 
@@ -659,7 +748,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   text-transform:uppercase;
   transform: translateY(-100px);
   transition:all 900ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.20s;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.7);
 }
 .profileCard:hover .titleCard{
   opacity:1;
@@ -670,7 +759,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   display:block;
   width:50%;
   margin:10px auto;
-  border-bottom:2px solid #222;
 }
 .profileCard .profileContent .titleCard > span{
   display:block;
@@ -724,3 +812,97 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 .space{
   width: 174px;
 }
+
+btn-custom ul{
+  padding: 0!important;
+}
+btn-custom ul li {
+  list-style:none;
+  display: flex;
+  justify-content: center;
+}
+btn-custom ul li a {
+  display:block;
+  position:relative;
+  width:200px;
+  height:60px;
+  line-height:60px;
+  font-size:20px;
+  text-align:center;
+  text-decoration:none;
+  color:#927f4d;
+  transition:.5s;
+}
+btn-custom ul li a span {
+  position:absolute;
+  transition: transform .5s;
+}
+btn-custom ul li a span:nth-child(1),
+btn-custom ul li a span:nth-child(3){
+  width:100%;
+  height:3px;
+  background:#927f4d;
+}
+btn-custom ul li a span:nth-child(1) {
+  top:0;
+  left:0;
+  transform-origin: right;
+}
+btn-custom ul li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:transform .5s;
+}
+
+btn-custom ul li a span:nth-child(3) {
+  bottom:0;
+  left:0;
+  transform-origin: left;
+}
+btn-custom ul li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition:transform .5s;
+}
+
+btn-custom ul li a span:nth-child(2),
+btn-custom ul li a span:nth-child(4){
+  width:3px;
+  height:100%;
+  background:#927f4d;
+}
+btn-custom ul li a span:nth-child(2) {
+  top:0;
+  left:0;
+  transform:scale(0);
+  transform-origin: bottom;
+}
+btn-custom ul li a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition:transform .5s;
+}
+btn-custom ul li a span:nth-child(4) {
+  top:0;
+  right:0;
+  transform:scale(0);
+  transform-origin: top;
+}
+btn-custom ul li a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition:transform .5s;
+}
+
+.facebook:hover {
+  color: #bb9a37;
+}
+.facebook:hover span { 
+  background: #bb9a37;
+}
+
+video {
+  width: 100%;
+
+}
+

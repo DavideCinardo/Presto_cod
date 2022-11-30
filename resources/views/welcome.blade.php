@@ -1,20 +1,38 @@
 <x-layout>
 
-    <div class="container-fluid">
+    {{-- Video di sfondo --}}
+    <div class="container-fluid p-0">
+        <video src="/media/VideoHeader.mp4" type="video/mp4" muted autoplay loop class="videofullscreen"></video>
+    </div>
+
+
+    <div class="container-fluid mt-5">
         <div class="row justify-content-center">
             <div class="col-12">  
                     <form action="{{route('articles.search')}}" method="GET" class="my-3" role="search">
                         @csrf
-                        <div class="container SearchBar my-5">
+                        <div class="container SearchBar">
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-12 col-md-3 text-center">
                                     <label class="Lbl-text" for="searched">{{__('ui.search')}}</label>
                                 </div>
                                 <div class="col-12 col-md-4 text-center">
-                                    <input class="form-control me-2 d-inline my-2" id="searched" name="searched" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
+                                    <input class="form-control rounded-0 me-2 d-inline my-2" id="searched" name="searched" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
                                 </div>
                                 <div class="col-12 col-md-3 text-center">
-                                    <button type="submit" class="btn Btn-text">{{__('ui.searchBtn')}}</button>
+                                    <btn-custom>
+                                        <ul>
+                                            <li>
+                                              <a class="facebook" href="#">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                {{__('ui.searchBtn')}}
+                                              </a>
+                                            </li>
+                                        </ul>
+                                    </btn-custom>
                                 </div>
                             </div>
                         </div>
@@ -24,36 +42,7 @@
     </div>
 
 
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            {{-- carosello --}}
-            <div class="col-12 col-md-5">
-
-                <div id="carouselExampleControls" class="carouselPosition carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="https://picsum.photos/300/200" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://picsum.photos/300/200" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://picsum.photos/300/200" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-
-            </div>
-            </div>
-        </div>
+   
     </div>
     
     <div class="container-fluid">
@@ -63,10 +52,11 @@
                     @if(count($category->articles) > 0)
                         @foreach($category->articles as $article)
                             @if($article->is_accepted)
+                            <div class="container-fluid formCreate mt-0 mb-5">
                                 <div class="row title-h justify-content-center">
                                     <div class="col-1 border-start border-top"></div>
                                     <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
-                                        <h4>{{__('ui.latestaAd')}} : 
+                                        <h4>Ultimi articoli per la categoria : 
                                             @switch(Config::get('app.locale'))
                                                 @case('it')
                                                     {{$category->nameIt}}
@@ -83,32 +73,46 @@
                                     </div>
                                     <div class="col-1 border-end border-bottom"></div>
                                 </div>
-                                @break
+                            </div>
                             @endif
                         @endforeach
-                        <dvi class="container">
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-12">
-                                    <div class="swiper mySwiper mt-5">
-                                        <div class="swiper-wrapper">
-                                            @foreach($category->articles as $article)
-                                                @if ($article->is_accepted)
-                                                    <div class="swiper-slide">
-                                                        @livewire('articles-card', ['article' => $article])
-                                                    </div>         
-                                                @endif
-                                            @endforeach
-                                        </div>
-                                        {{-- <div class="swiper-pagination"></div> --}}
-                                    </div>
-                                </div>
+                        <div class="swiper mySwiper d-flex justify-content-center mt-5">
+                            <div class="swiper-wrapper d-flex justify-content-center">
+                                @foreach($category->articles as $article)
+                                    @if ($article->is_accepted)
+                                        <div class="swiper-slide">
+                                            @livewire('articles-card', ['article' => $article])
+                                        </div>         
+                                    @endif
+                                @endforeach
                             </div>
-                        </dvi> 
-                        
+                        </div>
+                    {{-- @elseif(count($category->orderBy('id', 'DESC')->first()->articles) == 0) 
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-1 border-start border-top"></div>
+                                <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">Non ci sono annunci al momento</div>
+                                <div class="col-1 border-end border-bottom"></div>
+                            </div>
+                        </div>  --}}
                     @endif
-                </div>
+                </div>     
             @endforeach
     </div>
 
     <x-footer />
 </x-layout>
+
+{{-- <btn-custom>
+    <ul>
+        <li>
+          <a class="facebook" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Inserisci
+          </a>
+        </li>
+    </ul>
+</btn-custom> --}}

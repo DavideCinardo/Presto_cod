@@ -30,7 +30,7 @@ return[
     'photos'=>'Foto',
     'description'=>'Descrizione',
     'noAds'=>'Non ci sono annunci per la categoria',
-    'insert'=>'Inserisci Annuncio',
+    'insert'=>'Pubblica',
     'yourRewiew'=>'Revisionati da te',
     'accept'=>'Accetta',
     'reject'=>'Rifiuta',
@@ -38,7 +38,7 @@ return[
     'cancelReview'=>'Annulla revisione',
     'reviewBecome'=>'Vuoi diventare revisore? ',
     'why'=>'Dicci perchè?',
-    'apply'=>'Invia candidatura',
+    'apply'=>'Candidati',
 
 
     'register'=>'Registrati',

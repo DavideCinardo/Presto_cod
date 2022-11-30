@@ -17,6 +17,19 @@
                             <h3>{{__('ui.noLike')}}</h3>
                             <h5>{{__('ui.explore')}} : </h5>
                             <a href="{{ route('articles.index') }}" class="btn btn-outline-dark">Inseriscine uno</a>
+                            <btn-custom>
+                                <ul>
+                                    <li>
+                                      <a href="{{route('articles.create')}}" class="facebook">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        {{__('ui.insert')}}
+                                      </a>
+                                    </li>
+                                </ul>
+                            </btn-custom>
                         </div>
                     </div>
                 </div>
