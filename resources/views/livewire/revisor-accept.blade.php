@@ -1,11 +1,7 @@
 <div>
   {{-- revisor not --}}
     {{-- titolo article unchecked --}}
-<<<<<<< HEAD
-      <div class="container-fluid formCreate mb-5 formCreate">
-=======
       <div class="container-fluid formCreate mt-5 mb-5">
->>>>>>> 919984df2884cfc15e77c9855645243bbe034d99
           <div class="row title-h justify-content-center">
               <div class="col-1 border-start border-top"></div>
               <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">

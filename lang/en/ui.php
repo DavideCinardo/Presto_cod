@@ -70,5 +70,6 @@ return[
     'popular' => 'popular product',
     'links' => 'links',
     'contacts'=>'contacts',
+    'zoneRev' => 'Revisor Area',
 
 ];

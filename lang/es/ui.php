@@ -70,5 +70,6 @@ return[
   'popular' => 'productos populares',
   'links' => 'link',
   'contacts' => 'Contactos',
+  'zoneRev' => 'área de revisores',
 
 ];
