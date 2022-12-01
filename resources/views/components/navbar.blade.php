@@ -10,7 +10,7 @@
   {{-- FINE BOTTONE ANIMATO --}}
 
 
-        <div class="py-3 text-center border-bottom under-line" id="navLogo">
+        <div class="py-3 text-center" id="navLogo">
             <div class="d-flex justify-content-end">
                 <x-_locale lang="it" />
                 <x-_locale lang="en" />
@@ -32,7 +32,7 @@
           <img class="logos" src="/media/8DB2CAB0-52CF-4989-A0B6-22BB6E51FA69_4_5005_c-PhotoRoom.png" alt="">
         </div>
     </nav>
-    <div class="navbar-expand-md" id="subNav">
+    <div class="navbar-expand-xl m-0" id="subNav">
         <div class="navbar-dark text-center">
             <button class="navbar-toggler w-75" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -42,6 +42,7 @@
         </div>
         <div class="text-center mt-0 collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             {{-- <div class="space"></div> --}}
+            <ul class="navbar-nav d-flex justify-content-center align-items-center w-100">
             <ul class="navbar-nav mt-2 d-flex justify-content-center w-100 dropdownMenuMobile">
                 <li class="nav-item">
                     <a class="nav-link active home" aria-current="page" href="{{ route('homepage') }}">Home</a>
@@ -65,6 +66,7 @@
                         @foreach ($categories as $category)
                             <a href="{{ route('category', compact('category')) }}">
                                 <li class="dropdown-item colorTextDD">
+                                    <span class="{{$category->icon}}"></span> 
 
                                     @switch(Config::get('app.locale'))
                                         @case('it')
@@ -101,7 +103,7 @@
                         </div>
                     @endif
                     {{-- end tasto dei revisori --}}
-                    <div class="nav-item dropdown colorText">
+                    <div class="nav-item dropdown colorText align-items-center">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             {{ __('ui.welcome') }}, {{ Auth::user()->name }}
@@ -120,12 +122,11 @@
                             <form class="d-none" method="POST" action="{{ route('logout') }}" id="form-logout">@csrf
                             </form>
                             <li>
-                                <a>
-                                    <button type="button" class="dropdown-item colorTextDD" data-bs-toggle="modal"
-                                        data-bs-target="#workModal">
+                                <button type="button" class="dropdown-item colorTextDD text-uppercase" data-bs-toggle="modal"
+                                data-bs-target="#workModal">
+                                    
                                         {{ __('ui.workUs') }}
-                                    </button>
-                                </a>
+                                </button> 
                             </li>
 
                         </ul>
@@ -183,12 +184,12 @@
                         <btn-custom data-bs-dismiss="modal" class="me-4">
                             <ul>
                                 <li>
-                                    <a class="facebook" href="#">
+                                    <a class="facebook text-uppercase" href="#">
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                         <span></span>
-                                        Close
+                                        {{ __('ui.close') }}
                                     </a>
                                 </li>
                             </ul>
@@ -197,7 +198,7 @@
                             <btn-custom >
                                 <ul>
                                     <li>
-                                        <a  class="facebook">
+                                        <a  class="facebook text-uppercase">
                                             <span></span>
                                             <span></span>
                                             <span></span>
