@@ -1,5 +1,5 @@
-document.addEventListener('articleCreated', ()=>{
-  window.scrollTo(0,0);
+document.addEventListener('articleCreated', () => {
+  window.scrollTo(0, 0);
 })
 
 var swiper = new Swiper(".mySwiper", {
@@ -16,6 +16,10 @@ const navLogo = document.getElementById('navLogo');
 let prev = window.pageYOffset;
 let subNav = document.getElementById('subNav');
 
+let logos = document.querySelector('.logos');
+
+let navbarNavDropdown = document.querySelector('#navbarNavDropdown');
+
 // window.addEventListener('scroll', function() {
 //   let current = window.pageYOffset;
 //   if (prev < current) {
@@ -26,14 +30,25 @@ let subNav = document.getElementById('subNav');
 //     prev = current;
 // })
 
-window.onscroll = function(){
-  if (document.body.scrollTop > 85 || document.documentElement.scrollTop > 85){
-    navLogo.classList.add('d-none');
-    subNav.classList.add('navbar-down');
-    
+
+window.onscroll = function () {
+  if (window.scrollY > 40) {
+    navLogo.style.animation = 'fadeOutNavBar 1s';
+    logos.classList.add('d-none');
+    subNav.classList.add('navbar-down', 'fixed-top');
+    subNav.style.animation = 'fadeInsubNav 1s';
+    navbarNavDropdown.style.height = '100%';
   } else {
-    navLogo.classList.remove('d-none');
-    subNav.classList.remove('navbar-down');
+    navLogo.style.animation = 'fadeInNavBar 1s';
+    logos.classList.remove('d-none');
+    subNav.classList.remove('navbar-down', 'fixed-top');
+    subNav.style.animation = 'fadeOutsubNav 1s';
+    navbarNavDropdown.style.height = 'max-content';
   }
 }
+
+
+
+
+
 
