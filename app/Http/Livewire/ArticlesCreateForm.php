@@ -20,7 +20,8 @@ class ArticlesCreateForm extends Component
 {
     use WithFileUploads;
 
-    public $article, $title, $price, $description, $location, $category, $cover, $temporary_images, $images = [];
+    public $article, $title, $price, $description, $location, $cover, $temporary_images, $images = [];
+    public $category = 1;
 
     protected $rules = [
         'title' => 'required',
