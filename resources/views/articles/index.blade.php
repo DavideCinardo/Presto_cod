@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container mt-5">
+    <div class="container formCreate">
         <div class="row justify-content-around">
             @foreach($articles as $article)
                 <div class="col-12 col-md-3 mb-4">

@@ -7,9 +7,9 @@
             </div>
                 
         @empty
-            <div class="container min-vh-100">
+            <div class="container min-vh-100 mt-5">
                 <div class="row">
-                    <div class="col-12 d-flex">
+                    <div class="col-12 d-flex justify-content-center">
                         <h3 class="categoryPrompt me-4">
                             {{__('ui.noAds')}} : <span class="{{$category->icon}}"></span> 
                                                     @switch(Config::get('app.locale'))
@@ -25,20 +25,23 @@
                                                         @default
                                                     @endswitch
                         </h3>
+                    </div>
+                    <div class="col-12 mt-5">
                         <btn-custom>
                             <ul>
                                 <li>
-                                  <a href="{{ route('articles.create') }}" class="facebook" href="#">
+                                <a href="{{ route('articles.create') }}" class="facebook" href="#">
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                     {{__('ui.insert')}}
-                                  </a>
+                                </a>
                                 </li>
                             </ul>
                         </btn-custom>
-                    </div>
+                    </div>  
+
                 </div>
             </div>
         @endforelse

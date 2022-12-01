@@ -1,7 +1,7 @@
 <div>
   {{-- revisor not --}}
     {{-- titolo article unchecked --}}
-      <div class="container-fluid formCreate mt-0 mb-5">
+      <div class="container-fluid formCreate mb-5 formCreate">
           <div class="row title-h justify-content-center">
               <div class="col-1 border-start border-top"></div>
               <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
@@ -76,7 +76,7 @@
                 <p class="text-secondary fst-italic">{{$article->location}}</p>
                 <p>{{$article->description}}</p>
                 <p class="fst-italic text-secondary">{{$article->user->name}}</p>
-                <div class="col-12 col-md-6 text-start">
+                <div class="col-12 col-md-6 text-end me-0 mx-auto">
                   <p class="fs-1">&euro;{{$article->price}}</p>
                 </div>             
               </div>

@@ -1,7 +1,7 @@
 <div class="container">
     {{-- messaggi di sessione --}}
         @if(session('nullRevision'))
-            <div class="alert alert-success">
+            <div class="alert alert-success formCreate">
                 {{session('nullRevision')}}
             </div>
         @endif
