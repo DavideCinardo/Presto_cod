@@ -1,7 +1,11 @@
 <div>
   {{-- revisor not --}}
     {{-- titolo article unchecked --}}
+<<<<<<< HEAD
+      <div class="container-fluid formCreate mb-5 formCreate">
+=======
       <div class="container-fluid formCreate mt-5 mb-5">
+>>>>>>> 919984df2884cfc15e77c9855645243bbe034d99
           <div class="row title-h justify-content-center">
               <div class="col-1 border-start border-top"></div>
               <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
@@ -75,8 +79,10 @@
                 </p>
                 <p class="text-light fst-italic">{{$article->location}}</p>
                 <p>{{$article->description}}</p>
-                <p class="fst-italic text-light">{{$article->user->name}}</p>
-                <p class="fs-1">&euro;{{$article->price}}</p>            
+                <p class="fst-italic text-secondary">{{$article->user->name}}</p>
+                <div class="col-12 col-md-6 text-end me-0 mx-auto">
+                  <p class="fs-1">&euro;{{$article->price}}</p>
+                </div>             
               </div>
               <div class="col-12 col-md-6 d-flex justify-content-start">
                 <div>
