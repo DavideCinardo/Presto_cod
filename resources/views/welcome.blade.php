@@ -20,19 +20,21 @@
                                     <input class="form-control rounded-0 me-2 d-inline my-2" id="searched" name="searched" type="search" placeholder="Macchina vintage, monete antiche..." aria-label="Search">
                                 </div>
                                 <div class="col-12 col-md-3 text-center">
-                                    <btn-custom>
-                                        <ul>
-                                            <li>
-                                              <a class="facebook" href="#">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                {{__('ui.searchBtn')}}
-                                              </a>
-                                            </li>
-                                        </ul>
-                                    </btn-custom>
+                                    <button type="submit" class="bg-transparent border-0">
+                                        <btn-custom>
+                                            <ul>
+                                                <li>
+                                                  <a class="facebook">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    {{__('ui.searchBtn')}}
+                                                  </a>
+                                                </li>
+                                            </ul>
+                                        </btn-custom>
+                                    </button>
                                 </div>
                             </div>
                         </div>
