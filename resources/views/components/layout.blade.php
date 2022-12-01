@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
       
-    <title>Document</title>
+    <title>Luxury - Presto.it</title>
 
     @livewireStyles
 

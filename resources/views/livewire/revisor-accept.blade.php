@@ -1,7 +1,11 @@
 <div>
   {{-- revisor not --}}
     {{-- titolo article unchecked --}}
+<<<<<<< HEAD
       <div class="container-fluid formCreate mb-5 formCreate">
+=======
+      <div class="container-fluid formCreate mt-5 mb-5">
+>>>>>>> 919984df2884cfc15e77c9855645243bbe034d99
           <div class="row title-h justify-content-center">
               <div class="col-1 border-start border-top"></div>
               <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
@@ -59,7 +63,7 @@
             <div class="row justify-content-center mt-4">
               <div class="col-12 col-md-6 text-end ps-2 Lbl-text">
                 <h3>{{$article->title}}</h3>
-                <p class="text-secondary fst-italic">{{__('ui.category')}} 
+                <p class="text-light fst-italic">{{__('ui.category')}} : <span class="{{$article->category->icon}}"></span> 
                   @switch(Config::get('app.locale'))
                       @case('it')
                           {{$article->category->nameIt}}
@@ -73,7 +77,7 @@
                       @default
                   @endswitch
                 </p>
-                <p class="text-secondary fst-italic">{{$article->location}}</p>
+                <p class="text-light fst-italic">{{$article->location}}</p>
                 <p>{{$article->description}}</p>
                 <p class="fst-italic text-secondary">{{$article->user->name}}</p>
                 <div class="col-12 col-md-6 text-end me-0 mx-auto">
@@ -98,10 +102,10 @@
                   @auth
                     @if(Auth::user()->is_revaisor && !$article->is_accepted)
                       <div class="my-2">
-                        <btn-custom wire:click="acceptArticle">
+                        <btn-custom type="button" wire:click="acceptArticle">
                           <ul>
                               <li>
-                                <a class="facebook accept" href="#">
+                                <a class="facebook accept">
                                   <span></span>
                                   <span></span>
                                   <span></span>
@@ -113,10 +117,10 @@
                         </btn-custom>
                       </div>
                       <div>
-                        <btn-custom wire:click="rejectArticle">
+                        <btn-custom type="button" wire:click="rejectArticle">
                             <ul>
                                 <li>
-                                  <a class="facebook reject" href="#">
+                                  <a class="facebook reject">
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -150,7 +154,7 @@
                 <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
                     <h4>
                         {{-- se ci sono annunci primo titolo altrimenti secondo --}}
-                        {{$articles_checked ? 'Tutti gli articoli revisionati da te' : 'Non ci sono articoli revisionati da te'}}
+                        {{count($articles_checked) > 0 ? 'Tutti gli articoli revisionati da te' : 'Non ci sono articoli revisionati da te'}}
                     </h4>
                 </div>
                 <div class="col-1 border-end border-bottom"></div>
@@ -168,15 +172,15 @@
               @endif
           {{-- end messaggi di sessione --}}
           @if($articles_checked)
-              <div class="row w-100 d-flex justify-content-center mt-5">
+              <div class="row justify-content-center mt-5">
                   @foreach ($articles_checked as $article)
-                      <div class="col-12 col-md-4 my-5">
+                      <div class="col-12 col-md-3 h-75 my-5">
                               {{-- Card --}}
                               @livewire('articles-card', ['article' => $article])
                           <div class="d-flex justify-content-center mt-3">
                               @if($last && $article->id == $last->id)
                                   <button wire:click="nullRevision({{$article->id}})" class="bg-transparent border-0">
-                                      <btn-custom class="mt-5">
+                                      <btn-custom type="button" class="mt-5">
                                           <ul>
                                               <li>
                                               <a class="facebook reject">
