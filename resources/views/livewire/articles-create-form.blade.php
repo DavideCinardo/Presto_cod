@@ -4,13 +4,13 @@
         
         <div class="col-12 col-md-8">
             @if (session('articleCreated'))
-                <div class="alert alert-success">
+                <div class="alert alert-success formCreate">
                     {{ session('articleCreated') }}
                 </div>
 
             @endif
             
-            <form wire:submit.prevent="store" class="formCreate">
+            <form wire:submit.prevent="store" class="formCreate ">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">{{__('ui.title')}}</label>
