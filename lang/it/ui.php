@@ -1,5 +1,6 @@
 <?php
 return[
+    'close'=> 'Chiudi',
     'postAd' =>'Inserisci annuncio',
     'ads'=>'Annunci',
     'allAds' =>'Tutti gli annunci',
@@ -60,6 +61,12 @@ return[
     'noLike'=>'Non hai messo like a nessun annuncio.',
     'explore'=>'Esplora i nostri annunci',
     'noSearch'=>'Non ci sono annunci relativi alla tua ricerca',
+
+    'adults' => 'Adulti',
+    'spoof' => 'Satira',
+    'medical' => 'Medico',
+    'violence' => 'Violenza',
+    'racy' => 'VM18',
 
 
 

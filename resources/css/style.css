@@ -472,6 +472,10 @@ body {
   text-decoration: none;
 }
 
+.slot{
+  margin-top: 200vh;
+}
+
 .card__image {      
   width: 100%;
   height: 100%;
@@ -651,6 +655,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   padding:12px;
 }
 
+
+
 .under-line{
   border-color:var(--oro) !important;
 }
@@ -673,11 +679,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 .profileCard{
   position:relative;
   overflow: hidden;
-  margin-bottom:10px;
 }
-.profileCard .profileImg .cardImg {
+.profileCard .profileImg .card__img {
   width:100%;
-  height:auto;
 }
 .profileContent{
   padding: 0!important;
@@ -972,6 +976,10 @@ video {
   .marginShowTop{
     margin-top: 100px;
   }
+
+  .dropdownMenuMobile{
+    background-image:url(/public/media/SfondoScuro.jpeg) ;
+  }
 }
 
 @media only screen and (max-width: 768px){
@@ -981,20 +989,25 @@ video {
   .marginShowTop{
     margin-top: 35vh;
   }
+
+  .dropdownMenuMobile{
+    background-image:url(/public/media/SfondoScuro.jpeg) ;
+  }
 }
 
 @media only screen and (max-width: 1024px){
   .formCreate{
-    margin-top: 200px;
+    margin-top: 300px;
   }
   .marginShowTop{
     margin-top: 35vh;
   }
+
 }
 
 @media only screen and (max-width: 1440px){
   .formCreate{
-    margin-top: 200px;
+    margin-top: 300px;
   }
   .marginShowTop{
     margin-top: 35vh;

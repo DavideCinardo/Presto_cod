@@ -43,7 +43,7 @@ class LogoImg implements ShouldQueue
 
         $image = SpatieImage::load($srcPath);
         $image->watermark('resources/img/logo.png')
-                ->watermarkHeight(100, Manipulations::UNIT_PERCENT);
+            ->watermarkPosition(Manipulations::POSITION_BOTTOM);
         $image->save($srcPath);
         return;
     }

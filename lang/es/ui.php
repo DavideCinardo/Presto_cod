@@ -1,5 +1,6 @@
 <?php
 return[
+    'close' => 'cerrar',
     'postAd' =>'Publicar anuncio',
     'ads'=>'Anuncios',
     'allAds' =>'Todos los annuncios',
@@ -59,4 +60,10 @@ return[
     'noLike'=>'No le ha gustado ningún anuncio.',
     'explore'=>'Explora nuestros clasificados',
     'noSearch'=>'No hay anuncios relacionados con tu búsqueda.',
+
+    'adults' => 'Adultos',
+    'spoof' => 'Parodia',
+    'medical' => 'Médico',
+    'violence' => 'Violencia',
+    'racy' => 'VM18',
 ];
