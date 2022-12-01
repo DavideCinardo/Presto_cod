@@ -41,7 +41,7 @@
               <i class="fas fa-gem me-3"></i>Code Of Duty
             </h6>
             <p>
-              Azienda specilizzata nella vendita al dettaglio di preziosi e merci da collezione. Dopo la fondazione nel 2022 e dopo essere riusciti a scappare dal mondo del contrabbando di diamanti i Code Of Duty si inseriscono prepotentemente nel mercato portando sempre una nota di eleganza, raffinatezza e soprattutto qualità.
+            {{ __('ui.footer') }}
             </p>
           </div>
           <!-- Grid column -->
@@ -50,19 +50,19 @@
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">
-              Prodotti popolari
+            {{ __('ui.popular') }}
             </h6>
             <p class="HoverFooter">
-              <a href="#!" class="text-reset">Motori</a>
+              <a href="#!" class="text-reset">{{ __('ui.motors') }}</a>
             </p>
             <p class="HoverFooter">
-              <a href="#!" class="text-reset">Libri</a>
+              <a href="#!" class="text-reset">{{ __('ui.books') }}</a>
             </p>
             <p class="HoverFooter">
-              <a href="#!" class="text-reset">Informatica</a>
+              <a href="#!" class="text-reset">{{ __('ui.Informatics') }}</a>
             </p>
             <p class="HoverFooter">
-              <a href="#!" class="text-reset">Smartphone</a>
+              <a href="#!" class="text-reset">{{ __('ui.smarthphone') }}</a>
             </p>
           </div>
        
@@ -71,19 +71,19 @@
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">
-              Link utili
+            {{ __('ui.links') }}
             </h6>
             <p class="HoverFooter">
-              <a href="#!" class="text-reset">Prezzi</a>
+              <a href="#!" class="text-reset">{{ __('ui.price') }}</a>
             </p>
             <p class="HoverFooter">
-              <a href="#!" class="text-reset">Impostazioni</a>
+              <a href="#!" class="text-reset">{{ __('ui.workUs') }}</a>
             </p>
             <p class="HoverFooter">
-              <a href="#!" class="text-reset">Ordini</a>
+              <a href="#!" class="text-reset">{{ __('ui.ads') }}</a>
             </p>
             <p class="HoverFooter">
-              <a href="#!" class="text-reset">Aiuto</a>
+              <a href="#!" class="text-reset">{{ __('ui.favourite') }}</a>
             </p>
           </div>
         
@@ -91,7 +91,7 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contatti</h6>
+            <h6 class="text-uppercase fw-bold mb-4">{{ __('ui.contacts') }}</h6>
             <p><i class="fas fa-home"></i> E Harris AveLas Vegas, NV, Stati Uniti
 </p>
             <p>
@@ -100,6 +100,7 @@
             </p>
             <p><i class="fas fa-phone"></i>+ 39 3475825382</p>
             <p><i class="fas fa-print"></i>+ 39 0774571008</p>
+            <p><i class="fa-solid fa-sack-dollar"></i></i> P.IVA 01145248226</p>
           </div>
           <!-- Grid column -->
         </div>

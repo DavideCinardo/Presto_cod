@@ -66,4 +66,9 @@ return[
     'medical' => 'Médico',
     'violence' => 'Violencia',
     'racy' => 'VM18',
+  'footer' => 'Empresa especializada en la venta al por menor de joyas y artículos de colección. Luego de la fundación en 2022 y luego de haber logrado escapar del mundo del contrabando de diamantes, Code Of Duty entró con fuerza al mercado trayendo siempre una nota de elegancia, refinamiento y sobre todo calidad.',
+  'popular' => 'productos populares',
+  'links' => 'link',
+  'contacts' => 'Contactos',
+
 ];
