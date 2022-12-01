@@ -1003,6 +1003,9 @@ video {
     margin-top: 35vh;
   }
 
+  .dropdownMenuMobile{
+    background-image:url(/public/media/SfondoScuro.jpeg) ;
+  }
 }
 
 @media only screen and (max-width: 1440px){
@@ -1011,6 +1014,10 @@ video {
   }
   .marginShowTop{
     margin-top: 35vh;
+  }
+
+  .dropdownMenuMobile{
+    background-image:url(/public/media/SfondoScuro.jpeg) ;
   }
 }
 
