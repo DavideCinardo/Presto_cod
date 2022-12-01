@@ -1,5 +1,5 @@
-<div class="container formCreate">
-    <div class="row justify-content-center">
+<div class="container">
+    <div class="row justify-content-center mt-5">
         @forelse($articles as $article)
         
             <div class="col-12 col-md-4 mb-4">
