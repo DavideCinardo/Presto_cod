@@ -70,7 +70,7 @@ class ArticlesCreateForm extends Component
 
                 RemoveFaces::withChain([
                     new LogoImg($newImage->id),
-                    new ResizeImage($newImage->path, 400,300),
+                    new ResizeImage($newImage->path, 300,400),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
 
