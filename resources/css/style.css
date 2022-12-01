@@ -343,7 +343,7 @@ footer {
   margin: 15px;
   border-radius: 15px;
   border: 1px solid var(--terzo);
-  border-bottom: 4px solid var(--secondario);
+  border-bottom: 4px solid var(--oro);
 }
 
 .CardImg {
@@ -357,12 +357,12 @@ footer {
 }
 
 .HoverFooter:hover {
-  color: var(--secondario);
+  color: var(--oro);
 }
 
 
 .formCreate {
-  margin-top: 150px;
+  margin-top: 300px;
 }
 
 .SearchBar {
@@ -578,7 +578,7 @@ body {
   justify-content: center;
   border-top-left-radius: 100%;
   border-bottom-right-radius: 100%;
-  border: solid 5px var(--secondario);
+  border: solid 5px var(--quarto);
 }
 
 .Sez-Articoli {
@@ -649,7 +649,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 }
 #navbarNavDropdown.collapsing .navbar-nav,
 #navbarNavDropdown.show .navbar-nav{
-  background:#037582;
+
   padding:12px;
 }
 
@@ -961,7 +961,6 @@ video {
   }
   .marginShowTop{
     margin-top: 100px;
-    background-color: red;
   }
 }
 
