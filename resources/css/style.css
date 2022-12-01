@@ -471,6 +471,10 @@ body {
   text-decoration: none;
 }
 
+.slot{
+  margin-top: 200vh;
+}
+
 .card__image {      
   width: 100%;
   height: 100%;
@@ -673,9 +677,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   overflow: hidden;
   margin-bottom:10px;
 }
-.profileCard .profileImg .cardImg {
+.profileCard .profileImg .card__img {
   width:100%;
-  height:auto;
 }
 .profileContent{
   padding: 0!important;
