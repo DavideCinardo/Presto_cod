@@ -65,6 +65,7 @@
                         @foreach ($categories as $category)
                             <a href="{{ route('category', compact('category')) }}">
                                 <li class="dropdown-item colorTextDD">
+                                    <span class="{{$category->icon}}"></span> 
 
                                     @switch(Config::get('app.locale'))
                                         @case('it')

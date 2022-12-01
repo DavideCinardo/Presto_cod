@@ -18,16 +18,16 @@ class DatabaseSeeder extends Seeder
     {
         //Categorie inserite lato server
         $categories =[
-            ['Motori', 'Motors', 'Motores'],
-            ['Informatica', 'Informatics', 'Informatica'],
-            ['Casa', 'Home', 'Hogar'],
-            ['Giochi', 'Games', 'Juegos'],
-            ['Lavoro', 'Work', 'Trabajar'],
-            ['Abbiglimento', 'Clothing', 'Ropa'],
-            ['Elettrodomestici', 'Domestic appliances', 'Usos domésticos'],
-            ['Libri', 'Books', 'Libros'],
-            ['Smartphone', 'Smartphone', 'Smartphone'],
-            ['Immobili', 'Property', 'Propiedades'],
+            ['Motori', 'Motors', 'Motores', 'fa-solid fa-car'],
+            ['Informatica', 'Informatics', 'Informatica', 'fa-solid fa-computer'],
+            ['Casa', 'Home', 'Hogar', 'fa-solid fa-house'],
+            ['Giochi', 'Games', 'Juegos', 'fa-solid fa-gamepad'],
+            ['Lavoro', 'Work', 'Trabajar', 'fa-solid fa-briefcase'],
+            ['Abbiglimento', 'Clothing', 'Ropa', 'fa-solid fa-person-dress'],
+            ['Elettrodomestici', 'Domestic appliances', 'Usos domésticos', 'fa-solid fa-bolt'],
+            ['Libri', 'Books', 'Libros', 'fa-solid fa-book'],
+            ['Smartphone', 'Smartphone', 'Smartphone', 'fa-solid fa-mobile-screen'],
+            ['Immobili', 'Property', 'Propiedades','fa-solid fa-building'],
         ];
         
         //per ogni categoria crea un record dando al name->category un valore dell'array
@@ -36,11 +36,8 @@ class DatabaseSeeder extends Seeder
                 'nameIt' => $category[0],
                 'nameEn' => $category[1],
                 'nameEs' => $category[2],
+                'icon' => $category[3],
             ]);
         };
     }
 }
-
-// ['Motori', 'Informatica', 'Casa', 'Giochi', 'Lavoro', 'Abbigliamento', 'Elettrodomestici', 'Libri', 'Smartphone', 'Immobili'],
-// ['Motors', 'Informatic', 'Home', 'Games', 'Work', 'Clothing', 'Domestic appliances', 'Books', 'Smartphone', 'Property'],
-// ['Motores', 'Informatica', 'Hogar', 'Juegos', 'Trabajar', 'Ropa', 'Usos domésticos', 'Libros', 'Smartphone', 'Propiedades'],

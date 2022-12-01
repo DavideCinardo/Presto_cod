@@ -62,6 +62,12 @@ return[
     'explore'=>'Esplora i nostri annunci',
     'noSearch'=>'Non ci sono annunci relativi alla tua ricerca',
 
+    'adults' => 'Adulti',
+    'spoof' => 'Satira',
+    'medical' => 'Medico',
+    'violence' => 'Violenza',
+    'racy' => 'VM18',
+
 
 
 ];

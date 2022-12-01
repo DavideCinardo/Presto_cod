@@ -60,4 +60,10 @@ return[
     'noLike'=>'You have not liked any ads.',
     'explore'=>'Explore our classifieds',
     'noSearch'=>'There are no ads related to your search',
+
+    'adults' => 'Adults',
+    'spoof' => 'Spoof',
+    'medical' => 'Mediccal',
+    'violence' => 'Violence',
+    'racy' => 'VM18',
 ];
