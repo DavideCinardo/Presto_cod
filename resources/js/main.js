@@ -33,17 +33,20 @@ let navbarNavDropdown = document.querySelector('#navbarNavDropdown');
 
 window.onscroll = function () {
   if (window.scrollY > 40) {
-    navLogo.style.animation = 'fadeOutNavBar 1s';
+    // navLogo.style.animation = 'fadeOutNavBar 1s';
     logos.classList.add('d-none');
     subNav.classList.add('navbar-down', 'fixed-top');
-    subNav.style.animation = 'fadeInsubNav 1s';
-    navbarNavDropdown.style.height = '100%';
+    subNav.classList.remove('fade-in-top');
+    subNav.classList.add('fade1');
+    // subNav.style.animation = 'fadeInsubNav 1s';
+     navbarNavDropdown.style.height = '100%';
   } else {
-    navLogo.style.animation = 'fadeInNavBar 1s';
+    // navLogo.style.animation = 'fadeInNavBar 1s';
     logos.classList.remove('d-none');
     subNav.classList.remove('navbar-down', 'fixed-top');
-    subNav.style.animation = 'fadeOutsubNav 1s';
+    subNav.classList.add('fade-in-top');
     navbarNavDropdown.style.height = 'max-content';
+    subNav.classList.remove('fade1');
   }
 }
 
