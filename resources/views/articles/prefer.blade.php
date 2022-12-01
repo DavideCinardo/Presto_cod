@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container mt-5">
+    <div class="container  formCreate">
         <div class="row title-h justify-content-center mb-5">
             <div class="col-1 border-start border-top"></div>
             <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
@@ -23,8 +23,8 @@
                 <div class="container min-vh-100">
                     <div class="row">
                         <div class="col-12">
-                            <h3>{{__('ui.noLike')}}</h3>
-                            <h5>{{__('ui.explore')}} : </h5>
+                            <h3 class="noAds text-center">{{__('ui.noLike')}}</h3>
+                            <h5 class="noAds text-center">{{__('ui.explore')}} : </h5>
                             <a href="{{ route('articles.index') }}" class="btn btn-outline-dark">Inseriscine uno</a>
                             <btn-custom>
                                 <ul>

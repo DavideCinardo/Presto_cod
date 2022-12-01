@@ -949,7 +949,7 @@ video {
 } */
 
 
-.textRemember{
+.textRemember, .noAds{
   color: var(--oro);
 }
 
@@ -1023,6 +1023,13 @@ video {
   .dropdownMenuMobile{
     background-image:url(/public/media/SfondoScuro.jpeg) ;
   }
+
+  .navBut{
+    height: 5px;
+    margin-top: 50px;
+    border: 0;
+  }
+
 }
 
 @media only screen and (max-width: 768px){
@@ -1036,6 +1043,10 @@ video {
   .dropdownMenuMobile{
     background-image:url(/public/media/SfondoScuro.jpeg) ;
   }
+
+
+
+
 }
 
 @media only screen and (max-width: 1024px){
@@ -1046,6 +1057,11 @@ video {
     margin-top: 35vh;
   }
 
+  .dropdownMenuMobile{
+    background-image:url(/public/media/SfondoScuro.jpeg) ;
+  }
+
+
 }
 
 @media only screen and (max-width: 1440px){
@@ -1055,6 +1071,7 @@ video {
   .marginShowTop{
     margin-top: 35vh;
   }
+
 }
 
 #subNav {
@@ -1131,7 +1148,4 @@ video {
   border-bottom: solid 5px var(--oro);
 }
 
-.navBut{
-  height: 5px;
-  
-}
+

@@ -32,7 +32,7 @@
             <div class="container min-vh-100 mt-5">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                        <h3 class="categoryPrompt me-4">
+                        <h3 class="categoryPrompt me-4 text-center">
                             {{__('ui.noAds')}} : <span class="{{$category->icon}}"></span> 
                                                     @switch(Config::get('app.locale'))
                                                         @case('it')

@@ -33,7 +33,7 @@
         </div>
     </nav>
     <div class="navbar-expand-xl m-0" id="subNav">
-        <div class="navbar-dark text-center">
+        <div class="navbar-dark text-center menuDrop">
             <button class="navbar-toggler w-75 navBut" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">

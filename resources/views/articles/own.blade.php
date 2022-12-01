@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container mt-5">
+    <div class="container formCreate">
         <div class="row title-h justify-content-center mb-5">
             <div class="col-1 border-start border-top"></div>
             <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
@@ -18,11 +18,11 @@
                 <div class="container min-vh-100">
                     <div class="row">
                         <div class="col-12">
-                            <h3>{{__('ui.noYourAds')}}</h3>
+                            <h3 class="noAds text-center">{{__('ui.noYourAds')}}</h3>
                             <btn-custom>
                                 <ul>
                                     <li>
-                                      <a href="{{route('articles.create')}}" class="facebook">
+                                      <a href="{{route('articles.create')}}" class="facebook mt-5">
                                         <span></span>
                                         <span></span>
                                         <span></span>
