@@ -121,11 +121,11 @@
                             <form class="d-none" method="POST" action="{{ route('logout') }}" id="form-logout">@csrf
                             </form>
                             <li>
-                                <a class="dropdown-item colorTextDD text-uppercase" data-bs-toggle="modal"
+                                <button type="button" class="dropdown-item colorTextDD text-uppercase" data-bs-toggle="modal"
                                 data-bs-target="#workModal">
                                     
                                         {{ __('ui.workUs') }}
-                                </a>
+                                </button> 
                             </li>
 
                         </ul>
