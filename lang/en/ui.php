@@ -66,4 +66,10 @@ return[
     'medical' => 'Mediccal',
     'violence' => 'Violence',
     'racy' => 'VM18',
+    'footer' => 'Company specialized in the retail sale of jewels and collectibles. After the foundation in 2022 and after having managed to escape from the world of diamond smuggling, Code Of Duty forcefully entered the market always bringing a note of elegance, refinement and above all quality.',
+    'popular' => 'popular product',
+    'links' => 'links',
+    'contacts'=>'contacts',
+    'zoneRev' => 'Revisor Area',
+
 ];
