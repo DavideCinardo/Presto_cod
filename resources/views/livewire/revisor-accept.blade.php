@@ -59,14 +59,14 @@
               <p class="text-secondary fst-italic">{{$article->location}}</p>
               <p>{{$article->description}}</p>
               <p class="fst-italic text-secondary">{{$article->user->name}}</p>
-              <div class="col-12 col-md-6 text-start">
+              <div class="col-12 col-md-6 text-center">
                 <p class="fs-1">&euro;{{$article->price}}</p>
               </div>             
             </div>
             <div class="col-12 col-md-6 d-flex justify-content-start">
               <div>
                 <btn-custom>
-                  <ul>
+                  {{-- <ul>
                       <li>
                         <a href="{{Route('homepage')}}" class="facebook" href="#">
                           <span></span>
@@ -76,7 +76,7 @@
                           Home
                         </a>
                       </li>
-                  </ul>
+                  </ul> --}}
                 </btn-custom>
                 @auth
                   @if(Auth::user()->is_revaisor && !$article->is_accepted)

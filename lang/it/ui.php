@@ -1,5 +1,6 @@
 <?php
 return[
+    'close'=> 'Chiudi',
     'postAd' =>'Inserisci annuncio',
     'ads'=>'Annunci',
     'allAds' =>'Tutti gli annunci',

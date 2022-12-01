@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid formCreate mt-0 mb-5">
+    <div class="container-fluid formCreate">
         <div class="row title-h justify-content-center">
             <div class="col-1 border-start border-top"></div>
             <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">

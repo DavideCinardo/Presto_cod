@@ -120,11 +120,10 @@
                             <form class="d-none" method="POST" action="{{ route('logout') }}" id="form-logout">@csrf
                             </form>
                             <li>
-                                <a>
-                                    <button type="button" class="dropdown-item colorTextDD" data-bs-toggle="modal"
-                                        data-bs-target="#workModal">
+                                <a class="dropdown-item colorTextDD text-uppercase" data-bs-toggle="modal"
+                                data-bs-target="#workModal">
+                                    
                                         {{ __('ui.workUs') }}
-                                    </button>
                                 </a>
                             </li>
 
@@ -183,12 +182,12 @@
                         <btn-custom data-bs-dismiss="modal" class="me-4">
                             <ul>
                                 <li>
-                                    <a class="facebook" href="#">
+                                    <a class="facebook text-uppercase" href="#">
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                         <span></span>
-                                        Close
+                                        {{ __('ui.close') }}
                                     </a>
                                 </li>
                             </ul>
@@ -197,7 +196,7 @@
                             <btn-custom >
                                 <ul>
                                     <li>
-                                        <a  class="facebook">
+                                        <a  class="facebook text-uppercase">
                                             <span></span>
                                             <span></span>
                                             <span></span>

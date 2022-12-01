@@ -1,5 +1,6 @@
 <?php
 return[
+    'close'=>'Close',
     'postAd' =>'Post ad',
     'ads'=>'Ads',
     'allAds' =>'All ads',
