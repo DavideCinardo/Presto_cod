@@ -18,16 +18,16 @@ class DatabaseSeeder extends Seeder
     {
         //Categorie inserite lato server
         $categories =[
-            ['Motori', 'Motors', 'Motores'],
-            ['Informatica', 'Informatics', 'Informatica'],
-            ['Casa', 'Home', 'Hogar'],
-            ['Giochi', 'Games', 'Juegos'],
-            ['Lavoro', 'Work', 'Trabajar'],
-            ['Abbiglimento', 'Clothing', 'Ropa'],
-            ['Elettrodomestici', 'Domestic appliances', 'Usos domésticos'],
-            ['Libri', 'Books', 'Libros'],
-            ['Smartphone', 'Smartphone', 'Smartphone'],
-            ['Immobili', 'Property', 'Propiedades'],
+            ['Motori', 'Motors', 'Motores'], //<i class="fa-solid fa-car"></i>
+            ['Informatica', 'Informatics', 'Informatica'], //<i class="fa-solid fa-computer"></i>
+            ['Casa', 'Home', 'Hogar'], //<i class="fa-solid fa-house"></i>
+            ['Giochi', 'Games', 'Juegos'], //<i class="fa-solid fa-gamepad"></i>
+            ['Lavoro', 'Work', 'Trabajar'], //<i class="fa-solid fa-briefcase"></i>
+            ['Abbiglimento', 'Clothing', 'Ropa'], //<i class="fa-solid fa-person-dress"></i>
+            ['Elettrodomestici', 'Domestic appliances', 'Usos domésticos'], //<i class="fa-solid fa-bolt"></i>
+            ['Libri', 'Books', 'Libros'], //<i class="fa-solid fa-book"></i>
+            ['Smartphone', 'Smartphone', 'Smartphone'], //<i class="fa-solid fa-mobile-screen"></i>
+            ['Immobili', 'Property', 'Propiedades'], //<i class="fa-solid fa-building"></i>
         ];
         
         //per ogni categoria crea un record dando al name->category un valore dell'array
