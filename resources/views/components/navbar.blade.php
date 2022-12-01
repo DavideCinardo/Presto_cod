@@ -29,7 +29,7 @@
         </div> --}}
         
         <div class="d-flex justify-content-center">
-          <img class="logos" src="/media/8DB2CAB0-52CF-4989-A0B6-22BB6E51FA69_4_5005_c-PhotoRoom.png" alt="">
+          <img class="logos fade-in-top" src="/media/8DB2CAB0-52CF-4989-A0B6-22BB6E51FA69_4_5005_c-PhotoRoom.png" alt="">
         </div>
     </nav>
     <div class="navbar-expand-xl m-0" id="subNav">
