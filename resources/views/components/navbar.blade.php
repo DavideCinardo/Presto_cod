@@ -109,7 +109,10 @@
                             {{ __('ui.welcome') }}, {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu bg-menu">
+<<<<<<< HEAD
                             
+=======
+>>>>>>> 919984df2884cfc15e77c9855645243bbe034d99
                             <li><a class="dropdown-item colorTextDD"
                                     href="{{ route('articles.own') }}">{{ __('ui.yourAds') }}</a></li>
                             <li><a class="dropdown-item colorTextDD"

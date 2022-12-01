@@ -594,7 +594,7 @@ body {
   position: absolute;
   top: 2%;
   right: 4%;
-  z-index: 1999;
+  z-index: 9;
 }
 
 /* DESCRIZIONE */
@@ -849,13 +849,13 @@ btn-custom ul li a span:nth-child(3){
   background:#927f4d;
 }
 btn-custom ul li a.accept {
-  color: rgb(18, 69, 18);
+  color: rgb(53, 159, 53);
 }
 btn-custom ul li a.accept span:nth-child(1),
 btn-custom ul li a.accept span:nth-child(3),
 btn-custom ul li a.accept span:nth-child(2),
 btn-custom ul li a.accept span:nth-child(4){
-  background:rgb(18, 69, 18);
+  background:rgb(53, 159, 53);
 }
 .accept.facebook:hover {
   color: green;
@@ -864,13 +864,13 @@ btn-custom ul li a.accept span:nth-child(4){
   background: green;
 }
 btn-custom ul li a.reject {
-  color: rgb(94, 21, 21);
+  color: rgb(181, 22, 22);
 }
 btn-custom ul li a.reject span:nth-child(1),
 btn-custom ul li a.reject span:nth-child(3),
 btn-custom ul li a.reject span:nth-child(2),
 btn-custom ul li a.reject span:nth-child(4){
-  background:rgb(94, 21, 21);
+  background:rgb(181, 22, 22);
 }
 .reject.facebook:hover {
   color: red;
@@ -1085,4 +1085,9 @@ video {
   @keyframes fadeInNavBar {
     
   }
+}
+
+
+.borderVideo {
+  border-bottom: solid 5px var(--oro);
 }
