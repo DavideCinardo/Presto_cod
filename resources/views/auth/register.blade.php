@@ -4,6 +4,15 @@
         
         <div class="row justify-content-center formCreate">
             <div class="col-12 col-md-8">
+            @if ($errors->any())
+            <div class="alert alert-danger errorLogin mb-3 p-3">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
                 {{-- form register --}}
                     <form action="{{route('register')}}" method="POST">
                         @csrf
@@ -88,15 +97,7 @@
             </div>
         </div>
 
-        @if ($errors->any())
-            <div class="alert alert-danger errorLogin">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+        
 
     </div>
 

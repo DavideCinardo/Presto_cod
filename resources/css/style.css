@@ -1094,3 +1094,8 @@ video {
 .borderVideo {
   border-bottom: solid 5px var(--oro);
 }
+
+.navBut{
+  height: 5px;
+  
+}

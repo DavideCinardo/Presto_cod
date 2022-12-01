@@ -34,10 +34,10 @@
     </nav>
     <div class="navbar-expand-xl m-0" id="subNav">
         <div class="navbar-dark text-center">
-            <button class="navbar-toggler w-75" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler w-75 navBut" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
+                <span class="navbar-toggler-icon"></span> <span class="align-middle menu ">Menu</span>
             </button>
         </div>
         <div class="text-center mt-0 collapse navbar-collapse justify-content-end" id="navbarNavDropdown">

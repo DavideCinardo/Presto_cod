@@ -1,8 +1,18 @@
 <x-layout>
 
     <div class="container min-vh-75">
+        
         <div class="row justify-content-center formCreate">
             <div class="col-12 col-md-8">
+            @if ($errors->any())
+        <div class="alert alert-danger errorLogin mb-3 p-3">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif      
                 {{-- form register --}}
                     <form action="{{route('login')}}" method="POST">
                         @csrf
@@ -77,15 +87,7 @@
                 {{--  end form register --}}
             </div>
         </div>
-        @if ($errors->any())
-        <div class="alert alert-danger errorLogin">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif      
+       
     </div>
 
     <x-footer />
