@@ -50,6 +50,13 @@ class RevisorAccept extends Component
 
         $this->article = Article::where('is_accepted', null)->first();
         $this->last = Article::where('revisioned_from', Auth::user()->id)->where('is_accepted', !null)->orderBy('updated_at', 'DESC')->first();
+
+        // dd($this->last);
+
+
         return view('livewire.revisor-accept');
+
+
+
     }
 }
