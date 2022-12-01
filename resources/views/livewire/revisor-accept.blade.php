@@ -174,7 +174,7 @@
                               {{-- Card --}}
                               @livewire('articles-card', ['article' => $article])
                           <div class="d-flex justify-content-center mt-3">
-                              @if($article->id == $last->id)
+                              @if($last && $article->id == $last->id)
                                   <button wire:click="nullRevision({{$article->id}})" class="bg-transparent border-0">
                                       <btn-custom class="mt-5">
                                           <ul>
