@@ -88,7 +88,7 @@ class ArticlesCreateForm extends Component
         $this->reset();
 
         //messaggio di avvenuto inserimento
-        session()->flash('articleCreated', 'Complimenti, hai creato la tua inserzione.');
+        session()->flash('articleCreated', 'Complimenti, la tua inserzione sarà revisionata entro 24H');
 
     }
 

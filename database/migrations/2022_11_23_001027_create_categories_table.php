@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('nameIt');
             $table->string('nameEn');
             $table->string('nameEs');
+            $table->string('icon');
 
             $table->timestamps();
         });

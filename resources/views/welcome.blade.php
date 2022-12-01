@@ -54,7 +54,7 @@
                             <div class="row title-h mt-5 justify-content-center">
                                 <div class="col-1 border-start border-top"></div>
                                 <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
-                                    <h4 class="text-center">{{__('ui.latestaAd')}} : 
+                                    <h4 class="text-center">{{__('ui.latestaAd')}} : <span class="{{$category->icon}}"></span> 
                                         @switch(Config::get('app.locale'))
                                             @case('it')
                                                 {{$category->nameIt}}
