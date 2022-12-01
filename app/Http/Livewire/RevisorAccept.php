@@ -49,7 +49,7 @@ class RevisorAccept extends Component
         $this->articles_checked = Article::where('revisioned_from', Auth::user()->id)->orderBy('updated_at', 'DESC')->get();
 
         $this->article = Article::where('is_accepted', null)->first();
-        $this->last = Article::where('revisioned_from', Auth::user()->id)->where('is_accepted', !null)->orderBy('updated_at', 'DESC')->first();
+        $this->last = Article::where('revisioned_from', Auth::user()->id)->orderBy('updated_at', 'DESC')->first();
 
         // dd($this->last);
 

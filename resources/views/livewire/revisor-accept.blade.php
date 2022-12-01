@@ -1,7 +1,7 @@
 <div>
   {{-- revisor not --}}
     {{-- titolo article unchecked --}}
-      <div class="container-fluid formCreate mt-0 mb-5">
+      <div class="container-fluid formCreate mt-5 mb-5">
           <div class="row title-h justify-content-center">
               <div class="col-1 border-start border-top"></div>
               <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
@@ -96,10 +96,10 @@
                   @auth
                     @if(Auth::user()->is_revaisor && !$article->is_accepted)
                       <div class="my-2">
-                        <btn-custom wire:click="acceptArticle">
+                        <btn-custom type="button" wire:click="acceptArticle">
                           <ul>
                               <li>
-                                <a class="facebook accept" href="#">
+                                <a class="facebook accept">
                                   <span></span>
                                   <span></span>
                                   <span></span>
@@ -111,10 +111,10 @@
                         </btn-custom>
                       </div>
                       <div>
-                        <btn-custom wire:click="rejectArticle">
+                        <btn-custom type="button" wire:click="rejectArticle">
                             <ul>
                                 <li>
-                                  <a class="facebook reject" href="#">
+                                  <a class="facebook reject">
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -148,7 +148,7 @@
                 <div class="col-8 Lbl-text justify-content-center d-flex align-items-center">
                     <h4>
                         {{-- se ci sono annunci primo titolo altrimenti secondo --}}
-                        {{$articles_checked ? 'Tutti gli articoli revisionati da te' : 'Non ci sono articoli revisionati da te'}}
+                        {{count($articles_checked) > 0 ? 'Tutti gli articoli revisionati da te' : 'Non ci sono articoli revisionati da te'}}
                     </h4>
                 </div>
                 <div class="col-1 border-end border-bottom"></div>
@@ -174,7 +174,7 @@
                           <div class="d-flex justify-content-center mt-3">
                               @if($last && $article->id == $last->id)
                                   <button wire:click="nullRevision({{$article->id}})" class="bg-transparent border-0">
-                                      <btn-custom class="mt-5">
+                                      <btn-custom type="button" class="mt-5">
                                           <ul>
                                               <li>
                                               <a class="facebook reject">

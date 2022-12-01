@@ -593,7 +593,7 @@ body {
   position: absolute;
   top: 2%;
   right: 4%;
-  z-index: 1999;
+  z-index: 9;
 }
 
 /* DESCRIZIONE */
