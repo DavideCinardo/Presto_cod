@@ -166,7 +166,7 @@
               @endif
           {{-- end messaggi di sessione --}}
           @if($articles_checked)
-              <div class="row d-flex justify-content-center mt-5">
+              <div class="row justify-content-center mt-5">
                   @foreach ($articles_checked as $article)
                       <div class="col-12 col-md-3 h-75 my-5">
                               {{-- Card --}}
