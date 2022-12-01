@@ -59,7 +59,7 @@
             <div class="row justify-content-center mt-4">
               <div class="col-12 col-md-6 text-end ps-2 Lbl-text">
                 <h3>{{$article->title}}</h3>
-                <p class="text-secondary fst-italic">{{__('ui.category')}} : <span class="{{$article->category->icon}}"></span> 
+                <p class="text-light fst-italic">{{__('ui.category')}} : <span class="{{$article->category->icon}}"></span> 
                   @switch(Config::get('app.locale'))
                       @case('it')
                           {{$article->category->nameIt}}
@@ -73,9 +73,9 @@
                       @default
                   @endswitch
                 </p>
-                <p class="text-secondary fst-italic">{{$article->location}}</p>
+                <p class="text-light fst-italic">{{$article->location}}</p>
                 <p>{{$article->description}}</p>
-                <p class="fst-italic text-secondary">{{$article->user->name}}</p>
+                <p class="fst-italic text-light">{{$article->user->name}}</p>
                 <p class="fs-1">&euro;{{$article->price}}</p>            
               </div>
               <div class="col-12 col-md-6 d-flex justify-content-start">
