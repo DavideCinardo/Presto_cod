@@ -10,7 +10,7 @@
 
             @endif
             
-            <form wire:submit.prevent="store" class="formCreate ">
+            <form wire:submit.prevent="store" class="formCreate">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">{{__('ui.title')}}</label>

@@ -109,21 +109,17 @@
                             {{ __('ui.welcome') }}, {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu bg-menu">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                            
-=======
->>>>>>> 919984df2884cfc15e77c9855645243bbe034d99
+
                             <li><a class="dropdown-item colorTextDD"
                                     href="{{ route('articles.own') }}">{{ __('ui.yourAds') }}</a></li>
                             <li><a class="dropdown-item colorTextDD"
                                     href="{{ route('articles.prefer') }}">{{ __('ui.favourite') }}</a></li>
                            
-=======
+
                             
                             <li><a class="dropdown-item colorTextDD"
                                     href="{{ route('articles.prefer') }}">{{ __('ui.favourite') }}</a></li>
->>>>>>> b0ddd6e8989a2879db6449c6968c12c228075901
+
                             <li><a class="dropdown-item colorTextDD" href=""
                                     onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
                             </li>
