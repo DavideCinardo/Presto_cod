@@ -109,7 +109,6 @@
                             {{ __('ui.welcome') }}, {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu bg-menu">
-                            <li><a class="dropdown-item colorTextDD" href="">I tuoi ordini</a></li>
                             <li><a class="dropdown-item colorTextDD"
                                     href="{{ route('articles.own') }}">{{ __('ui.yourAds') }}</a></li>
                             <li><a class="dropdown-item colorTextDD"

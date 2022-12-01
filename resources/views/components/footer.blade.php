@@ -42,6 +42,7 @@
             </h6>
             <p>
               Azienda specilizzata nella vendita al dettaglio di preziosi e merci da collezione. Dopo la fondazione nel 2022 e dopo essere riusciti a scappare dal mondo del contrabbando di diamanti i Code Of Duty si inseriscono prepotentemente nel mercato portando sempre una nota di eleganza, raffinatezza e soprattutto qualità.
+              {{}}
             </p>
           </div>
           <!-- Grid column -->
