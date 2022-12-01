@@ -343,7 +343,7 @@ footer {
   margin: 15px;
   border-radius: 15px;
   border: 1px solid var(--terzo);
-  border-bottom: 4px solid var(--secondario);
+  border-bottom: 4px solid var(--oro);
 }
 
 .CardImg {
@@ -357,12 +357,12 @@ footer {
 }
 
 .HoverFooter:hover {
-  color: var(--secondario);
+  color: var(--oro);
 }
 
 
 .formCreate {
-  margin-top: 150px;
+  margin-top: 300px;
 }
 
 .SearchBar {
@@ -471,6 +471,10 @@ body {
   text-decoration: none;
 }
 
+.slot{
+  margin-top: 200vh;
+}
+
 .card__image {      
   width: 100%;
   height: 100%;
@@ -574,7 +578,7 @@ body {
   justify-content: center;
   border-top-left-radius: 100%;
   border-bottom-right-radius: 100%;
-  border: solid 5px var(--secondario);
+  border: solid 5px var(--quarto);
 }
 
 .Sez-Articoli {
@@ -645,9 +649,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 }
 #navbarNavDropdown.collapsing .navbar-nav,
 #navbarNavDropdown.show .navbar-nav{
-  background:#037582;
+
   padding:12px;
 }
+
+
 
 .under-line{
   border-color:var(--oro) !important;
@@ -673,9 +679,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   overflow: hidden;
   margin-bottom:10px;
 }
-.profileCard .profileImg .cardImg {
+.profileCard .profileImg .card__img {
   width:100%;
-  height:auto;
 }
 .profileContent{
   padding: 0!important;
@@ -958,7 +963,10 @@ video {
   }
   .marginShowTop{
     margin-top: 100px;
-    background-color: red;
+  }
+
+  .dropdownMenuMobile{
+    background-image:url(/public/media/SfondoScuro.jpeg) ;
   }
 }
 
@@ -969,20 +977,25 @@ video {
   .marginShowTop{
     margin-top: 35vh;
   }
+
+  .dropdownMenuMobile{
+    background-image:url(/public/media/SfondoScuro.jpeg) ;
+  }
 }
 
 @media only screen and (max-width: 1024px){
   .formCreate{
-    margin-top: 200px;
+    margin-top: 300px;
   }
   .marginShowTop{
     margin-top: 35vh;
   }
+
 }
 
 @media only screen and (max-width: 1440px){
   .formCreate{
-    margin-top: 200px;
+    margin-top: 300px;
   }
   .marginShowTop{
     margin-top: 35vh;
