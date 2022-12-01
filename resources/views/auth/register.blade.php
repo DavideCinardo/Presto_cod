@@ -28,7 +28,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-4">
 
-                                    <button type="submit" class="bg-transparent border-0">
+                                    <button type="submit" class="bg-transparent border-0 d-flex mx-auto">
                                         <btn-custom >
                                             <ul>
                                                 <li>
