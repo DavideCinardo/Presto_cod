@@ -677,7 +677,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 .profileCard{
   position:relative;
   overflow: hidden;
-  margin-bottom:10px;
 }
 .profileCard .profileImg .card__img {
   width:100%;

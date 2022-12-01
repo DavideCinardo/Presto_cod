@@ -166,9 +166,9 @@
               @endif
           {{-- end messaggi di sessione --}}
           @if($articles_checked)
-              <div class="row w-100 d-flex justify-content-center mt-5">
+              <div class="row d-flex justify-content-center mt-5">
                   @foreach ($articles_checked as $article)
-                      <div class="col-12 col-md-4 my-5">
+                      <div class="col-12 col-md-3 h-75 my-5">
                               {{-- Card --}}
                               @livewire('articles-card', ['article' => $article])
                           <div class="d-flex justify-content-center mt-3">
