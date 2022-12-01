@@ -649,6 +649,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   padding:12px;
 }
 
+
+
 .under-line{
   border-color:var(--oro) !important;
 }
@@ -959,6 +961,10 @@ video {
   .marginShowTop{
     margin-top: 100px;
   }
+
+  .dropdownMenuMobile{
+    background-image:url(/public/media/SfondoScuro.jpeg) ;
+  }
 }
 
 @media only screen and (max-width: 768px){
@@ -968,20 +974,25 @@ video {
   .marginShowTop{
     margin-top: 35vh;
   }
+
+  .dropdownMenuMobile{
+    background-image:url(/public/media/SfondoScuro.jpeg) ;
+  }
 }
 
 @media only screen and (max-width: 1024px){
   .formCreate{
-    margin-top: 200px;
+    margin-top: 300px;
   }
   .marginShowTop{
     margin-top: 35vh;
   }
+
 }
 
 @media only screen and (max-width: 1440px){
   .formCreate{
-    margin-top: 200px;
+    margin-top: 300px;
   }
   .marginShowTop{
     margin-top: 35vh;
