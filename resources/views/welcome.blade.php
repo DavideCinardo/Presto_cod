@@ -77,18 +77,22 @@
                         @endif
                         @break
                     @endforeach
-                    <div class="row w-100 swiper mySwiper d-flex justify-content-center mt-5">
-                        <div class="swiper-wrapper">
-                            @foreach($category->articles as $article)
-                                @if ($article->is_accepted)
-                                    <div class="col-12 col-md-4 swiper-slide">
-                                        @livewire('articles-card', ['article' => $article])
-                                    </div>         
-                                @endif
-                            @endforeach
+                    @if(count($category->articles->filter(function($article){
+                        return $article->is_accepted;
+                    })))
+                        <div class="row w-100 swiper mySwiper d-flex justify-content-center mt-5">
+                            <div class="swiper-wrapper">
+                                @foreach($category->articles as $article)
+                                    @if ($article->is_accepted)
+                                        <div class="col-12 col-md-4 swiper-slide">
+                                            @livewire('articles-card', ['article' => $article])
+                                        </div>         
+                                    @endif
+                                @endforeach
+                            </div>
+                            <div class="swiper-scrollbar"></div>
                         </div>
-                        <div class="swiper-scrollbar"></div>
-                    </div>
+                    @endif
                 
                 @endif   
             @endforeach
@@ -96,17 +100,3 @@
 
     <x-footer />
 </x-layout>
-
-{{-- <btn-custom>
-    <ul>
-        <li>
-          <a class="facebook" href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Inserisci
-          </a>
-        </li>
-    </ul>
-</btn-custom> --}}

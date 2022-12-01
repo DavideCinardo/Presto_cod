@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container marginShowTop">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-4">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                   @if($article->images)
                     <div class="carousel-inner">
